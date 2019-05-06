@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Project_FileContentExplorer
 {
@@ -16,9 +17,32 @@ namespace Project_FileContentExplorer
         Account F_Account;
         Setting F_Setting;
 
+        // 일단 검색어 상관 없이, 드라이브 속 pdf, hwp, doc, docx, txt 총 개수
+        // 프로젝트 -> 프로젝트 속성 -> 응용 프로그램 -> 출력 형식 -> 콘솔
+        // search 누르면 개수 
+        int fileCount = 0;
+        //
+        StreamWriter textTxt = new StreamWriter(@"D:\txtList.txt", append: true);
+        StreamWriter textPdf = new StreamWriter(@"D:\pdfList.txt", append: true);
+        StreamWriter textHwp = new StreamWriter(@"D:\hwpList.txt", append: true);
+        StreamWriter textDoc = new StreamWriter(@"D:\docList.txt", append: true);
+        StreamWriter textDocx = new StreamWriter(@"D:\docxList.txt", append: true);
+
+        string systemFolder = Environment.GetFolderPath(System.Environment.SpecialFolder.Windows);//윈도우 폴더
+
+        private BackgroundWorker worker;
+
         public Home()
         {
             InitializeComponent();
+
+            //백그라운드로 전체 드라이브 돌면서 파일 목록 모으기
+            worker = new BackgroundWorker();
+            worker.WorkerReportsProgress = true;
+            worker.WorkerSupportsCancellation = true;
+            worker.DoWork += new DoWorkEventHandler(backgroundWork);    //백그라운드에서 어떤 작업을 할지
+            //worker.ProgressChanged += new ProgressChangedEventHandler();  //백그라운드에서  진행되는 상태
+            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorkCompleted); //백그라운드에서 작업 완료
 
             //프로그램 실행할 시 Search 폼을 Display_Area 패널에 띄운다.
             F_Search = new Search();
@@ -26,6 +50,151 @@ namespace Project_FileContentExplorer
             F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
             Display_Area.Controls.Add(F_Search);
             F_Search.Show();
+
+            //실행하자마자 백그라운드 아이콘 올려지고 열기/종료 선택 가능하도록
+            notifyIcon1.ContextMenuStrip = contextMenuStrip1;
+        }
+
+        void backgroundWork(object sender, DoWorkEventArgs e)
+        {
+            foreach (string path in Environment.GetLogicalDrives())
+            {
+                sync(path);
+            }
+           
+            //텍스트 각자 다 분류함
+            textTxt.Dispose();
+            textPdf.Dispose();
+            textHwp.Dispose();
+            textDoc.Dispose();
+            textDocx.Dispose();
+        }
+        void backgroundWorkCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //백그라운드 검색 완료시 알림창 띄움
+            Alarm alrm = new Alarm(fileCount.ToString());
+
+            //알림창 위치 조절
+            System.Drawing.Rectangle ScreenRectangle = Screen.PrimaryScreen.WorkingArea;
+            int xPos = ScreenRectangle.Width - alrm.Bounds.Width;
+            int yPos = ScreenRectangle.Height - alrm.Bounds.Height;
+
+            //오류메세지 바꿔줘야함 (if 에러시 오류창, 정상작동시 갯수 출력)
+            if (e.Error != null)
+            {
+                alrm.Show();
+                alrm.SetBounds(xPos, yPos, alrm.Size.Width, alrm.Size.Height, BoundsSpecified.Location);
+                alrm.BringToFront();
+                return;
+            }
+
+            alrm.Show();
+            alrm.SetBounds(xPos, yPos, alrm.Size.Width, alrm.Size.Height, BoundsSpecified.Location);
+            alrm.BringToFront();
+        }
+
+        public void sync(string path)
+        {
+            Stack<string> dirs = new Stack<string>(200);            
+
+            if (!System.IO.Directory.Exists(path))
+            {
+                throw new ArgumentException();
+            }
+            dirs.Push(path);
+
+            while (dirs.Count > 0)
+            {
+                Application.DoEvents();
+
+                string currentDIr = dirs.Pop();
+                string[] subDirs;
+                try
+                {
+                    subDirs = System.IO.Directory.GetDirectories(currentDIr);
+                }
+                catch (UnauthorizedAccessException e)
+                {
+                    //MessageBox.Show(e.Message);
+                    continue;
+                }
+                catch (System.IO.DirectoryNotFoundException e)
+                {
+                    //MessageBox.Show(e.Message);
+                    continue;
+                }
+                catch (Exception e)
+                {
+                    continue;
+                }
+
+                string[] files = null;
+                try
+                {
+                    files = System.IO.Directory.GetFiles(currentDIr);
+                }
+                catch (UnauthorizedAccessException e)
+                {
+                    //MessageBox.Show(e.Message);
+                    continue;
+                }
+                catch (System.IO.DirectoryNotFoundException e)
+                {
+                    //MessageBox.Show(e.Message);
+                    continue;
+                }
+                catch (Exception e)
+                {
+                    continue;
+                }
+
+                foreach (string file in files)
+                {
+                    try
+                    {
+                        //FileInfo fi = new FileInfo(file);                        
+                        string[] split = file.Split('.');
+                        switch (split[split.Length - 1])
+                        {
+                            case "pdf":
+                                textPdf.WriteLine(file);
+                                fileCount++;
+                                Console.WriteLine(fileCount);
+                                break;
+                            case "hwp":
+                                textHwp.WriteLine(file);
+                                fileCount++;
+                                Console.WriteLine(fileCount);
+                                break;
+                            case "txt":
+                                textTxt.WriteLine(file);
+                                fileCount++;
+                                Console.WriteLine(fileCount);
+                                break;
+                            case "doc":
+                                textDoc.WriteLine(file);
+                                fileCount++;
+                                Console.WriteLine(fileCount);
+                                break;
+                            case "docx":
+                                textDocx.WriteLine(file);
+                                fileCount++;
+                                Console.WriteLine(fileCount);
+                                break;
+                        }
+
+                    }
+                    catch (System.IO.FileNotFoundException e)
+                    {
+                        //MessageBox.Show(e.Message);
+                        continue;
+                    }
+                }
+
+                foreach (string str in subDirs)
+                    dirs.Push(str);
+
+            }
 
         }
 
@@ -103,15 +272,31 @@ namespace Project_FileContentExplorer
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
+            e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
             Properties.Settings.Default.Save();
+            this.ShowInTaskbar = true;
+            this.Visible = false;
         }
 
-        private void Display_Area_Paint(object sender, PaintEventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
+            this.notifyIcon1.Visible = false;
+            //this.ShowInTaskbar = false;
+            Application.Exit();
+        }
 
+        private void btn_open_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.Visible = true;
         }
 
         private void Home_Load(object sender, EventArgs e)
+        {
+            worker.RunWorkerAsync();
+        }
+
+        private void Display_Area_Paint(object sender, PaintEventArgs e)
         {
 
         }
