@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ID_text = new System.Windows.Forms.TextBox();
             this.PW_text = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.PW_Check_Label = new System.Windows.Forms.Label();
+            this.ID_Error = new System.Windows.Forms.Label();
             this.CheckID_Btn = new System.Windows.Forms.Button();
             this.SingUp_Btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -100,29 +100,29 @@
             this.PW_text.TabIndex = 26;
             this.PW_text.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label4
+            // PW_Check_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(64, 383);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 18);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "* Passwords don\'t match!";
-            this.label4.Visible = false;
+            this.PW_Check_Label.AutoSize = true;
+            this.PW_Check_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PW_Check_Label.ForeColor = System.Drawing.Color.Red;
+            this.PW_Check_Label.Location = new System.Drawing.Point(64, 383);
+            this.PW_Check_Label.Name = "PW_Check_Label";
+            this.PW_Check_Label.Size = new System.Drawing.Size(177, 18);
+            this.PW_Check_Label.TabIndex = 28;
+            this.PW_Check_Label.Text = "* Passwords don\'t match!";
+            this.PW_Check_Label.Visible = false;
             // 
-            // label5
+            // ID_Error
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(64, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 18);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "* Already exists ID!";
-            this.label5.Visible = false;
+            this.ID_Error.AutoSize = true;
+            this.ID_Error.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_Error.ForeColor = System.Drawing.Color.Red;
+            this.ID_Error.Location = new System.Drawing.Point(64, 182);
+            this.ID_Error.Name = "ID_Error";
+            this.ID_Error.Size = new System.Drawing.Size(129, 18);
+            this.ID_Error.TabIndex = 29;
+            this.ID_Error.Text = "* Already exists ID!";
+            this.ID_Error.Visible = false;
             // 
             // CheckID_Btn
             // 
@@ -230,8 +230,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.SingUp_Btn);
             this.Controls.Add(this.CheckID_Btn);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ID_Error);
+            this.Controls.Add(this.PW_Check_Label);
             this.Controls.Add(this.Confirm_text);
             this.Controls.Add(this.PW_text);
             this.Controls.Add(this.ID_text);
@@ -254,8 +254,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ID_text;
         private System.Windows.Forms.TextBox PW_text;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label PW_Check_Label;
+        private System.Windows.Forms.Label ID_Error;
         private System.Windows.Forms.Button CheckID_Btn;
         private System.Windows.Forms.Button SingUp_Btn;
         private System.Windows.Forms.Label label7;

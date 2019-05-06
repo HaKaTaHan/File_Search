@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.Account_Panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,25 +37,25 @@
             this.PW_Text = new System.Windows.Forms.TextBox();
             this.SignIn_Btn = new System.Windows.Forms.Button();
             this.ID_Text = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
+            this.Account_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // Account_Panel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.SingUp_Btn);
-            this.panel2.Controls.Add(this.PW_Text);
-            this.panel2.Controls.Add(this.SignIn_Btn);
-            this.panel2.Controls.Add(this.ID_Text);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(924, 601);
-            this.panel2.TabIndex = 5;
+            this.Account_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.Account_Panel.Controls.Add(this.label6);
+            this.Account_Panel.Controls.Add(this.label5);
+            this.Account_Panel.Controls.Add(this.label4);
+            this.Account_Panel.Controls.Add(this.button7);
+            this.Account_Panel.Controls.Add(this.SingUp_Btn);
+            this.Account_Panel.Controls.Add(this.PW_Text);
+            this.Account_Panel.Controls.Add(this.SignIn_Btn);
+            this.Account_Panel.Controls.Add(this.ID_Text);
+            this.Account_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Account_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Account_Panel.Name = "Account_Panel";
+            this.Account_Panel.Size = new System.Drawing.Size(924, 601);
+            this.Account_Panel.TabIndex = 5;
             // 
             // label6
             // 
@@ -160,19 +160,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 601);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.Account_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Account";
             this.Text = "Account";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Account_Panel.ResumeLayout(false);
+            this.Account_Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Account_Panel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
