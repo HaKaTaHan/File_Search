@@ -30,10 +30,10 @@
         {
             this.Panel_Btns = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.Display_Area = new System.Windows.Forms.Panel();
             this.Setting_Btn = new System.Windows.Forms.Button();
             this.Account_Btn = new System.Windows.Forms.Button();
             this.Search_Btn = new System.Windows.Forms.Button();
+            this.Display_Area = new System.Windows.Forms.Panel();
             this.Panel_Btns.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,15 +64,6 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // Display_Area
-            // 
-            this.Display_Area.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Display_Area.Location = new System.Drawing.Point(140, 0);
-            this.Display_Area.Name = "Display_Area";
-            this.Display_Area.Size = new System.Drawing.Size(924, 601);
-            this.Display_Area.TabIndex = 3;
-            this.Display_Area.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Area_Paint);
-            // 
             // Setting_Btn
             // 
             this.Setting_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
@@ -96,6 +87,7 @@
             this.Account_Btn.FlatAppearance.BorderSize = 0;
             this.Account_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Account_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.Account_Btn.Image = global::Project_FileContentExplorer.Properties.Resources.Image_Account;
             this.Account_Btn.Location = new System.Drawing.Point(0, 120);
             this.Account_Btn.Margin = new System.Windows.Forms.Padding(0);
             this.Account_Btn.Name = "Account_Btn";
@@ -111,6 +103,7 @@
             this.Search_Btn.FlatAppearance.BorderSize = 0;
             this.Search_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Search_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(50)))), ((int)(((byte)(170)))));
+            this.Search_Btn.Image = global::Project_FileContentExplorer.Properties.Resources.Image_Search;
             this.Search_Btn.Location = new System.Drawing.Point(0, 0);
             this.Search_Btn.Margin = new System.Windows.Forms.Padding(0);
             this.Search_Btn.Name = "Search_Btn";
@@ -118,6 +111,15 @@
             this.Search_Btn.TabIndex = 0;
             this.Search_Btn.UseVisualStyleBackColor = false;
             this.Search_Btn.Click += new System.EventHandler(this.Search_Btn_Click);
+            // 
+            // Display_Area
+            // 
+            this.Display_Area.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Display_Area.Location = new System.Drawing.Point(140, 0);
+            this.Display_Area.Name = "Display_Area";
+            this.Display_Area.Size = new System.Drawing.Size(924, 601);
+            this.Display_Area.TabIndex = 3;
+            this.Display_Area.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Area_Paint);
             // 
             // Home
             // 
