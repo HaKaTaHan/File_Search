@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace Project_FileContentExplorer
 {
-
-    public partial class Setting : Form
+    public partial class Alarm : Form
     {
-        public static string ext;
-        //ext=CheckBox.
-        public Setting()
+        public Alarm(string mesg)
         {
             InitializeComponent();
+
+            //적절한 폰트로 수정
+            label3.Font = new Font("Arial", 8, FontStyle.Bold);
+
+            //검색한 갯수 출력
+            label3.Text = mesg;
         }
     }
 }
