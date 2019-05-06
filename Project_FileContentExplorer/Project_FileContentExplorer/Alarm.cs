@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace Project_FileContentExplorer
 {
-    public partial class Signup : Form
+    public partial class Alarm : Form
     {
-        public Signup()
+        public Alarm(string mesg)
         {
             InitializeComponent();
+
+            //적절한 폰트로 수정
+            label3.Font = new Font("Arial", 8, FontStyle.Bold);
+
+            //검색한 갯수 출력
+            label3.Text = mesg;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
