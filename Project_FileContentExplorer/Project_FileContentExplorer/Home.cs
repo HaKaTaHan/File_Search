@@ -105,5 +105,15 @@ namespace Project_FileContentExplorer
         {
             Properties.Settings.Default.Save();
         }
+
+        private void Display_Area_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
