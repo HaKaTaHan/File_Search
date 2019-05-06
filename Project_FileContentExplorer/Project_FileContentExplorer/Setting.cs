@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_FileContentExplorer
 {
+
     public partial class Setting : Form
     {
+        public static string ext;
+        //ext=CheckBox.
         public Setting()
         {
             InitializeComponent();
