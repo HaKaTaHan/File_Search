@@ -13,15 +13,15 @@ namespace Project_FileContentExplorer
         public StringBuilder PostParam = new StringBuilder();
         public byte[] Data;
         HttpWebRequest Request;
-        string IP = "";//your ServerIP
+        string IP = "http://ec2-52-79-229-92.ap-northeast-2.compute.amazonaws.com/Project/";//your ServerIP
         string PHP;
 
         public Http(string PHP)
         {
             this.PHP = PHP;
         }
-        //test용 차후에 Json 반환해야할듯
-        public string Client_To_Server()
+        
+        public string Client_To_Server()//단순 문자열 반환
         {
             
             Request = (HttpWebRequest)WebRequest.Create(IP+PHP);

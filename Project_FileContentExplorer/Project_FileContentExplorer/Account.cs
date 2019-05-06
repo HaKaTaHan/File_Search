@@ -12,6 +12,7 @@ namespace Project_FileContentExplorer
 {
     public partial class Account : Form
     {
+        Signup F_Signup;
         public Account()
         {
             InitializeComponent();
@@ -19,14 +20,33 @@ namespace Project_FileContentExplorer
 
         private void SingUp_Btn_Click(object sender, EventArgs e)
         {
-            
-            
+            Account_Panel.Controls.Clear();
+            F_Signup = new Signup();
+            F_Signup.TopLevel = false;
+            F_Signup.Dock = System.Windows.Forms.DockStyle.Fill;
+            Account_Panel.Controls.Add(F_Signup);
+            F_Signup.Show();
+
         }
 
         private void SignIn_Btn_Click(object sender, EventArgs e)
         {
             try
             {
+                //아이디 입력 안 했을 때
+                if (ID_Text.Text.Length == 0)
+                {
+                    MessageBox.Show("아이디를 입력해주세요.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                //비밀번호 입력 안 했을 때
+                if (PW_Text.Text.Length == 0)
+                {
+                    MessageBox.Show("비밀번호를 입력해주세요.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 Http http = new Http("Login.php");
 
                 http.PostParam.Append("ID="+ID_Text.Text);
