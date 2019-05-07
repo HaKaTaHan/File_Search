@@ -12,6 +12,7 @@ namespace Project_FileContentExplorer
 {
     public partial class Account : Form
     {
+        Signup F_Signup;
         public Account()
         {
             InitializeComponent();
@@ -19,8 +20,13 @@ namespace Project_FileContentExplorer
 
         private void SingUp_Btn_Click(object sender, EventArgs e)
         {
-            
-            
+            panel2.Controls.Clear();
+            F_Signup = new Signup();
+            F_Signup.TopLevel = false;
+            F_Signup.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel2.Controls.Add(F_Signup);
+            F_Signup.Show();
+
         }
 
         private void SignIn_Btn_Click(object sender, EventArgs e)
