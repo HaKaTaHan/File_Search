@@ -20,11 +20,11 @@ namespace Project_FileContentExplorer
 
         private void SingUp_Btn_Click(object sender, EventArgs e)
         {
-            Account_Panel.Controls.Clear();
+            panel2.Controls.Clear();
             F_Signup = new Signup();
             F_Signup.TopLevel = false;
             F_Signup.Dock = System.Windows.Forms.DockStyle.Fill;
-            Account_Panel.Controls.Add(F_Signup);
+            panel2.Controls.Add(F_Signup);
             F_Signup.Show();
 
         }
@@ -68,6 +68,11 @@ namespace Project_FileContentExplorer
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

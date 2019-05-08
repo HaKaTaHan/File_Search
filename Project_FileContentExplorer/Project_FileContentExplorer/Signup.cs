@@ -20,6 +20,11 @@ namespace Project_FileContentExplorer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void CheckID_Btn_Click(object sender, EventArgs e)
+        {
             //아이디가 6자 미만일 경우
             if (ID_text.Text.Length < 6)
             {
@@ -50,11 +55,6 @@ namespace Project_FileContentExplorer
                 ID_Error.Visible = true;
                 ID_text.ReadOnly = true;
             }
-        }
-
-        private void CheckID_Btn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ID_text_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,11 +91,11 @@ namespace Project_FileContentExplorer
                 MessageBox.Show("비밀번호는 8자 이상 입력하셔야합니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PW_text.Focus();
             }
+
         }
 
         private void Confirm_text_TextChanged(object sender, EventArgs e)
         {
-            //비밀번호와 비밀번호 확인이 일치한다.
             if (PW_text.Text.Equals(Confirm_text.Text))
             {
 
