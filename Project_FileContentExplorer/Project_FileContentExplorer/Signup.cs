@@ -112,5 +112,10 @@ namespace Project_FileContentExplorer
                 PW_Check_Label.Visible = true;
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
