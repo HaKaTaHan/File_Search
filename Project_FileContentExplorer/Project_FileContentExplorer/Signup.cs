@@ -59,7 +59,7 @@ namespace Project_FileContentExplorer
 
         private void ID_text_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar) || Char.IsLetter(e.KeyChar)) && e.KeyChar != 8)
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsLower(e.KeyChar)) && e.KeyChar != 8)
             {
                 e.Handled = true;
             }
@@ -90,8 +90,10 @@ namespace Project_FileContentExplorer
             {
                 MessageBox.Show("비밀번호는 8자 이상 입력하셔야합니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PW_text.Focus();
+                return;
             }
 
+            //이메일까지 해서 날려야함
         }
 
         private void Confirm_text_TextChanged(object sender, EventArgs e)
