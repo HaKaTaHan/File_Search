@@ -128,7 +128,7 @@
             this.PW_Text.Name = "PW_Text";
             this.PW_Text.PasswordChar = '*';
             this.PW_Text.Size = new System.Drawing.Size(200, 24);
-            this.PW_Text.TabIndex = 15;
+            this.PW_Text.TabIndex = 14;
             // 
             // SignIn_Btn
             // 
@@ -140,7 +140,7 @@
             this.SignIn_Btn.Location = new System.Drawing.Point(141, 354);
             this.SignIn_Btn.Name = "SignIn_Btn";
             this.SignIn_Btn.Size = new System.Drawing.Size(85, 25);
-            this.SignIn_Btn.TabIndex = 14;
+            this.SignIn_Btn.TabIndex = 15;
             this.SignIn_Btn.Text = "SIGN IN";
             this.SignIn_Btn.UseVisualStyleBackColor = false;
             this.SignIn_Btn.Click += new System.EventHandler(this.SignIn_Btn_Click);
