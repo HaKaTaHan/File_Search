@@ -85,6 +85,7 @@
             this.ID_text.ForeColor = System.Drawing.Color.White;
             this.ID_text.Location = new System.Drawing.Point(77, 194);
             this.ID_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ID_text.MaxLength = 10;
             this.ID_text.Name = "ID_text";
             this.ID_text.Size = new System.Drawing.Size(285, 29);
             this.ID_text.TabIndex = 25;
@@ -98,6 +99,7 @@
             this.PW_text.ForeColor = System.Drawing.Color.White;
             this.PW_text.Location = new System.Drawing.Point(77, 319);
             this.PW_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PW_text.MaxLength = 12;
             this.PW_text.Name = "PW_text";
             this.PW_text.PasswordChar = '*';
             this.PW_text.Size = new System.Drawing.Size(285, 29);
@@ -200,6 +202,7 @@
             this.Confirm_text.ForeColor = System.Drawing.Color.White;
             this.Confirm_text.Location = new System.Drawing.Point(77, 445);
             this.Confirm_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Confirm_text.MaxLength = 12;
             this.Confirm_text.Name = "Confirm_text";
             this.Confirm_text.PasswordChar = '*';
             this.Confirm_text.Size = new System.Drawing.Size(285, 29);
