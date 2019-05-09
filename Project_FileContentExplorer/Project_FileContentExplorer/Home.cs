@@ -253,7 +253,7 @@ namespace Project_FileContentExplorer
             Setting_Btn.BackColor = Color.FromArgb(35, 45, 65);
 
             //Account폼을 Display_Area 패널에 띄운다.
-            F_Account = new Account();
+            F_Account = new Account(Display_Area);
             F_Account.TopLevel = false;
             F_Account.Dock = System.Windows.Forms.DockStyle.Fill;
             Display_Area.Controls.Add(F_Account);
