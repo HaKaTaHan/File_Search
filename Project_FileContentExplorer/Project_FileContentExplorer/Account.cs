@@ -13,20 +13,30 @@ namespace Project_FileContentExplorer
     public partial class Account : Form
     {
         Signup F_Signup;
-        public Account()
+        Panel Home_Panel;
+        public Account(Panel panel)//Home에서 넘어올 때
         {
             InitializeComponent();
+            Home_Panel = panel;
+        }
+
+        public Account(Panel panel,String ID)//Sign_Up에서 넘어올 때
+        {
+            InitializeComponent();
+            ID_Text.Text = ID;
+            Home_Panel = panel;
         }
 
         private void SingUp_Btn_Click(object sender, EventArgs e)
         {
-            panel2.Controls.Clear();
-            F_Signup = new Signup();
+            //panel2.Controls.Clear();
+            F_Signup = new Signup(Home_Panel);
             F_Signup.TopLevel = false;
             F_Signup.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel2.Controls.Add(F_Signup);
+            Home_Panel.Controls.Add(F_Signup);
+            
             F_Signup.Show();
-
+            Close();
         }
 
         private void SignIn_Btn_Click(object sender, EventArgs e)
