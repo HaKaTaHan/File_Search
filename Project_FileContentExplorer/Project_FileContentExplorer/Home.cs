@@ -200,6 +200,7 @@ namespace Project_FileContentExplorer
 
         private void Search_Btn_Click(object sender, EventArgs e)
         {
+            
             //열려있는 창 닫기
             if (F_Search != null)
                 F_Search.Close();
@@ -207,6 +208,11 @@ namespace Project_FileContentExplorer
                 F_Account.Close();
             if (F_Setting != null)
                 F_Setting.Close();
+            //Sign_Up 닫기
+            if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
             
             //Search_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(98, 50, 170);
@@ -232,6 +238,12 @@ namespace Project_FileContentExplorer
             if (F_Setting != null)
                 F_Setting.Close();
 
+            //Sign_Up 닫기
+            if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+
             //Account_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(35, 45, 65);
             Account_Btn.BackColor = Color.FromArgb(98, 50, 170);
@@ -255,6 +267,12 @@ namespace Project_FileContentExplorer
                 F_Account.Close();
             if (F_Setting != null)
                 F_Setting.Close();
+
+            //Sign_Up 닫기
+            if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
 
             //Setting_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(35, 45, 65);
