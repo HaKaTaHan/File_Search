@@ -23,9 +23,19 @@ namespace Project_FileContentExplorer
             label3.Text = mesg;
         }
 
+        public void setLabel1(string text)
+        {   //처음 동기화 또는 검색 결과 labels text 를 바꿈
+            label1.Text = text;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
