@@ -116,7 +116,7 @@ namespace Project_FileContentExplorer
             Http http = new Http("SignUp.php");
             http.PostParam.Append("ID=" + ID_text.Text);
             http.PostParam.Append("&PW=" + PW_text.Text);
-            http.PostParam.Append("&Email=" + Email_text + "@" + Email_Combo.SelectedItem.ToString());
+            http.PostParam.Append("&Email=" + Email_text.Text + "@" + Email_Combo.SelectedItem.ToString());
             http.Data = UTF8Encoding.UTF8.GetBytes(http.PostParam.ToString());
 
             string result = http.Client_To_Server();
