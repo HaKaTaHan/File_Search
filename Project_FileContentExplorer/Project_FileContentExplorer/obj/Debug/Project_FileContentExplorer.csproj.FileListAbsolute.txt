@@ -85,3 +85,4 @@ C:\Users\alask\Documents\GitHub\File_Search\Project_FileContentExplorer\Project_
 C:\Users\alask\Documents\GitHub\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.csproj.CopyComplete
 C:\Users\alask\Documents\GitHub\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.exe
 C:\Users\alask\Documents\GitHub\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.pdb
+C:\Users\alask\Documents\GitHub\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.Signin.resources
