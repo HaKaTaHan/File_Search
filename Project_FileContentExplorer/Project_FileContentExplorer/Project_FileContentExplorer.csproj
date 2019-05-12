@@ -115,6 +115,12 @@
     <Compile Include="Alarm.Designer.cs">
       <DependentUpon>Alarm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Findaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Findaccount.Designer.cs">
+      <DependentUpon>Findaccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FullAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alarm.resx">
       <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Findaccount.resx">
+      <DependentUpon>Findaccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FullAccount.resx">
       <DependentUpon>FullAccount.cs</DependentUpon>
