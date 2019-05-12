@@ -22,14 +22,18 @@ namespace Project_FileContentExplorer
         // search 누르면 개수 
         int fileCount = 0;
 
+        public static string currentDirectory = Directory.GetCurrentDirectory();
+        //public static FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        //public static FileStream pdfFileStream = File.Open(@"D:\pdfList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        //public static FileStream hwpFileStream = File.Open(@"D:\hwpList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        //public static FileStream docFileStream = File.Open(@"D:\docList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        //public static FileStream docxFileStream = File.Open(@"D:\docxList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream txtFileStream = File.Open(currentDirectory + "\\txtList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream pdfFileStream = File.Open(currentDirectory + "\\pdfList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream hwpFileStream = File.Open(currentDirectory + "\\hwpList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream docFileStream = File.Open(currentDirectory + "\\docList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream docxFileStream = File.Open(currentDirectory + "\\docxList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 
-
-        public static FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-        public static FileStream pdfFileStream = File.Open(@"D:\pdfList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-        public static FileStream hwpFileStream = File.Open(@"D:\hwpList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-        public static FileStream docFileStream = File.Open(@"D:\docList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-        public static FileStream docxFileStream = File.Open(@"D:\docxList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-            
         public StreamWriter textTxt = new StreamWriter(txtFileStream);
         public StreamWriter textPdf = new StreamWriter(pdfFileStream);       
         public StreamWriter textHwp = new StreamWriter(hwpFileStream);

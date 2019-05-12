@@ -13,7 +13,7 @@ using System.Threading;
 using System.IO;
 using org.apache.pdfbox.pdmodel;
 using org.apache.pdfbox.util;
-
+using Aspose.Words;
 
 namespace Project_FileContentExplorer
 {
@@ -24,6 +24,7 @@ namespace Project_FileContentExplorer
         // 일단 검색어 상관 없이, 드라이브 속 pdf, hwp, doc, docx, txt 총 개수
         // 프로젝트 -> 프로젝트 속성 -> 응용 프로그램 -> 출력 형식 -> 콘솔
         // search 누르면 개수 
+        string currentDirectory = Directory.GetCurrentDirectory();
         string keyword;
         string systemFolder = Environment.GetFolderPath(System.Environment.SpecialFolder.Windows);//윈도우 폴더
         int txtCount=0;
@@ -64,7 +65,8 @@ namespace Project_FileContentExplorer
 
         void txtWork()
         {
-            FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            //FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream txtFileStream = File.Open(currentDirectory + "\\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             StreamReader txtReader = new StreamReader(txtFileStream);            
             while (true)
             {               
@@ -79,7 +81,7 @@ namespace Project_FileContentExplorer
                 //Console.WriteLine(path);
             }
             Console.WriteLine("txt 검색 끝");
-            Console.WriteLine("찾은 txt 개수 : " + txtCount);
+            Console.WriteLine("keyword가 들어있는 txt 개수 : " + txtCount);
 
             txtReader.Dispose();
             txtFileStream.Close();
@@ -87,7 +89,7 @@ namespace Project_FileContentExplorer
 
         void pdfWork()
         {
-            FileStream pdfFileStream = File.Open(@"D:\pdfList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream pdfFileStream = File.Open(currentDirectory + "\\pdfList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             StreamReader pdfReader = new StreamReader(pdfFileStream);
             while (true)
             {
@@ -100,7 +102,7 @@ namespace Project_FileContentExplorer
                     pdfExtract(keyword, path);
             }
             Console.WriteLine("pdf 검색 끝");
-
+            Console.WriteLine("keyword가 들어있는 pdf 개수 " + pdfCount);
             
             pdfReader.Dispose();
             pdfFileStream.Close();
@@ -108,7 +110,7 @@ namespace Project_FileContentExplorer
 
         void hwpWork()
         {
-            FileStream hwpFileStream = File.Open(@"D:\hwpList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream hwpFileStream = File.Open(currentDirectory + "\\hwpList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             StreamReader hwpReader = new StreamReader(hwpFileStream);
             while (true)
             {
@@ -123,13 +125,13 @@ namespace Project_FileContentExplorer
                 //Console.WriteLine(path);
             }
             Console.WriteLine("hwp 검색 끝");
-            Console.WriteLine("찾은 hwp 개수 " + hwpCount);
+            Console.WriteLine("keyword가 들어있는 hwp 개수 " + hwpCount);
             hwpReader.Dispose();
             hwpFileStream.Close();
         }
         void docWork()
         {
-            FileStream docFileStream = File.Open(@"D:\docList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream docFileStream = File.Open(currentDirectory + "\\docList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             StreamReader docReader = new StreamReader(docFileStream);
             while (true)
             {
@@ -138,15 +140,19 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                //Console.WriteLine(path);
+                else
+                    docExtract(keyword, path);
             }
             Console.WriteLine("doc 검색 끝");
+            Console.WriteLine("keyword가 들어있는 doc 개수 " + docCount);
+
             docReader.Dispose();
             docFileStream.Close();
         }
+
         void docxWork()
         {
-            FileStream docxFileStream = File.Open(@"D:\docxList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream docxFileStream = File.Open(currentDirectory + "\\docxList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             StreamReader docxReader = new StreamReader(docxFileStream);
             while (true)
             {
@@ -155,9 +161,12 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
+                else
+                    docxExtract(keyword, path);
                 //Console.WriteLine(path);
             }
             Console.WriteLine("docx 검색 끝");
+            Console.WriteLine("keyword가 들어있는 docx 개수 " + docxCount);
             docxReader.Dispose();
             docxFileStream.Close();
         }
@@ -182,29 +191,30 @@ namespace Project_FileContentExplorer
 
         public void pdfExtract(string keyWord, string path)
         {
+            PDDocument doc = null;
             try
             {
-                Console.WriteLine("pdf 찾는중....");
-                PDDocument doc = null;
-
+                //Console.WriteLine(path + " : pdf 찾는중....");
                 doc = PDDocument.load(path);
+                //doc = PDDocument.load(@"D:\Download\Chrome download\5 (1).pdf");
                 PDFTextStripper stripper = new PDFTextStripper();
-                MessageBox.Show(stripper.getText(doc));
+                //MessageBox.Show(stripper.getText(doc));
                 bool isExist = stripper.getText(doc).Contains(keyWord);
-
                 if (isExist)
                     pdfCount++;
+                doc.close();
             }
             catch
             {
                 return;
             }
+          
         }
         public void hwpExtract(string keyWord, string path)
         {
             try
             {               
-                Console.WriteLine("hwp 찾는중....");
+                //Console.WriteLine("hwp 찾는중....");
                 StringBuilder sb = new StringBuilder();
                 HWPMeta meta = new HWPMeta();
                 H2TParser parser = new H2TParser();
@@ -223,6 +233,40 @@ namespace Project_FileContentExplorer
             }
         }
 
+        public void docExtract(string keyWord, string path)
+        {
+            try
+            {
+                Document doc = new Document(path);
+                DocumentBuilder builder = new DocumentBuilder(doc);
+
+                bool isExist = doc.GetText().Contains(keyword);
+                if (isExist)
+                    docCount++;
+                    
+            }
+            catch
+            {
+                return;
+            }          
+        }
+
+        public void docxExtract(string keyWord, string path)
+        {
+            try
+            {
+                Document doc = new Document(path);
+                DocumentBuilder builder = new DocumentBuilder(doc);
+                //MessageBox.Show(doc.GetText());
+                bool isExist = doc.GetText().Contains(keyword);
+                if (isExist)
+                    docxCount++;
+            }
+            catch
+            {
+                return;
+            }
+        }
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
