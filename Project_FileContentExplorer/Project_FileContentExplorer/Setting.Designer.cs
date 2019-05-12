@@ -81,6 +81,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(924, 601);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Scope_Btn
             // 
@@ -113,18 +114,18 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(435, 261);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(16, 16);
+            this.label11.Size = new System.Drawing.Size(17, 16);
             this.label11.TabIndex = 30;
             this.label11.Text = "~";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(718, 266);
             this.label9.Name = "label9";
@@ -135,7 +136,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(578, 266);
             this.label10.Name = "label10";
@@ -147,7 +148,7 @@
             // 
             this.DayTo_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.DayTo_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DayTo_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DayTo_Combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DayTo_Combo.ForeColor = System.Drawing.Color.White;
             this.DayTo_Combo.FormattingEnabled = true;
             this.DayTo_Combo.Items.AddRange(new object[] {
@@ -192,7 +193,7 @@
             // 
             this.YearTo_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.YearTo_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.YearTo_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearTo_Combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YearTo_Combo.ForeColor = System.Drawing.Color.White;
             this.YearTo_Combo.FormattingEnabled = true;
             this.YearTo_Combo.Items.AddRange(new object[] {
@@ -236,7 +237,7 @@
             // 
             this.MonthTo_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.MonthTo_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MonthTo_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthTo_Combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonthTo_Combo.ForeColor = System.Drawing.Color.White;
             this.MonthTo_Combo.FormattingEnabled = true;
             this.MonthTo_Combo.Items.AddRange(new object[] {
@@ -261,7 +262,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(289, 266);
             this.label8.Name = "label8";
@@ -272,7 +273,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(149, 266);
             this.label7.Name = "label7";
@@ -284,7 +285,7 @@
             // 
             this.DayFrom_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.DayFrom_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DayFrom_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DayFrom_Combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DayFrom_Combo.ForeColor = System.Drawing.Color.White;
             this.DayFrom_Combo.FormattingEnabled = true;
             this.DayFrom_Combo.Items.AddRange(new object[] {
@@ -329,7 +330,7 @@
             // 
             this.YearFrom_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.YearFrom_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.YearFrom_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearFrom_Combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YearFrom_Combo.ForeColor = System.Drawing.Color.White;
             this.YearFrom_Combo.FormattingEnabled = true;
             this.YearFrom_Combo.Items.AddRange(new object[] {
@@ -373,7 +374,7 @@
             // 
             this.MonthFrom_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.MonthFrom_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MonthFrom_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthFrom_Combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonthFrom_Combo.ForeColor = System.Drawing.Color.White;
             this.MonthFrom_Combo.FormattingEnabled = true;
             this.MonthFrom_Combo.Items.AddRange(new object[] {
@@ -398,33 +399,33 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(22, 221);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 24);
+            this.label6.Size = new System.Drawing.Size(154, 25);
             this.label6.TabIndex = 18;
             this.label6.Text = "SEARCH DATE";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(22, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 24);
+            this.label5.Size = new System.Drawing.Size(171, 25);
             this.label5.TabIndex = 16;
             this.label5.Text = "SEARCH SCOPE";
             // 
             // DOC_Text
             // 
             this.DOC_Text.AutoSize = true;
-            this.DOC_Text.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOC_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DOC_Text.ForeColor = System.Drawing.Color.White;
             this.DOC_Text.Location = new System.Drawing.Point(386, 62);
             this.DOC_Text.Name = "DOC_Text";
-            this.DOC_Text.Size = new System.Drawing.Size(126, 23);
+            this.DOC_Text.Size = new System.Drawing.Size(125, 24);
             this.DOC_Text.TabIndex = 15;
             this.DOC_Text.Text = ".DOC  .DOCX";
             this.DOC_Text.UseVisualStyleBackColor = true;
@@ -433,11 +434,11 @@
             // HWP_Check
             // 
             this.HWP_Check.AutoSize = true;
-            this.HWP_Check.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HWP_Check.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HWP_Check.ForeColor = System.Drawing.Color.White;
             this.HWP_Check.Location = new System.Drawing.Point(266, 62);
             this.HWP_Check.Name = "HWP_Check";
-            this.HWP_Check.Size = new System.Drawing.Size(71, 23);
+            this.HWP_Check.Size = new System.Drawing.Size(69, 24);
             this.HWP_Check.TabIndex = 14;
             this.HWP_Check.Text = ".HWP";
             this.HWP_Check.UseVisualStyleBackColor = true;
@@ -446,11 +447,11 @@
             // TXT_Check
             // 
             this.TXT_Check.AutoSize = true;
-            this.TXT_Check.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Check.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_Check.ForeColor = System.Drawing.Color.White;
             this.TXT_Check.Location = new System.Drawing.Point(146, 62);
             this.TXT_Check.Name = "TXT_Check";
-            this.TXT_Check.Size = new System.Drawing.Size(59, 23);
+            this.TXT_Check.Size = new System.Drawing.Size(61, 24);
             this.TXT_Check.TabIndex = 13;
             this.TXT_Check.Text = ".TXT";
             this.TXT_Check.UseVisualStyleBackColor = true;
@@ -459,11 +460,11 @@
             // PDF__Check
             // 
             this.PDF__Check.AutoSize = true;
-            this.PDF__Check.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PDF__Check.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PDF__Check.ForeColor = System.Drawing.Color.White;
             this.PDF__Check.Location = new System.Drawing.Point(26, 62);
             this.PDF__Check.Name = "PDF__Check";
-            this.PDF__Check.Size = new System.Drawing.Size(63, 23);
+            this.PDF__Check.Size = new System.Drawing.Size(64, 24);
             this.PDF__Check.TabIndex = 12;
             this.PDF__Check.Text = ".PDF";
             this.PDF__Check.UseVisualStyleBackColor = true;
@@ -472,11 +473,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(22, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 24);
+            this.label4.Size = new System.Drawing.Size(128, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "EXTENSION";
             // 

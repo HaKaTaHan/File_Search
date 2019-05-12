@@ -46,8 +46,7 @@ namespace Project_FileContentExplorer
 
         public Home()
         {
-            InitializeComponent();
-
+            InitializeComponent();     
             //백그라운드로 전체 드라이브 돌면서 파일 목록 모으기
             worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;

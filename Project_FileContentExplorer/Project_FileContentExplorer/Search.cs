@@ -44,22 +44,46 @@ namespace Project_FileContentExplorer
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if(txt_Search.Text.Length != 0)
+            if (txt_Search.Text.Length != 0)
             {
                 txtCount = 0;
                 hwpCount = 0;
                 //p = 0;
                 keyword = txt_Search.Text;
-                Thread t1 = new Thread(new ThreadStart(txtWork));
-                Thread t2 = new Thread(new ThreadStart(pdfWork));
-                Thread t3 = new Thread(new ThreadStart(hwpWork));
-                Thread t4 = new Thread(new ThreadStart(docWork));
-                Thread t5 = new Thread(new ThreadStart(docxWork));
-                t1.Start();                
-                t2.Start();                
-                t3.Start();                
-                t4.Start();                
-                t5.Start();             
+
+                Thread t1;
+                Thread t2;
+                Thread t3;
+                Thread t4;
+                Thread t5;
+                
+                if (Properties.Settings.Default.txtList.Length != 0)
+                {
+                    t1 = new Thread(new ThreadStart(txtWork));
+                    t1.Start();
+                }
+                if (Properties.Settings.Default.pdfList.Length != 0)
+                {
+                    t2 = new Thread(new ThreadStart(pdfWork));
+                    t2.Start();
+                }
+                if (Properties.Settings.Default.hwpList.Length != 0)
+                {
+                    t3 = new Thread(new ThreadStart(hwpWork));
+                    t3.Start();
+                }
+
+                if (Properties.Settings.Default.docList.Length != 0)
+                {
+                    t4 = new Thread(new ThreadStart(docWork));
+                    t4.Start();
+                }
+
+                if (Properties.Settings.Default.docxList.Length != 0)
+                {
+                    t5 = new Thread(new ThreadStart(docxWork));
+                    t5.Start();
+                }                                                                                                                                          
             }
         }
 
@@ -73,11 +97,12 @@ namespace Project_FileContentExplorer
                 string path = txtReader.ReadLine();
                 if (path == "End")
                     break;
-                else if (path == null)                                   
+                else if (path == null)
                     continue;
-                else
+                else if (Properties.Settings.Default.Path_Scope.Length != 0)
                     txtExtract(keyword, path);
-
+                else if(path.Contains(Properties.Settings.Default.Path_Scope))
+                    txtExtract(keyword, path);
                 //Console.WriteLine(path);
             }
             Console.WriteLine("txt 검색 끝");
@@ -98,7 +123,9 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                else
+                else if(Properties.Settings.Default.Path_Scope.Length != 0)
+                    pdfExtract(keyword, path);
+                else if(path.Contains(Properties.Settings.Default.Path_Scope))
                     pdfExtract(keyword, path);
             }
             Console.WriteLine("pdf 검색 끝");
