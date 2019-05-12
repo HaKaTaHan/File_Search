@@ -21,12 +21,20 @@ namespace Project_FileContentExplorer
         // 프로젝트 -> 프로젝트 속성 -> 응용 프로그램 -> 출력 형식 -> 콘솔
         // search 누르면 개수 
         int fileCount = 0;
-        //
-        StreamWriter textTxt = new StreamWriter(@"D:\txtList.txt", append: true);
-        StreamWriter textPdf = new StreamWriter(@"D:\pdfList.txt", append: true);
-        StreamWriter textHwp = new StreamWriter(@"D:\hwpList.txt", append: true);
-        StreamWriter textDoc = new StreamWriter(@"D:\docList.txt", append: true);
-        StreamWriter textDocx = new StreamWriter(@"D:\docxList.txt", append: true);
+
+
+
+        public static FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream pdfFileStream = File.Open(@"D:\pdfList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream hwpFileStream = File.Open(@"D:\hwpList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream docFileStream = File.Open(@"D:\docList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        public static FileStream docxFileStream = File.Open(@"D:\docxList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+            
+        public StreamWriter textTxt = new StreamWriter(txtFileStream);
+        public StreamWriter textPdf = new StreamWriter(pdfFileStream);       
+        public StreamWriter textHwp = new StreamWriter(hwpFileStream);
+        public StreamWriter textDoc = new StreamWriter(docFileStream);
+        public StreamWriter textDocx = new StreamWriter(docxFileStream);
 
         string systemFolder = Environment.GetFolderPath(System.Environment.SpecialFolder.Windows);//윈도우 폴더
 
@@ -57,11 +65,17 @@ namespace Project_FileContentExplorer
 
         void backgroundWork(object sender, DoWorkEventArgs e)
         {
-            foreach (string path in Environment.GetLogicalDrives())
-            {
-                sync(path);
-            }
-           
+            //foreach (string path in Environment.GetLogicalDrives())
+            //{
+            //    sync(path);
+            //}
+            sync(@"D:\");
+
+            textTxt.WriteLine("End");
+            textPdf.WriteLine("End");
+            textHwp.WriteLine("End");
+            textDoc.WriteLine("End");
+            textDocx.WriteLine("End");
             //텍스트 각자 다 분류함
             textTxt.Dispose();
             textPdf.Dispose();
@@ -74,6 +88,7 @@ namespace Project_FileContentExplorer
             //백그라운드 검색 완료시 알림창 띄움
             Alarm alrm = new Alarm(fileCount.ToString());
 
+            alrm.setLabel1("동기화 완료");
             //알림창 위치 조절
             System.Drawing.Rectangle ScreenRectangle = Screen.PrimaryScreen.WorkingArea;
             int xPos = ScreenRectangle.Width - alrm.Bounds.Width;
