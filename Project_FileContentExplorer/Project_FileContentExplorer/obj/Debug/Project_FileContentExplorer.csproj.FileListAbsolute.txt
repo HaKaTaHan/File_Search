@@ -208,8 +208,6 @@ D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentEx
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Project_FileContentExplorer.exe
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Project_FileContentExplorer.pdb
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Newtonsoft.Json.dll
-D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\NPOI.dll
-D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\rcc.h2tlib-1.0.1-net4.dll
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Newtonsoft.Json.xml
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.csprojResolveAssemblyReference.cache
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.Account.resources

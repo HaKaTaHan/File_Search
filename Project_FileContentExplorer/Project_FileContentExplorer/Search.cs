@@ -11,6 +11,8 @@ using NPOI;
 using rcc.h2tlib.parser;
 using System.Threading;
 using System.IO;
+using org.apache.pdfbox.pdmodel;
+using org.apache.pdfbox.util;
 
 
 namespace Project_FileContentExplorer
@@ -92,9 +94,10 @@ namespace Project_FileContentExplorer
                 string path = pdfReader.ReadLine();
                 if (path == "End")
                     break;
-                else if (path == null)                                    
-                    continue;               
-                //Console.WriteLine(path);
+                else if (path == null)
+                    continue;
+                else
+                    pdfExtract(keyword, path);
             }
             Console.WriteLine("pdf 검색 끝");
 
@@ -177,16 +180,30 @@ namespace Project_FileContentExplorer
             }            
         }
 
-        public void hwpExtract(string keyWord, string path)
+        public void pdfExtract(string keyWord, string path)
         {
             try
             {
-                //FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                //StreamReader textHwp = new StreamReader(fs);
-                //string all = textHwp.ReadToEnd();
-                //bool isExist = all.Contains(keyword);
-                //if (isExist)
-                //    p++;
+                Console.WriteLine("pdf 찾는중....");
+                PDDocument doc = null;
+
+                doc = PDDocument.load(path);
+                PDFTextStripper stripper = new PDFTextStripper();
+                MessageBox.Show(stripper.getText(doc));
+                bool isExist = stripper.getText(doc).Contains(keyWord);
+
+                if (isExist)
+                    pdfCount++;
+            }
+            catch
+            {
+                return;
+            }
+        }
+        public void hwpExtract(string keyWord, string path)
+        {
+            try
+            {               
                 Console.WriteLine("hwp 찾는중....");
                 StringBuilder sb = new StringBuilder();
                 HWPMeta meta = new HWPMeta();
@@ -205,6 +222,8 @@ namespace Project_FileContentExplorer
                 return;
             }
         }
+
+
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
 
