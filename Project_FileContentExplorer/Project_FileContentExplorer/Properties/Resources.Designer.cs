@@ -63,6 +63,26 @@ namespace Project_FileContentExplorer.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap _2703079_16 {
+            get {
+                object obj = ResourceManager.GetObject("2703079-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2738304_64 {
+            get {
+                object obj = ResourceManager.GetObject("2738304-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap KakaoTalk_20190509_181414085 {
             get {
                 object obj = ResourceManager.GetObject("KakaoTalk_20190509_181414085", resourceCulture);
