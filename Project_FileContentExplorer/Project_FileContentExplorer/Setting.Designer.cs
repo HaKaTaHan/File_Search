@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ChangeLocation_Btn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Scope_Btn = new System.Windows.Forms.Button();
+            this.Scope_Text = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.DayTo_Combo = new System.Windows.Forms.ComboBox();
+            this.YearTo_Combo = new System.Windows.Forms.ComboBox();
+            this.MonthTo_Combo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DayFrom_Combo = new System.Windows.Forms.ComboBox();
+            this.YearFrom_Combo = new System.Windows.Forms.ComboBox();
+            this.MonthFrom_Combo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DOC_Text = new System.Windows.Forms.CheckBox();
+            this.HWP_Check = new System.Windows.Forms.CheckBox();
+            this.TXT_Check = new System.Windows.Forms.CheckBox();
+            this.PDF__Check = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.fbd = new System.Windows.Forms.FolderBrowserDialog();
             this.panel2.SuspendLayout();
@@ -56,25 +56,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.panel2.Controls.Add(this.ChangeLocation_Btn);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.Scope_Btn);
+            this.panel2.Controls.Add(this.Scope_Text);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.comboBox4);
-            this.panel2.Controls.Add(this.comboBox5);
-            this.panel2.Controls.Add(this.comboBox6);
+            this.panel2.Controls.Add(this.DayTo_Combo);
+            this.panel2.Controls.Add(this.YearTo_Combo);
+            this.panel2.Controls.Add(this.MonthTo_Combo);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.DayFrom_Combo);
+            this.panel2.Controls.Add(this.YearFrom_Combo);
+            this.panel2.Controls.Add(this.MonthFrom_Combo);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.checkBox4);
-            this.panel2.Controls.Add(this.checkBox3);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.DOC_Text);
+            this.panel2.Controls.Add(this.HWP_Check);
+            this.panel2.Controls.Add(this.TXT_Check);
+            this.panel2.Controls.Add(this.PDF__Check);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -82,32 +82,33 @@
             this.panel2.Size = new System.Drawing.Size(924, 601);
             this.panel2.TabIndex = 6;
             // 
-            // ChangeLocation_Btn
+            // Scope_Btn
             // 
-            this.ChangeLocation_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(50)))), ((int)(((byte)(170)))));
-            this.ChangeLocation_Btn.FlatAppearance.BorderSize = 0;
-            this.ChangeLocation_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeLocation_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangeLocation_Btn.ForeColor = System.Drawing.Color.White;
-            this.ChangeLocation_Btn.Location = new System.Drawing.Point(546, 160);
-            this.ChangeLocation_Btn.Margin = new System.Windows.Forms.Padding(0);
-            this.ChangeLocation_Btn.Name = "ChangeLocation_Btn";
-            this.ChangeLocation_Btn.Size = new System.Drawing.Size(170, 25);
-            this.ChangeLocation_Btn.TabIndex = 17;
-            this.ChangeLocation_Btn.Text = "CHANGE LOCATION";
-            this.ChangeLocation_Btn.UseVisualStyleBackColor = false;
-            this.ChangeLocation_Btn.Click += new System.EventHandler(this.ChangeLocation_Btn_Click);
+            this.Scope_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(50)))), ((int)(((byte)(170)))));
+            this.Scope_Btn.FlatAppearance.BorderSize = 0;
+            this.Scope_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Scope_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Scope_Btn.ForeColor = System.Drawing.Color.White;
+            this.Scope_Btn.Location = new System.Drawing.Point(546, 160);
+            this.Scope_Btn.Margin = new System.Windows.Forms.Padding(0);
+            this.Scope_Btn.Name = "Scope_Btn";
+            this.Scope_Btn.Size = new System.Drawing.Size(170, 25);
+            this.Scope_Btn.TabIndex = 17;
+            this.Scope_Btn.Text = "CHANGE LOCATION";
+            this.Scope_Btn.UseVisualStyleBackColor = false;
+            this.Scope_Btn.Click += new System.EventHandler(this.ChangeLocation_Btn_Click);
             // 
-            // textBox1
+            // Scope_Text
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.textBox1.Location = new System.Drawing.Point(26, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(500, 24);
-            this.textBox1.TabIndex = 16;
+            this.Scope_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.Scope_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Scope_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.Scope_Text.Location = new System.Drawing.Point(26, 160);
+            this.Scope_Text.Name = "Scope_Text";
+            this.Scope_Text.ReadOnly = true;
+            this.Scope_Text.Size = new System.Drawing.Size(500, 24);
+            this.Scope_Text.TabIndex = 16;
+            this.Scope_Text.TextChanged += new System.EventHandler(this.Scope_Text_TextChanged);
             // 
             // label11
             // 
@@ -142,14 +143,14 @@
             this.label10.TabIndex = 28;
             this.label10.Text = ",";
             // 
-            // comboBox4
+            // DayTo_Combo
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.ForeColor = System.Drawing.Color.White;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.DayTo_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.DayTo_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DayTo_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DayTo_Combo.ForeColor = System.Drawing.Color.White;
+            this.DayTo_Combo.FormattingEnabled = true;
+            this.DayTo_Combo.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -181,19 +182,20 @@
             "29",
             "30",
             "31"});
-            this.comboBox4.Location = new System.Drawing.Point(595, 258);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 22;
+            this.DayTo_Combo.Location = new System.Drawing.Point(595, 258);
+            this.DayTo_Combo.Name = "DayTo_Combo";
+            this.DayTo_Combo.Size = new System.Drawing.Size(121, 24);
+            this.DayTo_Combo.TabIndex = 22;
+            this.DayTo_Combo.SelectedIndexChanged += new System.EventHandler(this.DayTo_Combo_SelectedIndexChanged);
             // 
-            // comboBox5
+            // YearTo_Combo
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.ForeColor = System.Drawing.Color.White;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.YearTo_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.YearTo_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.YearTo_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearTo_Combo.ForeColor = System.Drawing.Color.White;
+            this.YearTo_Combo.FormattingEnabled = true;
+            this.YearTo_Combo.Items.AddRange(new object[] {
             "2019",
             "2018",
             "2017",
@@ -224,19 +226,20 @@
             "1992",
             "1991",
             "1990"});
-            this.comboBox5.Location = new System.Drawing.Point(735, 258);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 24);
-            this.comboBox5.TabIndex = 23;
+            this.YearTo_Combo.Location = new System.Drawing.Point(735, 258);
+            this.YearTo_Combo.Name = "YearTo_Combo";
+            this.YearTo_Combo.Size = new System.Drawing.Size(121, 24);
+            this.YearTo_Combo.TabIndex = 23;
+            this.YearTo_Combo.SelectedIndexChanged += new System.EventHandler(this.YearTo_Combo_SelectedIndexChanged);
             // 
-            // comboBox6
+            // MonthTo_Combo
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox6.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.ForeColor = System.Drawing.Color.White;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.MonthTo_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.MonthTo_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MonthTo_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthTo_Combo.ForeColor = System.Drawing.Color.White;
+            this.MonthTo_Combo.FormattingEnabled = true;
+            this.MonthTo_Combo.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -249,10 +252,11 @@
             "October",
             "November",
             "December"});
-            this.comboBox6.Location = new System.Drawing.Point(455, 258);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 24);
-            this.comboBox6.TabIndex = 21;
+            this.MonthTo_Combo.Location = new System.Drawing.Point(455, 258);
+            this.MonthTo_Combo.Name = "MonthTo_Combo";
+            this.MonthTo_Combo.Size = new System.Drawing.Size(121, 24);
+            this.MonthTo_Combo.TabIndex = 21;
+            this.MonthTo_Combo.SelectedIndexChanged += new System.EventHandler(this.MonthTo_Combo_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -276,14 +280,14 @@
             this.label7.TabIndex = 23;
             this.label7.Text = ",";
             // 
-            // comboBox3
+            // DayFrom_Combo
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.DayFrom_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.DayFrom_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DayFrom_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DayFrom_Combo.ForeColor = System.Drawing.Color.White;
+            this.DayFrom_Combo.FormattingEnabled = true;
+            this.DayFrom_Combo.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -315,19 +319,20 @@
             "29",
             "30",
             "31"});
-            this.comboBox3.Location = new System.Drawing.Point(166, 258);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 19;
+            this.DayFrom_Combo.Location = new System.Drawing.Point(166, 258);
+            this.DayFrom_Combo.Name = "DayFrom_Combo";
+            this.DayFrom_Combo.Size = new System.Drawing.Size(121, 24);
+            this.DayFrom_Combo.TabIndex = 19;
+            this.DayFrom_Combo.SelectedIndexChanged += new System.EventHandler(this.DayFrom_Combo_SelectedIndexChanged);
             // 
-            // comboBox2
+            // YearFrom_Combo
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.YearFrom_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.YearFrom_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.YearFrom_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearFrom_Combo.ForeColor = System.Drawing.Color.White;
+            this.YearFrom_Combo.FormattingEnabled = true;
+            this.YearFrom_Combo.Items.AddRange(new object[] {
             "2019",
             "2018",
             "2017",
@@ -358,19 +363,20 @@
             "1992",
             "1991",
             "1990"});
-            this.comboBox2.Location = new System.Drawing.Point(306, 258);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 20;
+            this.YearFrom_Combo.Location = new System.Drawing.Point(306, 258);
+            this.YearFrom_Combo.Name = "YearFrom_Combo";
+            this.YearFrom_Combo.Size = new System.Drawing.Size(121, 24);
+            this.YearFrom_Combo.TabIndex = 20;
+            this.YearFrom_Combo.SelectedIndexChanged += new System.EventHandler(this.YearFrom_Combo_SelectedIndexChanged);
             // 
-            // comboBox1
+            // MonthFrom_Combo
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.MonthFrom_Combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
+            this.MonthFrom_Combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MonthFrom_Combo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthFrom_Combo.ForeColor = System.Drawing.Color.White;
+            this.MonthFrom_Combo.FormattingEnabled = true;
+            this.MonthFrom_Combo.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -383,10 +389,11 @@
             "October",
             "November",
             "December"});
-            this.comboBox1.Location = new System.Drawing.Point(26, 258);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 18;
+            this.MonthFrom_Combo.Location = new System.Drawing.Point(26, 258);
+            this.MonthFrom_Combo.Name = "MonthFrom_Combo";
+            this.MonthFrom_Combo.Size = new System.Drawing.Size(121, 24);
+            this.MonthFrom_Combo.TabIndex = 18;
+            this.MonthFrom_Combo.SelectedIndexChanged += new System.EventHandler(this.MonthFrom_Combo_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -410,53 +417,57 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "SEARCH SCOPE";
             // 
-            // checkBox4
+            // DOC_Text
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(386, 62);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(126, 23);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.Text = ".DOC  .DOCX";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.DOC_Text.AutoSize = true;
+            this.DOC_Text.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOC_Text.ForeColor = System.Drawing.Color.White;
+            this.DOC_Text.Location = new System.Drawing.Point(386, 62);
+            this.DOC_Text.Name = "DOC_Text";
+            this.DOC_Text.Size = new System.Drawing.Size(126, 23);
+            this.DOC_Text.TabIndex = 15;
+            this.DOC_Text.Text = ".DOC  .DOCX";
+            this.DOC_Text.UseVisualStyleBackColor = true;
+            this.DOC_Text.CheckedChanged += new System.EventHandler(this.DOC_Text_CheckedChanged);
             // 
-            // checkBox3
+            // HWP_Check
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(266, 62);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(71, 23);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.Text = ".HWP";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.HWP_Check.AutoSize = true;
+            this.HWP_Check.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HWP_Check.ForeColor = System.Drawing.Color.White;
+            this.HWP_Check.Location = new System.Drawing.Point(266, 62);
+            this.HWP_Check.Name = "HWP_Check";
+            this.HWP_Check.Size = new System.Drawing.Size(71, 23);
+            this.HWP_Check.TabIndex = 14;
+            this.HWP_Check.Text = ".HWP";
+            this.HWP_Check.UseVisualStyleBackColor = true;
+            this.HWP_Check.CheckedChanged += new System.EventHandler(this.HWP_Check_CheckedChanged);
             // 
-            // checkBox2
+            // TXT_Check
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(146, 62);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(59, 23);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = ".TXT";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.TXT_Check.AutoSize = true;
+            this.TXT_Check.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Check.ForeColor = System.Drawing.Color.White;
+            this.TXT_Check.Location = new System.Drawing.Point(146, 62);
+            this.TXT_Check.Name = "TXT_Check";
+            this.TXT_Check.Size = new System.Drawing.Size(59, 23);
+            this.TXT_Check.TabIndex = 13;
+            this.TXT_Check.Text = ".TXT";
+            this.TXT_Check.UseVisualStyleBackColor = true;
+            this.TXT_Check.CheckedChanged += new System.EventHandler(this.TXT_Check_CheckedChanged);
             // 
-            // checkBox1
+            // PDF__Check
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(26, 62);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 23);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = ".PDF";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.PDF__Check.AutoSize = true;
+            this.PDF__Check.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PDF__Check.ForeColor = System.Drawing.Color.White;
+            this.PDF__Check.Location = new System.Drawing.Point(26, 62);
+            this.PDF__Check.Name = "PDF__Check";
+            this.PDF__Check.Size = new System.Drawing.Size(63, 23);
+            this.PDF__Check.TabIndex = 12;
+            this.PDF__Check.Text = ".PDF";
+            this.PDF__Check.UseVisualStyleBackColor = true;
+            this.PDF__Check.CheckedChanged += new System.EventHandler(this.PDF__Check_CheckedChanged);
             // 
             // label4
             // 
@@ -490,23 +501,23 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox DayTo_Combo;
+        private System.Windows.Forms.ComboBox YearTo_Combo;
+        private System.Windows.Forms.ComboBox MonthTo_Combo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox DayFrom_Combo;
+        private System.Windows.Forms.ComboBox YearFrom_Combo;
+        private System.Windows.Forms.ComboBox MonthFrom_Combo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox DOC_Text;
+        private System.Windows.Forms.CheckBox HWP_Check;
+        private System.Windows.Forms.CheckBox TXT_Check;
+        private System.Windows.Forms.CheckBox PDF__Check;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Scope_Text;
         private System.Windows.Forms.FolderBrowserDialog fbd;
-        private System.Windows.Forms.Button ChangeLocation_Btn;
+        private System.Windows.Forms.Button Scope_Btn;
     }
 }

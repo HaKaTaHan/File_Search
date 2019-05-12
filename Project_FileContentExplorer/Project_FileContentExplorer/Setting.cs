@@ -25,12 +25,67 @@ namespace Project_FileContentExplorer
                 if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
 
-                    textBox1.Clear();
-                    textBox1.AppendText(fbd.SelectedPath);
+                    Scope_Text.Clear();
+                    Scope_Text.AppendText(fbd.SelectedPath);
                 }
 
                 return;
             
+        }
+
+        private void PDF__Check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_Check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HWP_Check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DOC_Text_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Scope_Text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonthFrom_Combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DayFrom_Combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void YearFrom_Combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonthTo_Combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DayTo_Combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void YearTo_Combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
