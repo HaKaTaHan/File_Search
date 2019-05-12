@@ -57,7 +57,7 @@ namespace Project_FileContentExplorer
             worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorkCompleted); //백그라운드에서 작업 완료
 
             //프로그램 실행할 시 Search 폼을 Display_Area 패널에 띄운다.
-            F_Search = new Search();
+            F_Search = new Search(Display_Area);
             F_Search.TopLevel = false;
             F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
             Display_Area.Controls.Add(F_Search);
@@ -232,6 +232,10 @@ namespace Project_FileContentExplorer
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
             
             //Search_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(98, 50, 170);
@@ -239,7 +243,7 @@ namespace Project_FileContentExplorer
             Setting_Btn.BackColor = Color.FromArgb(35, 45, 65);
 
             //Search폼을 Display_Area 패널에 띄운다.
-            F_Search = new Search();
+            F_Search = new Search(Display_Area);
             F_Search.TopLevel = false;
             F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
             Display_Area.Controls.Add(F_Search);
@@ -259,6 +263,10 @@ namespace Project_FileContentExplorer
 
             //Sign_Up 닫기
             if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
@@ -289,6 +297,10 @@ namespace Project_FileContentExplorer
 
             //Sign_Up 닫기
             if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
