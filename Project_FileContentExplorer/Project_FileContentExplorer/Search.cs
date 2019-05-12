@@ -31,11 +31,14 @@ namespace Project_FileContentExplorer
         int hwpCount = 0;
         int pdfCount = 0;
         int docCount = 0;
-        int docxCount = 0;        
+        int docxCount = 0;                        
         
-        public Search()
+        Searching F_Searching;
+        Panel Home_Panel;
+        public Search(Panel panel)
         {
             InitializeComponent();
+            Home_Panel = panel;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -89,6 +92,14 @@ namespace Project_FileContentExplorer
                     t5.Start();
                 }                                                                                                                                          
             }
+
+            F_Searching = new Searching(txt_Search.Text);
+            F_Searching.TopLevel = false;
+            F_Searching.Dock = System.Windows.Forms.DockStyle.Fill;
+            Home_Panel.Controls.Add(F_Searching);
+
+            F_Searching.Show();
+            Close();
         }
 
         void txtWork()

@@ -50,6 +50,14 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Words, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -115,6 +123,12 @@
     <Compile Include="Alarm.Designer.cs">
       <DependentUpon>Alarm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Findaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Findaccount.Designer.cs">
+      <DependentUpon>Findaccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FullAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alarm.resx">
       <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Findaccount.resx">
+      <DependentUpon>Findaccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FullAccount.resx">
       <DependentUpon>FullAccount.cs</DependentUpon>
@@ -230,6 +247,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kakaotalk_20190509_182207464_Rji_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

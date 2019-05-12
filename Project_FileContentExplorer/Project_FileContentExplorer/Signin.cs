@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_FileContentExplorer
 {
-    public partial class Searching : Form
+    public partial class Signin : Form
     {
-        String Keyword;
-        public Searching(String Keyword)
+        public Signin()
         {
             InitializeComponent();
-            this.Keyword = Keyword;
         }
     }
 }
