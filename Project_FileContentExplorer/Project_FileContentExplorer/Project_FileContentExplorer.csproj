@@ -142,6 +142,18 @@
     <Compile Include="FullSetting.Designer.cs">
       <DependentUpon>FullSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchedFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchedFile.Designer.cs">
+      <DependentUpon>SearchedFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Searching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Searching.Designer.cs">
+      <DependentUpon>Searching.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FullSetting.resx">
       <DependentUpon>FullSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchedFile.resx">
+      <DependentUpon>SearchedFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Searching.resx">
+      <DependentUpon>Searching.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>

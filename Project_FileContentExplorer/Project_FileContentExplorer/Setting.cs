@@ -115,7 +115,7 @@ namespace Project_FileContentExplorer
 
         private void Scope_Text_TextChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Path_Scope = fbd.SelectedPath;
+            Properties.Settings.Default.Path_Scope = Scope_Text.Text;
             Properties.Settings.Default.Save();
         }
 
