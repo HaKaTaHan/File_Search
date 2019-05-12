@@ -10,14 +10,27 @@ using System.Windows.Forms;
 
 namespace Project_FileContentExplorer
 {
-
     public partial class Setting : Form
     {
-        public static string ext;
-        //ext=CheckBox.
         public Setting()
         {
             InitializeComponent();
+        }
+
+        private void ChangeLocation_Btn_Click(object sender, EventArgs e)
+        {
+           
+                FolderBrowserDialog fbd = new FolderBrowserDialog();
+
+                if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+
+                    textBox1.Clear();
+                    textBox1.AppendText(fbd.SelectedPath);
+                }
+
+                return;
+            
         }
     }
 }
