@@ -118,13 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="2703079-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2703079-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="KakaoTalk_20190509_181414085" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KakaoTalk_20190509_181414085.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KakaoTalk_20190509_181414334" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KakaoTalk_20190509_181414334.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KakaoTalk_20190509_181414212" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KakaoTalk_20190509_181414212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KakaoTalk_20190509_181414334" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KakaoTalk_20190509_181414334.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2738304-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2738304-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
