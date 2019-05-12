@@ -17,7 +17,7 @@ namespace Project_FileContentExplorer
             InitializeComponent();
 
             //적절한 폰트로 수정
-            label3.Font = new Font("Arial", 8, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
 
             //검색한 갯수 출력
             label3.Text = mesg;
@@ -29,6 +29,16 @@ namespace Project_FileContentExplorer
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

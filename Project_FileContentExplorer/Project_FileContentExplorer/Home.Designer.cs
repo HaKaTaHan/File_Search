@@ -133,7 +133,7 @@
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "File Content Explorer";
             this.notifyIcon1.Visible = true;
             // 
             // contextMenuStrip1
