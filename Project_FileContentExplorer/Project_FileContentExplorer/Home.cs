@@ -310,15 +310,14 @@ namespace Project_FileContentExplorer
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
+            //scope path 해제해야됨
             Properties.Settings.Default.Save();
-            this.ShowInTaskbar = true;
             this.Visible = false;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            this.notifyIcon1.Visible = false;
-            //this.ShowInTaskbar = false;
+            notifyIcon1.Dispose();
             Application.Exit();
         }
 
@@ -336,6 +335,20 @@ namespace Project_FileContentExplorer
         private void Display_Area_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //notifyicon 더블클릭 이벤트핸들러
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(this.Visible)
+            {
+                this.Visible = false;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Visible = true;
+            }
         }
     }
 }
