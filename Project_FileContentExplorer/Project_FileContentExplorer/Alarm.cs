@@ -12,6 +12,7 @@ namespace Project_FileContentExplorer
 {
     public partial class Alarm : Form
     {
+        private int count=0;
         public Alarm(string mesg)
         {
             InitializeComponent();
@@ -28,11 +29,6 @@ namespace Project_FileContentExplorer
             label1.Text = text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -41,6 +37,31 @@ namespace Project_FileContentExplorer
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        //폼이 로드되면 timer 시작
+        private void Alarm_Load(object sender, EventArgs e)
+        {
+            timer1.Interval = 1000;  //1초 간격
+            timer1.Start();
+            timer1.Tick += new System.EventHandler(this.timer1_Tick);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //timer에서 3초가 되면 알림창 종료
+            if(count>=3)
+            {
+                timer1.Enabled = false;
+                count = 0;
+                this.Close();
+            }
+            //3초 미만시 count증가
+            else
+            {
+                count++;
+            }
         }
     }
 }
