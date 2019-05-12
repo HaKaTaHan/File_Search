@@ -12,9 +12,11 @@ namespace Project_FileContentExplorer
 {
     public partial class Searching : Form
     {
-        public Searching()
+        String Keyword;
+        public Searching(String Keyword)
         {
             InitializeComponent();
+            this.Keyword = Keyword;
         }
     }
 }
