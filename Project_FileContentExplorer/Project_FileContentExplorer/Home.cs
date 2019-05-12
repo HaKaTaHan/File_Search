@@ -34,11 +34,11 @@ namespace Project_FileContentExplorer
         public static FileStream docFileStream = File.Open(currentDirectory + "\\docList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
         public static FileStream docxFileStream = File.Open(currentDirectory + "\\docxList.txt", FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 
-        public StreamWriter textTxt = new StreamWriter(txtFileStream);
-        public StreamWriter textPdf = new StreamWriter(pdfFileStream);       
-        public StreamWriter textHwp = new StreamWriter(hwpFileStream);
-        public StreamWriter textDoc = new StreamWriter(docFileStream);
-        public StreamWriter textDocx = new StreamWriter(docxFileStream);
+        public StreamWriter textTxt = new StreamWriter(txtFileStream, Encoding.Default);
+        public StreamWriter textPdf = new StreamWriter(pdfFileStream, Encoding.Default);       
+        public StreamWriter textHwp = new StreamWriter(hwpFileStream, Encoding.Default);
+        public StreamWriter textDoc = new StreamWriter(docFileStream, Encoding.Default);
+        public StreamWriter textDocx = new StreamWriter(docxFileStream, Encoding.Default);
 
         string systemFolder = Environment.GetFolderPath(System.Environment.SpecialFolder.Windows);//윈도우 폴더
 

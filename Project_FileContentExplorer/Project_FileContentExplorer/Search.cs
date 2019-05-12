@@ -31,7 +31,8 @@ namespace Project_FileContentExplorer
         int hwpCount = 0;
         int pdfCount = 0;
         int docCount = 0;
-        int docxCount = 0;
+        int docxCount = 0;        
+        
         public Search()
         {
             InitializeComponent();
@@ -48,6 +49,9 @@ namespace Project_FileContentExplorer
             {
                 txtCount = 0;
                 hwpCount = 0;
+                pdfCount = 0;
+                docCount = 0;
+                docxCount = 0;
                 //p = 0;
                 keyword = txt_Search.Text;
 
@@ -91,7 +95,7 @@ namespace Project_FileContentExplorer
         {
             //FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             FileStream txtFileStream = File.Open(currentDirectory + "\\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader txtReader = new StreamReader(txtFileStream);            
+            StreamReader txtReader = new StreamReader(txtFileStream, Encoding.Default);            
             while (true)
             {               
                 string path = txtReader.ReadLine();
@@ -99,11 +103,10 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                else if (Properties.Settings.Default.Path_Scope.Length != 0)
+                else if (Properties.Settings.Default.Path_Scope.Length == 0)
                     txtExtract(keyword, path);
-                else if(path.Contains(Properties.Settings.Default.Path_Scope))
-                    txtExtract(keyword, path);
-                //Console.WriteLine(path);
+                else if (path.Contains(Properties.Settings.Default.Path_Scope))                                    
+                    txtExtract(keyword, path);                
             }
             Console.WriteLine("txt 검색 끝");
             Console.WriteLine("keyword가 들어있는 txt 개수 : " + txtCount);
@@ -115,7 +118,7 @@ namespace Project_FileContentExplorer
         void pdfWork()
         {
             FileStream pdfFileStream = File.Open(currentDirectory + "\\pdfList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader pdfReader = new StreamReader(pdfFileStream);
+            StreamReader pdfReader = new StreamReader(pdfFileStream, Encoding.Default);
             while (true)
             {
                 string path = pdfReader.ReadLine();
@@ -123,7 +126,7 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                else if(Properties.Settings.Default.Path_Scope.Length != 0)
+                else if(Properties.Settings.Default.Path_Scope.Length == 0)
                     pdfExtract(keyword, path);
                 else if(path.Contains(Properties.Settings.Default.Path_Scope))
                     pdfExtract(keyword, path);
@@ -138,7 +141,7 @@ namespace Project_FileContentExplorer
         void hwpWork()
         {
             FileStream hwpFileStream = File.Open(currentDirectory + "\\hwpList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader hwpReader = new StreamReader(hwpFileStream);
+            StreamReader hwpReader = new StreamReader(hwpFileStream, Encoding.Default);
             while (true)
             {
                 string path = hwpReader.ReadLine();
@@ -146,7 +149,9 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                else
+                else if (Properties.Settings.Default.Path_Scope.Length == 0)
+                    hwpExtract(keyword, path);
+                else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     hwpExtract(keyword, path);
 
                 //Console.WriteLine(path);
@@ -159,7 +164,7 @@ namespace Project_FileContentExplorer
         void docWork()
         {
             FileStream docFileStream = File.Open(currentDirectory + "\\docList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader docReader = new StreamReader(docFileStream);
+            StreamReader docReader = new StreamReader(docFileStream, Encoding.Default);
             while (true)
             {
                 string path = docReader.ReadLine();
@@ -167,7 +172,9 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                else
+                else if (Properties.Settings.Default.Path_Scope.Length == 0)
+                    docExtract(keyword, path);
+                else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     docExtract(keyword, path);
             }
             Console.WriteLine("doc 검색 끝");
@@ -180,7 +187,7 @@ namespace Project_FileContentExplorer
         void docxWork()
         {
             FileStream docxFileStream = File.Open(currentDirectory + "\\docxList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader docxReader = new StreamReader(docxFileStream);
+            StreamReader docxReader = new StreamReader(docxFileStream, Encoding.Default);
             while (true)
             {
                 string path = docxReader.ReadLine();
@@ -188,7 +195,9 @@ namespace Project_FileContentExplorer
                     break;
                 else if (path == null)
                     continue;
-                else
+                else if (Properties.Settings.Default.Path_Scope.Length == 0)
+                    docxExtract(keyword, path);
+                else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     docxExtract(keyword, path);
                 //Console.WriteLine(path);
             }
@@ -204,9 +213,9 @@ namespace Project_FileContentExplorer
             {
                 //Console.WriteLine("txt 찾는중....");
                 FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                StreamReader textTxt = new StreamReader(fs);
-                string all = textTxt.ReadToEnd();
-                bool isExist = all.Contains(keyword);
+                StreamReader textTxt = new StreamReader(fs, Encoding.Default);                
+                string all = textTxt.ReadToEnd();                
+                bool isExist = all.ToLower().Contains(keyword);
                 if (isExist)
                     txtCount++;
             }
@@ -220,19 +229,28 @@ namespace Project_FileContentExplorer
         {
             PDDocument doc = null;
             try
-            {
-                //Console.WriteLine(path + " : pdf 찾는중....");
+            {                
                 doc = PDDocument.load(path);
-                //doc = PDDocument.load(@"D:\Download\Chrome download\5 (1).pdf");
                 PDFTextStripper stripper = new PDFTextStripper();
-                //MessageBox.Show(stripper.getText(doc));
-                bool isExist = stripper.getText(doc).Contains(keyWord);
+                //bool isExist = stripper.getText(doc).Contains(keyWord);                                
+                bool isExist = stripper.getText(doc).ToLower().Contains(keyword);
                 if (isExist)
+                {
+                    Console.WriteLine(path);
                     pdfCount++;
+                }
                 doc.close();
             }
             catch
             {
+                try { 
+                    if (doc != null)
+                        doc.close();
+                }
+                catch
+                {
+                    return;
+                }
                 return;
             }
           
@@ -249,7 +267,7 @@ namespace Project_FileContentExplorer
                 bool isExist = false;
                 if (flg)
                 {
-                   isExist = sb.ToString().Contains(keyword);
+                   isExist = sb.ToString().ToLower().Contains(keyword);
                 }
                 if (isExist)
                     hwpCount++;
@@ -267,7 +285,7 @@ namespace Project_FileContentExplorer
                 Document doc = new Document(path);
                 DocumentBuilder builder = new DocumentBuilder(doc);
 
-                bool isExist = doc.GetText().Contains(keyword);
+                bool isExist = doc.GetText().ToLower().Contains(keyword);
                 if (isExist)
                     docCount++;
                     
@@ -285,7 +303,7 @@ namespace Project_FileContentExplorer
                 Document doc = new Document(path);
                 DocumentBuilder builder = new DocumentBuilder(doc);
                 //MessageBox.Show(doc.GetText());
-                bool isExist = doc.GetText().Contains(keyword);
+                bool isExist = doc.GetText().ToLower().Contains(keyword);
                 if (isExist)
                     docxCount++;
             }
