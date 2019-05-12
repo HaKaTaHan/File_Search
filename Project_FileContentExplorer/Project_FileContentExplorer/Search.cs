@@ -12,6 +12,7 @@ using rcc.h2tlib.parser;
 using System.Threading;
 using System.IO;
 
+
 namespace Project_FileContentExplorer
 {
 
@@ -23,8 +24,11 @@ namespace Project_FileContentExplorer
         // search 누르면 개수 
         string keyword;
         string systemFolder = Environment.GetFolderPath(System.Environment.SpecialFolder.Windows);//윈도우 폴더
-        int k=0;
-        int p = 0;
+        int txtCount=0;
+        int hwpCount = 0;
+        int pdfCount = 0;
+        int docCount = 0;
+        int docxCount = 0;
         public Search()
         {
             InitializeComponent();
@@ -39,8 +43,9 @@ namespace Project_FileContentExplorer
         {
             if(txt_Search.Text.Length != 0)
             {
-                k = 0;
-                p = 0;
+                txtCount = 0;
+                hwpCount = 0;
+                //p = 0;
                 keyword = txt_Search.Text;
                 Thread t1 = new Thread(new ThreadStart(txtWork));
                 Thread t2 = new Thread(new ThreadStart(pdfWork));
@@ -72,7 +77,7 @@ namespace Project_FileContentExplorer
                 //Console.WriteLine(path);
             }
             Console.WriteLine("txt 검색 끝");
-            Console.WriteLine("찾은 txt 개수 : " + k);
+            Console.WriteLine("찾은 txt 개수 : " + txtCount);
 
             txtReader.Dispose();
             txtFileStream.Close();
@@ -92,6 +97,7 @@ namespace Project_FileContentExplorer
                 //Console.WriteLine(path);
             }
             Console.WriteLine("pdf 검색 끝");
+
             
             pdfReader.Dispose();
             pdfFileStream.Close();
@@ -114,7 +120,7 @@ namespace Project_FileContentExplorer
                 //Console.WriteLine(path);
             }
             Console.WriteLine("hwp 검색 끝");
-            Console.WriteLine("찾은 hwp 개수 " + p);
+            Console.WriteLine("찾은 hwp 개수 " + hwpCount);
             hwpReader.Dispose();
             hwpFileStream.Close();
         }
@@ -157,13 +163,13 @@ namespace Project_FileContentExplorer
         {
             try
             {
-                Console.WriteLine("찾는중....");
+                //Console.WriteLine("txt 찾는중....");
                 FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 StreamReader textTxt = new StreamReader(fs);
                 string all = textTxt.ReadToEnd();
                 bool isExist = all.Contains(keyword);
                 if (isExist)
-                    k++;
+                    txtCount++;
             }
             catch
             {
@@ -175,12 +181,24 @@ namespace Project_FileContentExplorer
         {
             try
             {
-                FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                StreamReader textHwp = new StreamReader(fs);
-                string all = textHwp.ReadToEnd();
-                bool isExist = all.Contains(keyword);
+                //FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                //StreamReader textHwp = new StreamReader(fs);
+                //string all = textHwp.ReadToEnd();
+                //bool isExist = all.Contains(keyword);
+                //if (isExist)
+                //    p++;
+                Console.WriteLine("hwp 찾는중....");
+                StringBuilder sb = new StringBuilder();
+                HWPMeta meta = new HWPMeta();
+                H2TParser parser = new H2TParser();
+                bool flg = parser.GetText(path, meta, sb);
+                bool isExist = false;
+                if (flg)
+                {
+                   isExist = sb.ToString().Contains(keyword);
+                }
                 if (isExist)
-                    p++;
+                    hwpCount++;
             }
             catch
             {
