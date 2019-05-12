@@ -168,6 +168,7 @@
             this.ClientSize = new System.Drawing.Size(1216, 751);
             this.Controls.Add(this.Display_Area);
             this.Controls.Add(this.Panel_Btns);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Home";
             this.Text = "File Content Explorer";
