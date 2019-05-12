@@ -70,7 +70,7 @@ namespace Project_FileContentExplorer
                 {
                     Properties.Settings.Default.ID = ID_Text.Text;
                     MessageBox.Show("로그인이 되었습니다.", "환영합니다", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show(Properties.Settings.Default.ID);
+                    //MessageBox.Show(Properties.Settings.Default.ID);
                 }
 
             }
