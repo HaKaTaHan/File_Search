@@ -236,7 +236,11 @@ namespace Project_FileContentExplorer
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
-            
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Findaccount"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+
             //Search_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(98, 50, 170);
             Account_Btn.BackColor = Color.FromArgb(35, 45, 65);
@@ -267,6 +271,10 @@ namespace Project_FileContentExplorer
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Findaccount"))
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
@@ -301,6 +309,10 @@ namespace Project_FileContentExplorer
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Findaccount"))
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }

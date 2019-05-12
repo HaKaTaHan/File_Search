@@ -13,8 +13,9 @@ namespace Project_FileContentExplorer
     public partial class Account : Form
     {
         Signup F_Signup;
+        Findaccount F_Findaccount;
         Panel Home_Panel;
-        public Account(Panel panel)//Home에서 넘어올 때
+        public Account(Panel panel)//Home에서 넘어올 때 Findaccount에서 넘어올 때
         {
             InitializeComponent();
             Home_Panel = panel;
@@ -83,6 +84,17 @@ namespace Project_FileContentExplorer
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            F_Findaccount = new Findaccount(Home_Panel);
+            F_Findaccount.TopLevel = false;
+            F_Findaccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            Home_Panel.Controls.Add(F_Findaccount);
+
+            F_Findaccount.Show();
+            Close();
         }
     }
 }
