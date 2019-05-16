@@ -232,5 +232,8 @@ D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentEx
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\IKVM.OpenJDK.Util.dll
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\IKVM.Runtime.dll
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\pdfbox-1.8.9.dll
-D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Aspose.Words.dll
 D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Aspose.Words.xml
+D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.SearchedFile.resources
+D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.Searching.resources
+D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\obj\Debug\Project_FileContentExplorer.Findaccount.resources
+D:\3.1\응용소프트웨어실습\20190512git\File_Search\Project_FileContentExplorer\Project_FileContentExplorer\bin\Debug\Aspose.Words.dll
