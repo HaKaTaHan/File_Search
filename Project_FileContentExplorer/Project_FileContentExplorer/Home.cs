@@ -334,6 +334,7 @@ namespace Project_FileContentExplorer
         {
             e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
             //scope path 해제해야됨
+            Properties.Settings.Default.Path_Scope = "";
             Properties.Settings.Default.Save();
             this.Visible = false;
         }

@@ -31,6 +31,10 @@ namespace Project_FileContentExplorer
             {
                 DOC_Text.Checked = true;
             }
+            if (!Properties.Settings.Default.Path_Scope.Equals(""))
+            {
+                Scope_Text.AppendText(Properties.Settings.Default.Path_Scope);
+            }
         }
 
         private void ChangeLocation_Btn_Click(object sender, EventArgs e)
