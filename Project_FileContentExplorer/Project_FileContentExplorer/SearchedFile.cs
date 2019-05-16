@@ -12,6 +12,13 @@ namespace Project_FileContentExplorer
 {
     public partial class SearchedFile : Form
     {
+        Panel Home_Panel;
+        public SearchedFile(Panel panel)
+        {
+            InitializeComponent();
+            Home_Panel = panel;
+        }
+
         public SearchedFile()
         {
             InitializeComponent();

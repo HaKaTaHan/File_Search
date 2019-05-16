@@ -33,6 +33,9 @@
             this.Search_Progress = new System.Windows.Forms.ProgressBar();
             this.Keyword_Label = new System.Windows.Forms.Label();
             this.Item_Panel = new System.Windows.Forms.Panel();
+            this.Resume_Btn = new System.Windows.Forms.Button();
+            this.Stop_Btn = new System.Windows.Forms.Button();
+            this.Test_Btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +62,7 @@
             this.Pause_Btn.TabIndex = 5;
             this.Pause_Btn.Text = "PAUSE";
             this.Pause_Btn.UseVisualStyleBackColor = false;
+            this.Pause_Btn.Click += new System.EventHandler(this.Pause_Btn_Click);
             // 
             // Search_Progress
             // 
@@ -87,12 +91,62 @@
             this.Item_Panel.Size = new System.Drawing.Size(814, 469);
             this.Item_Panel.TabIndex = 8;
             // 
+            // Resume_Btn
+            // 
+            this.Resume_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(180)))), ((int)(((byte)(82)))));
+            this.Resume_Btn.FlatAppearance.BorderSize = 0;
+            this.Resume_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Resume_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resume_Btn.ForeColor = System.Drawing.Color.White;
+            this.Resume_Btn.Location = new System.Drawing.Point(565, 26);
+            this.Resume_Btn.Name = "Resume_Btn";
+            this.Resume_Btn.Size = new System.Drawing.Size(140, 35);
+            this.Resume_Btn.TabIndex = 9;
+            this.Resume_Btn.Text = "RESUME";
+            this.Resume_Btn.UseVisualStyleBackColor = false;
+            this.Resume_Btn.Visible = false;
+            this.Resume_Btn.Click += new System.EventHandler(this.Resume_Btn_Click);
+            // 
+            // Stop_Btn
+            // 
+            this.Stop_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Stop_Btn.FlatAppearance.BorderSize = 0;
+            this.Stop_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Stop_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stop_Btn.ForeColor = System.Drawing.Color.White;
+            this.Stop_Btn.Location = new System.Drawing.Point(721, 26);
+            this.Stop_Btn.Name = "Stop_Btn";
+            this.Stop_Btn.Size = new System.Drawing.Size(140, 35);
+            this.Stop_Btn.TabIndex = 10;
+            this.Stop_Btn.Text = "STOP";
+            this.Stop_Btn.UseVisualStyleBackColor = false;
+            this.Stop_Btn.Visible = false;
+            this.Stop_Btn.Click += new System.EventHandler(this.Stop_Btn_Click);
+            // 
+            // Test_Btn
+            // 
+            this.Test_Btn.BackColor = System.Drawing.Color.White;
+            this.Test_Btn.FlatAppearance.BorderSize = 0;
+            this.Test_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Test_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Test_Btn.ForeColor = System.Drawing.Color.Black;
+            this.Test_Btn.Location = new System.Drawing.Point(12, 12);
+            this.Test_Btn.Name = "Test_Btn";
+            this.Test_Btn.Size = new System.Drawing.Size(36, 26);
+            this.Test_Btn.TabIndex = 11;
+            this.Test_Btn.Text = "!";
+            this.Test_Btn.UseVisualStyleBackColor = false;
+            this.Test_Btn.Click += new System.EventHandler(this.Test_Btn_Click);
+            // 
             // Searching
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.ClientSize = new System.Drawing.Size(924, 601);
+            this.Controls.Add(this.Test_Btn);
+            this.Controls.Add(this.Stop_Btn);
+            this.Controls.Add(this.Resume_Btn);
             this.Controls.Add(this.Item_Panel);
             this.Controls.Add(this.Keyword_Label);
             this.Controls.Add(this.Search_Progress);
@@ -101,6 +155,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Searching";
             this.Text = "Searching";
+            this.Load += new System.EventHandler(this.Searching_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +168,8 @@
         private System.Windows.Forms.ProgressBar Search_Progress;
         private System.Windows.Forms.Label Keyword_Label;
         private System.Windows.Forms.Panel Item_Panel;
+        private System.Windows.Forms.Button Resume_Btn;
+        private System.Windows.Forms.Button Stop_Btn;
+        private System.Windows.Forms.Button Test_Btn;
     }
 }
