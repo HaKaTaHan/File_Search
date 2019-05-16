@@ -61,44 +61,65 @@ namespace Project_FileContentExplorer
                 Thread t4;
                 Thread t5;
 
-                if (Properties.Settings.Default.txtList.Length != 0)
+                int txtChecked = Properties.Settings.Default.txtList.Length;
+                int pdfChecked = Properties.Settings.Default.pdfList.Length;
+                int hwpChecked = Properties.Settings.Default.hwpList.Length;
+                int docChecked = Properties.Settings.Default.docList.Length;
+                int docxChecked = Properties.Settings.Default.docxList.Length;
+
+                if (txtChecked != 0)
                 {
-                    t1 = new Thread(new ThreadStart(txtWork));
+                    t1 = new Thread(new ThreadStart(txtWork));                    
                     t1.Start();
                 }
-                if (Properties.Settings.Default.pdfList.Length != 0)
+                if (pdfChecked != 0)
                 {
                     t2 = new Thread(new ThreadStart(pdfWork));
                     t2.Start();
                 }
-                if (Properties.Settings.Default.hwpList.Length != 0)
+                if (hwpChecked != 0)
                 {
                     t3 = new Thread(new ThreadStart(hwpWork));
                     t3.Start();
                 }
-
-                if (Properties.Settings.Default.docList.Length != 0)
+                if (docChecked != 0)
                 {
                     t4 = new Thread(new ThreadStart(docWork));
                     t4.Start();
                 }
-
-                if (Properties.Settings.Default.docxList.Length != 0)
+                if (docxChecked != 0)
                 {
                     t5 = new Thread(new ThreadStart(docxWork));
                     t5.Start();
                 }
+
+                if(txtChecked + pdfChecked + hwpChecked + docxChecked + docChecked + docxChecked == 0)
+                {
+                    t1 = new Thread(new ThreadStart(txtWork));
+                    t1.Start();
+                    t2 = new Thread(new ThreadStart(pdfWork));
+                    t2.Start();
+                    t3 = new Thread(new ThreadStart(hwpWork));
+                    t3.Start();
+                    t4 = new Thread(new ThreadStart(docWork));
+                    t4.Start();
+                    t5 = new Thread(new ThreadStart(docxWork));
+                    t5.Start();
+                }
+
+                
+
+
             }          
         }       
 
         void txtWork()
-        {
+        {            
             //FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             FileStream txtFileStream = File.Open(currentDirectory + "\\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader txtReader = new StreamReader(txtFileStream, Encoding.Default);
-
+            StreamReader txtReader = new StreamReader(txtFileStream, Encoding.Default);            
             while (true)
-            {
+            {                
                 string path = txtReader.ReadLine();                
                 if (path == "End")
                     break;
@@ -215,8 +236,7 @@ namespace Project_FileContentExplorer
         public void txtExtract(string keyWord, string path)
         {            
             try
-            {
-                //Console.WriteLine("txt 찾는중....");
+            {                
                 FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 StreamReader textTxt = new StreamReader(fs, Encoding.Default);
                 string all = textTxt.ReadToEnd();
@@ -240,8 +260,7 @@ namespace Project_FileContentExplorer
                 //bool isExist = stripper.getText(doc).Contains(keyWord);                                
                 bool isExist = stripper.getText(doc).ToLower().Contains(keyword);
                 if (isExist)
-                {
-                    Console.WriteLine(path);
+                {                    
                     pdfCount++;
                 }
                 doc.close();
