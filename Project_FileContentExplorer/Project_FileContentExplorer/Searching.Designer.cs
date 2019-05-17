@@ -90,6 +90,7 @@
             this.Item_Panel.Name = "Item_Panel";
             this.Item_Panel.Size = new System.Drawing.Size(814, 469);
             this.Item_Panel.TabIndex = 8;
+            this.Item_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Item_Panel_Paint);
             // 
             // Resume_Btn
             // 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace Project_FileContentExplorer
 {
     public partial class Home : Form
@@ -68,11 +69,11 @@ namespace Project_FileContentExplorer
 
         void backgroundWork(object sender, DoWorkEventArgs e)
         {
-            foreach (string path in Environment.GetLogicalDrives())
-            {
-                sync(path);
-            }
-            //sync(@"D:\");
+            //foreach (string path in Environment.GetLogicalDrives())
+            //{
+            //    sync(path);
+            //}
+            sync(@"D:\");
 
             textTxt.WriteLine("End");
             textPdf.WriteLine("End");
@@ -337,6 +338,8 @@ namespace Project_FileContentExplorer
             Properties.Settings.Default.Path_Scope = "";
             Properties.Settings.Default.Save();
             this.Visible = false;
+
+            
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
