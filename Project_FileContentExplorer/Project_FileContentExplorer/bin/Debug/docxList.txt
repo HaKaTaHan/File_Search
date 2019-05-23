@@ -1,0 +1,22 @@
+C:\Windows\ShellNew\NoName_en-US.docx
+C:\Windows\ShellNew\NoName_ko-KR.docx
+C:\Users\박종민\OneDrive - kw.ac.kr\문서.docx
+C:\Users\박종민\Documents\Welcome to Word.docx
+C:\Users\박종민\Documents\카카오톡 받은 파일\functiondescription.docx
+C:\Users\박종민\Documents\카카오톡 받은 파일\새 Office Open XML 문서.docx
+C:\Users\박종민\Documents\카카오톡 받은 파일\오픈소스 2차 프로젝트_승철 (1).docx
+C:\Users\박종민\Documents\카카오톡 받은 파일\오픈소스 2차 프로젝트_승철.docx
+C:\Users\박종민\Desktop\디비\과제2.docx
+C:\Users\박종민\Desktop\디비\과제2\과제2.docx
+C:\Users\박종민\Desktop\3-1 자료\테스트.docx
+C:\Users\박종민\Desktop\2-2 자료\오픈소스소프트웨어개발\FOSS_프로젝트 제안서.docx
+C:\Users\박종민\Desktop\2-2 자료\시스템소프트\우수+과제.docx
+C:\Users\박종민\Desktop\2-2 자료\선형대수학\1%2C2장+과제.docx
+C:\Users\박종민\Desktop\2-2 자료\선형대수학\4장+과제.docx
+C:\Users\박종민\Desktop\2-2 자료\선형대수학\5장.docx
+C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$I0APD3T.docx
+C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$I9F88J4.docx
+C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$ISG77YM.docx
+C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$R0APD3T.docx
+C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$R9F88J4.docx
+End
