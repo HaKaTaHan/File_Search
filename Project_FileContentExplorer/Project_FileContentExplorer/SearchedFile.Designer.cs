@@ -43,10 +43,9 @@
             this.FileName_Label.AutoSize = true;
             this.FileName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileName_Label.ForeColor = System.Drawing.Color.White;
-            this.FileName_Label.Location = new System.Drawing.Point(195, 36);
-            this.FileName_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.FileName_Label.Location = new System.Drawing.Point(105, 18);
             this.FileName_Label.Name = "FileName_Label";
-            this.FileName_Label.Size = new System.Drawing.Size(321, 44);
+            this.FileName_Label.Size = new System.Drawing.Size(157, 24);
             this.FileName_Label.TabIndex = 3;
             this.FileName_Label.Text = "Insert_File_Name";
             // 
@@ -55,10 +54,9 @@
             this.FilePath_Label.AutoSize = true;
             this.FilePath_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilePath_Label.ForeColor = System.Drawing.Color.White;
-            this.FilePath_Label.Location = new System.Drawing.Point(914, 42);
-            this.FilePath_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.FilePath_Label.Location = new System.Drawing.Point(492, 21);
             this.FilePath_Label.Name = "FilePath_Label";
-            this.FilePath_Label.Size = new System.Drawing.Size(395, 37);
+            this.FilePath_Label.Size = new System.Drawing.Size(199, 20);
             this.FilePath_Label.TabIndex = 5;
             this.FilePath_Label.Text = "Insert_File_Path_BlahBlah";
             // 
@@ -67,10 +65,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(780, 42);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(420, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 37);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "File Path:";
             // 
@@ -85,27 +82,26 @@
             // 
             // Extension_Picture
             // 
-            this.Extension_Picture.Location = new System.Drawing.Point(41, 36);
-            this.Extension_Picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Extension_Picture.Location = new System.Drawing.Point(22, 18);
             this.Extension_Picture.Name = "Extension_Picture";
-            this.Extension_Picture.Size = new System.Drawing.Size(119, 128);
+            this.Extension_Picture.Size = new System.Drawing.Size(64, 64);
             this.Extension_Picture.TabIndex = 8;
             this.Extension_Picture.TabStop = false;
             // 
             // SearchedFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(1512, 200);
+            this.ClientSize = new System.Drawing.Size(814, 100);
             this.Controls.Add(this.Extension_Picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FilePath_Label);
             this.Controls.Add(this.FileName_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "SearchedFile";
             this.Text = "SearchedFile";
+            this.DoubleClick += new System.EventHandler(this.SearchedFile_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.Extension_Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
