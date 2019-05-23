@@ -135,11 +135,11 @@
 
         #endregion
         private System.Windows.Forms.Label FileModified_Label;
-        private System.Windows.Forms.Label FileName_Label;
-        private System.Windows.Forms.Label FilePath_Label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ImageList il;
         private System.Windows.Forms.PictureBox Extension_Picture;
+        public System.Windows.Forms.Label FileName_Label;
+        public System.Windows.Forms.Label FilePath_Label;
     }
 }
