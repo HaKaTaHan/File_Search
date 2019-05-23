@@ -8,12 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace Project_FileContentExplorer
 {
     public partial class Home : Form
     {
+        [DllImport("user32.dll")]
+        public static extern bool ShowWindow(IntPtr hWnd, int nCmdSHow);
+        [DllImport("user32.dll")]
+        public static extern void BringWindowToTop(IntPtr hWnd);
+        [DllImport("user32.dll")]
+        public static extern void SetForegroundWindow(IntPtr hWnd);
+        [DllImport("user32.dll")]
+        public static extern IntPtr FindWindow(string IpClassName, string IpWindowName);
+
+
         Search F_Search;
         Account F_Account;
         Setting F_Setting;
@@ -47,33 +58,54 @@ namespace Project_FileContentExplorer
 
         public Home()
         {
-            InitializeComponent();     
-            //백그라운드로 전체 드라이브 돌면서 파일 목록 모으기
-            worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.WorkerSupportsCancellation = true;
-            worker.DoWork += new DoWorkEventHandler(backgroundWork);    //백그라운드에서 어떤 작업을 할지
-            //worker.ProgressChanged += new ProgressChangedEventHandler();  //백그라운드에서  진행되는 상태
-            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorkCompleted); //백그라운드에서 작업 완료
+            try
+            {
+                IntPtr hWnd = FindWindow(null, "File Content Explorer");
+                if(hWnd == IntPtr.Zero)
+                {
+                    InitializeComponent();
+                    //백그라운드로 전체 드라이브 돌면서 파일 목록 모으기
+                    worker = new BackgroundWorker();
+                    worker.WorkerReportsProgress = true;
+                    worker.WorkerSupportsCancellation = true;
+                    worker.DoWork += new DoWorkEventHandler(backgroundWork);    //백그라운드에서 어떤 작업을 할지
+                                                                                //worker.ProgressChanged += new ProgressChangedEventHandler();  //백그라운드에서  진행되는 상태
+                    worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorkCompleted); //백그라운드에서 작업 완료
 
-            //프로그램 실행할 시 Search 폼을 Display_Area 패널에 띄운다.
-            F_Search = new Search(Display_Area);
-            F_Search.TopLevel = false;
-            F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
-            Display_Area.Controls.Add(F_Search);
-            F_Search.Show();
+                    //프로그램 실행할 시 Search 폼을 Display_Area 패널에 띄운다.
+                    F_Search = new Search(Display_Area);
+                    F_Search.TopLevel = false;
+                    F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+                    Display_Area.Controls.Add(F_Search);
+                    F_Search.Show();
 
-            //실행하자마자 백그라운드 아이콘 올려지고 열기/종료 선택 가능하도록
-            notifyIcon1.ContextMenuStrip = contextMenuStrip1;
+                    //실행하자마자 백그라운드 아이콘 올려지고 열기/종료 선택 가능하도록
+                    notifyIcon1.ContextMenuStrip = contextMenuStrip1;
+                }
+                else
+                {
+                    string rt = "File Content Explorer";
+                    IntPtr wHandle = FindWindow(null, rt);
+                    ShowWindow(wHandle, 5);
+                    BringWindowToTop(wHandle);
+                    SetForegroundWindow(wHandle);
+                    this.Close();
+                    return;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         void backgroundWork(object sender, DoWorkEventArgs e)
         {
-            //foreach (string path in Environment.GetLogicalDrives())
-            //{
-            //    sync(path);
-            //}
-            sync(@"D:\");
+            foreach (string path in Environment.GetLogicalDrives())
+            {
+                sync(path);
+            }
+            //sync(@"C:\");
 
             textTxt.WriteLine("End");
             textPdf.WriteLine("End");
