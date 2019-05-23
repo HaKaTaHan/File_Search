@@ -47,6 +47,27 @@ namespace Project_FileContentExplorer
         int docChecked;
         int docxChecked;
 
+        static string[] txtExtensions =
+        {
+            ".txt"
+        };
+
+        static string[] hwpExtensions =
+        {
+            ".hwp"
+        };
+
+        static string[] pdfExtensions =
+        {
+            ".pdf"
+        };
+
+        static string[] docxExtensions =
+        {
+           ".doc", ".docx"
+        };
+
+
         public Searching(String Keyword)
         {
             InitializeComponent();
@@ -248,6 +269,12 @@ namespace Project_FileContentExplorer
                 {
                     txtCount++;
                     Console.WriteLine(path);
+                    
+
+                    Task.Run(() =>
+                    {
+                        Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
+                    });
                 }
             }
             catch
@@ -269,9 +296,17 @@ namespace Project_FileContentExplorer
                 }              
                 PDFTextStripper stripper = new PDFTextStripper();                
                 bool isExist = stripper.getText(doc).ToLower().Contains(keyword);
-                if (isExist)                                  
-                    pdfCount++;                
-                doc.close();
+                if (isExist)
+                {
+                    pdfCount++;
+                    Console.WriteLine(path);
+
+                    Task.Run(() =>
+                    {
+                        Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
+                    });
+                }
+                    doc.close();
             }
             catch
             {
@@ -302,7 +337,15 @@ namespace Project_FileContentExplorer
                     isExist = sb.ToString().ToLower().Contains(keyword);
                 }
                 if (isExist)
+                {
                     hwpCount++;
+                    Console.WriteLine(path);
+
+                    Task.Run(() =>
+                    {
+                        Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
+                    });
+                }
             }
             catch
             {
@@ -319,8 +362,15 @@ namespace Project_FileContentExplorer
 
                 bool isExist = doc.GetText().ToLower().Contains(keyword);
                 if (isExist)
+                {
                     docCount++;
+                    Console.WriteLine(path);
 
+                    Task.Run(() =>
+                    {
+                        Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
+                    });
+                }
             }
             catch
             {
@@ -343,7 +393,7 @@ namespace Project_FileContentExplorer
 
                     Task.Run(() =>
                     {
-                        Add_Item("testname", path);
+                        Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
                     
                 }
@@ -534,7 +584,7 @@ namespace Project_FileContentExplorer
             this.F_SearchedFile.Show();
         }
 
-        private void Add_Item(string name, string path)
+        private void Add_Item(string name, string path, string extension)
         {
             this.Invoke((System.Action)(() =>
             {
@@ -543,6 +593,31 @@ namespace Project_FileContentExplorer
                 F_SearchedFile.Dock = System.Windows.Forms.DockStyle.Top;
                 F_SearchedFile.FileName_Label.Text = name;
                 F_SearchedFile.FilePath_Label.Text = path;
+                if (Array.IndexOf(txtExtensions, extension) != -1)
+                {
+                    F_SearchedFile.Extension_Picture.Image = F_SearchedFile.il.Images[0];
+
+                }
+                else if (Array.IndexOf(pdfExtensions, extension) != -1)
+                {
+                    F_SearchedFile.Extension_Picture.Image = F_SearchedFile.il.Images[1];
+
+                }
+                else if (Array.IndexOf(hwpExtensions, extension) != -1)
+                {
+                    F_SearchedFile.Extension_Picture.Image = F_SearchedFile.il.Images[2];
+
+                }
+                else if (Array.IndexOf(docxExtensions, extension) != -1)
+                {
+                    F_SearchedFile.Extension_Picture.Image = F_SearchedFile.il.Images[3];
+
+                }
+                else
+                {
+
+                }
+
 
                 Item_Panel.Controls.Add(F_SearchedFile);
 
