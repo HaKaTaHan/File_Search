@@ -72,6 +72,7 @@ namespace Project_FileContentExplorer
                 hwpChecked = Properties.Settings.Default.hwpList.Length;
                 docChecked = Properties.Settings.Default.docList.Length;
                 docxChecked = Properties.Settings.Default.docxList.Length;
+                
 
                 if (txtChecked != 0)
                 {
@@ -339,8 +340,12 @@ namespace Project_FileContentExplorer
                 {
                     docxCount++;
                     Console.WriteLine(path);
-                    Add_Item("testname", path);
-                    MessageBox.Show("123123213");
+
+                    Task.Run(() =>
+                    {
+                        Add_Item("testname", path);
+                    });
+                    
                 }
             }
             catch(Exception e)
@@ -531,18 +536,19 @@ namespace Project_FileContentExplorer
 
         private void Add_Item(string name, string path)
         {
-            
-            F_SearchedFile = new SearchedFile(Item_Panel);
-            
-            F_SearchedFile.TopLevel = false;
-            F_SearchedFile.Dock = System.Windows.Forms.DockStyle.Top;
-            F_SearchedFile.FileName_Label.Text = name;
-            F_SearchedFile.FilePath_Label.Text = path;
- 
-            Item_Panel.Controls.Add(F_SearchedFile);
-            
-            F_SearchedFile.Show();
-            
+            this.Invoke((System.Action)(() =>
+            {
+                F_SearchedFile = new SearchedFile(Item_Panel);
+                F_SearchedFile.TopLevel = false;
+                F_SearchedFile.Dock = System.Windows.Forms.DockStyle.Top;
+                F_SearchedFile.FileName_Label.Text = name;
+                F_SearchedFile.FilePath_Label.Text = path;
+
+                Item_Panel.Controls.Add(F_SearchedFile);
+
+                F_SearchedFile.Show();
+            }
+                ));                                                
             //Console.WriteLine("Test: " + path);
         }
 
