@@ -127,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SearchedFile";
             this.Text = "SearchedFile";
+            this.Load += new System.EventHandler(this.SearchedFile_Load);
             this.DoubleClick += new System.EventHandler(this.SearchedFile_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.Extension_Picture)).EndInit();
             this.ResumeLayout(false);

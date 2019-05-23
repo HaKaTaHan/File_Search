@@ -40,6 +40,11 @@ namespace Project_FileContentExplorer
             }
         }
 
+        private void SearchedFile_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //0: txt 1: pdf 2: hwp 3: doc, docx
 
     }
