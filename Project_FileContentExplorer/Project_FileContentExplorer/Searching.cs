@@ -131,6 +131,7 @@ namespace Project_FileContentExplorer
                     txtExtract(keyword, path);               
                 else if (path.Contains(Properties.Settings.Default.Path_Scope))                                    
                     txtExtract(keyword, path);
+                //Console.WriteLine(path);
                                
             }
             Console.WriteLine("txt 검색 끝");
@@ -155,6 +156,7 @@ namespace Project_FileContentExplorer
                     pdfExtract(keyword, path);
                 else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     pdfExtract(keyword, path);
+                //Console.WriteLine(path);
             }                        
             Console.WriteLine("pdf 검색 끝");
             Console.WriteLine("keyword가 들어있는 pdf 개수 " + pdfCount);
@@ -201,6 +203,7 @@ namespace Project_FileContentExplorer
                     docExtract(keyword, path);
                 else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     docExtract(keyword, path);
+                //Console.WriteLine(path);
             }
             Console.WriteLine("doc 검색 끝");
             Console.WriteLine("keyword가 들어있는 doc 개수 " + docCount);
@@ -241,7 +244,10 @@ namespace Project_FileContentExplorer
                 string all = textTxt.ReadToEnd();
                 bool isExist = all.ToLower().Contains(keyword);
                 if (isExist)
+                {
                     txtCount++;
+                    Console.WriteLine(path);
+                }
             }
             catch
             {
@@ -330,10 +336,16 @@ namespace Project_FileContentExplorer
                 //MessageBox.Show(doc.GetText());
                 bool isExist = doc.GetText().ToLower().Contains(keyword);
                 if (isExist)
+                {
                     docxCount++;
+                    Console.WriteLine(path);
+                    Add_Item("testname", path);
+                    MessageBox.Show("123123213");
+                }
             }
-            catch
+            catch(Exception e)
             {
+                MessageBox.Show(e.Message);
                 return;
             }
         }
@@ -508,11 +520,30 @@ namespace Project_FileContentExplorer
 
         private void Test_Btn_Click(object sender, EventArgs e)
         {
+            this.F_SearchedFile = new SearchedFile(Item_Panel);
+            this.F_SearchedFile.TopLevel = false;
+            this.F_SearchedFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.F_SearchedFile.FileName_Label.Text = "Fixed_Text";
+            this.F_SearchedFile.FilePath_Label.Text = "Fixed_Path";
+            this.Item_Panel.Controls.Add(F_SearchedFile);
+            this.F_SearchedFile.Show();
+        }
+
+        private void Add_Item(string name, string path)
+        {
+            
             F_SearchedFile = new SearchedFile(Item_Panel);
+            
             F_SearchedFile.TopLevel = false;
             F_SearchedFile.Dock = System.Windows.Forms.DockStyle.Top;
+            F_SearchedFile.FileName_Label.Text = name;
+            F_SearchedFile.FilePath_Label.Text = path;
+ 
             Item_Panel.Controls.Add(F_SearchedFile);
+            
             F_SearchedFile.Show();
+            
+            //Console.WriteLine("Test: " + path);
         }
 
         private void Item_Panel_Paint(object sender, PaintEventArgs e)
