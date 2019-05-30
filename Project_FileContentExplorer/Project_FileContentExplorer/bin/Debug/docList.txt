@@ -1,14 +1,1 @@
-C:\Windows\WinSxS\wow64_microsoft-windows-r..t-office-protectors_31bf3856ad364e35_10.0.17134.1_none_fda066e39307ddcb\MsoIrmProtector.doc
-C:\Windows\WinSxS\amd64_microsoft-windows-r..t-office-protectors_31bf3856ad364e35_10.0.17134.1_none_f34bbc915ea71bd0\MsoIrmProtector.doc
-C:\Windows\SysWOW64\MSDRM\MsoIrmProtector.doc
-C:\Windows\System32\MSDRM\MsoIrmProtector.doc
-C:\Program Files (x86)\Steam\ThirdPartyLegalNotices.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$I4KL98U.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$I94CBBN.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$IGVXWXA.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$IN3QYPZ.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$R4KL98U.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$R94CBBN.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$RGVXWXA.doc
-C:\$Recycle.Bin\S-1-5-21-1244760370-1488521131-2026780412-1001\$RN3QYPZ.doc
 End
