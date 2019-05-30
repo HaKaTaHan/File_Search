@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 namespace Project_FileContentExplorer
 {
@@ -54,8 +55,46 @@ namespace Project_FileContentExplorer
         private void Upload_Btn_Click(object sender, EventArgs e)
         {
             string path = this.FilePath_Label.Text;
-            MessageBox.Show(path);
-            
+            //업로드 여부 확인
+            string user_name = Properties.Settings.Default.ID;
+
+
+            FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            byte[] data = new byte[fs.Length];
+            fs.Read(data, 0, data.Length);
+            fs.Close();
+
+            Http http = new Http("File_Upload.php");
+            string footer = "\r\n--" + http.Boundary + "--\r\n";
+            http.formDataStream = new MemoryStream();
+
+            string header = string.Format("--{0}\r\nContent-Disposition: form-data; name=\"{1}\"; filename=\"{2}\"\r\nContent-Type: {3}\r\n\r\n",//파일
+                        http.Boundary,
+                        "file",//php 변수 'file'
+                        path, //파일 풀 경로
+                        "application/octet-stream"); //확장자
+
+            http.formDataStream.Write(Encoding.UTF8.GetBytes(header), 0, Encoding.UTF8.GetByteCount(header));
+            http.formDataStream.Write(data, 0, data.Length);
+            http.formDataStream.Write(Encoding.UTF8.GetBytes(footer), 0, Encoding.UTF8.GetByteCount(footer));
+
+            http.formDataStream.Write(Encoding.UTF8.GetBytes("\r\n"), 0, Encoding.UTF8.GetByteCount("\r\n"));
+
+            string postData = string.Format("--{0}\r\nContent-Disposition: form-data; name=\"{1}\"\r\n\r\n{2}",
+                    http.Boundary,
+                    "ID",
+                    user_name);
+            http.formDataStream.Write(Encoding.UTF8.GetBytes(postData), 0, Encoding.UTF8.GetByteCount(postData));
+
+
+            http.formDataStream.Write(Encoding.UTF8.GetBytes(footer), 0, Encoding.UTF8.GetByteCount(footer));
+
+            http.formDataStream.Position = 0;
+            http.Data = new byte[http.formDataStream.Length]; //완성된 데이터 복사
+            http.formDataStream.Read(http.Data, 0, http.Data.Length);
+            http.formDataStream.Close();
+
+            string result = http.File_Upload();
         }
 
 

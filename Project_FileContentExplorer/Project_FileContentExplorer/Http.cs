@@ -13,9 +13,10 @@ namespace Project_FileContentExplorer
         public StringBuilder PostParam = new StringBuilder();
         public byte[] Data;
         HttpWebRequest Request;
+        public Stream formDataStream;
         string IP = "";//your ServerIP
         string PHP;
-
+        public string Boundary = String.Format("----------{0:N}", Guid.NewGuid());
         public Http(string PHP)
         {
             this.PHP = PHP;
@@ -39,6 +40,40 @@ namespace Project_FileContentExplorer
 
             Stream dataStream = response.GetResponseStream();
             
+            StreamReader reader = new StreamReader(dataStream);
+            string From_Server = reader.ReadToEnd();
+
+            reader.Close();
+            response.Close();
+
+            return From_Server;
+        }
+
+        public string File_Upload()
+        {
+
+            string ContentType = "multipart/form-data; boundary=" + Boundary;
+
+
+            Request = (HttpWebRequest)WebRequest.Create(IP + PHP);
+            Request.Credentials = CredentialCache.DefaultCredentials;
+            Request.Method = "POST";
+            Request.ContentType = ContentType;
+            Request.CookieContainer = new CookieContainer();
+            Request.ContentLength = Data.Length;
+            Request.KeepAlive = true;
+
+
+            //데이터 전송
+            Stream Write_Data = Request.GetRequestStream();
+            Write_Data.Write(Data, 0, Data.Length);
+            Write_Data.Flush();
+            Write_Data.Close();
+
+            HttpWebResponse response = (HttpWebResponse)Request.GetResponse();
+
+            Stream dataStream = response.GetResponseStream();
+
             StreamReader reader = new StreamReader(dataStream);
             string From_Server = reader.ReadToEnd();
 
