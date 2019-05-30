@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.il = new System.Windows.Forms.ImageList(this.components);
             this.Extension_Picture = new System.Windows.Forms.PictureBox();
+            this.Upload_Btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Extension_Picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,9 +44,9 @@
             this.FileName_Label.AutoSize = true;
             this.FileName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileName_Label.ForeColor = System.Drawing.Color.White;
-            this.FileName_Label.Location = new System.Drawing.Point(120, 22);
+            this.FileName_Label.Location = new System.Drawing.Point(105, 18);
             this.FileName_Label.Name = "FileName_Label";
-            this.FileName_Label.Size = new System.Drawing.Size(204, 29);
+            this.FileName_Label.Size = new System.Drawing.Size(157, 24);
             this.FileName_Label.TabIndex = 3;
             this.FileName_Label.Text = "Insert_File_Name";
             // 
@@ -54,9 +55,9 @@
             this.FilePath_Label.AutoSize = true;
             this.FilePath_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilePath_Label.ForeColor = System.Drawing.Color.White;
-            this.FilePath_Label.Location = new System.Drawing.Point(562, 26);
+            this.FilePath_Label.Location = new System.Drawing.Point(411, 22);
             this.FilePath_Label.Name = "FilePath_Label";
-            this.FilePath_Label.Size = new System.Drawing.Size(242, 25);
+            this.FilePath_Label.Size = new System.Drawing.Size(199, 20);
             this.FilePath_Label.TabIndex = 5;
             this.FilePath_Label.Text = "Insert_File_Path_BlahBlah";
             // 
@@ -65,9 +66,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(480, 26);
+            this.label3.Location = new System.Drawing.Point(339, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 25);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "File Path:";
             // 
@@ -82,25 +83,39 @@
             // 
             // Extension_Picture
             // 
-            this.Extension_Picture.Location = new System.Drawing.Point(25, 22);
-            this.Extension_Picture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Extension_Picture.Location = new System.Drawing.Point(22, 18);
             this.Extension_Picture.Name = "Extension_Picture";
-            this.Extension_Picture.Size = new System.Drawing.Size(73, 80);
+            this.Extension_Picture.Size = new System.Drawing.Size(64, 64);
             this.Extension_Picture.TabIndex = 8;
             this.Extension_Picture.TabStop = false;
             // 
+            // Upload_Btn
+            // 
+            this.Upload_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(180)))), ((int)(((byte)(82)))));
+            this.Upload_Btn.FlatAppearance.BorderSize = 0;
+            this.Upload_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Upload_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Upload_Btn.ForeColor = System.Drawing.Color.White;
+            this.Upload_Btn.Location = new System.Drawing.Point(109, 52);
+            this.Upload_Btn.Name = "Upload_Btn";
+            this.Upload_Btn.Size = new System.Drawing.Size(100, 30);
+            this.Upload_Btn.TabIndex = 32;
+            this.Upload_Btn.Text = "UPLOAD";
+            this.Upload_Btn.UseVisualStyleBackColor = false;
+            this.Upload_Btn.Click += new System.EventHandler(this.Upload_Btn_Click);
+            // 
             // SearchedFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(930, 125);
+            this.ClientSize = new System.Drawing.Size(814, 100);
+            this.Controls.Add(this.Upload_Btn);
             this.Controls.Add(this.Extension_Picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FilePath_Label);
             this.Controls.Add(this.FileName_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SearchedFile";
             this.Text = "SearchedFile";
             this.DoubleClick += new System.EventHandler(this.SearchedFile_DoubleClick);
@@ -118,5 +133,6 @@
         public System.Windows.Forms.Label FilePath_Label;
         public System.Windows.Forms.ImageList il;
         public System.Windows.Forms.PictureBox Extension_Picture;
+        private System.Windows.Forms.Button Upload_Btn;
     }
 }

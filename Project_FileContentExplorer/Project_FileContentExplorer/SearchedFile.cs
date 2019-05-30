@@ -51,6 +51,13 @@ namespace Project_FileContentExplorer
             this.BackColor = Color.FromArgb(69, 79, 100);
         }
 
+        private void Upload_Btn_Click(object sender, EventArgs e)
+        {
+            string path = this.FilePath_Label.Text;
+            MessageBox.Show(path);
+            
+        }
+
 
 
         //0: txt 1: pdf 2: hwp 3: doc, docx
