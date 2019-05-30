@@ -14,6 +14,7 @@ namespace Project_FileContentExplorer
     public partial class SearchedFile : Form
     {
         Panel Home_Panel;
+        
         public SearchedFile(Panel panel)
         {
             InitializeComponent();
@@ -38,6 +39,18 @@ namespace Project_FileContentExplorer
                 MessageBox.Show("파일을 연결프로그램으로 열기 실패" + ex.ToString());
             }
         }
+
+        private void SearchedFile_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(69, 79, 100);
+        }
+
+        private void SearchedFile_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(47, 57, 78);
+        }
+
+
 
         //0: txt 1: pdf 2: hwp 3: doc, docx
 

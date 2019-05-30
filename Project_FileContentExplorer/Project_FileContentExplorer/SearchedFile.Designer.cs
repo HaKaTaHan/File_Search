@@ -102,6 +102,8 @@
             this.Name = "SearchedFile";
             this.Text = "SearchedFile";
             this.DoubleClick += new System.EventHandler(this.SearchedFile_DoubleClick);
+            this.MouseLeave += new System.EventHandler(this.SearchedFile_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.SearchedFile_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.Extension_Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
