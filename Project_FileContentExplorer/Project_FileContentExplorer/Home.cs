@@ -248,8 +248,11 @@ namespace Project_FileContentExplorer
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
 
-            Application.OpenForms["Searching"].Enabled = true;
-            Application.OpenForms["Searching"].Visible = true;
+            if (Application.OpenForms["Searching"] != null)
+            {
+                Application.OpenForms["Searching"].Enabled = true;
+                Application.OpenForms["Searching"].Visible = true;
+            }
             //Application.OpenForms["Searching"].TopLevel = true;
 
 
