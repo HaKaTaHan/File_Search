@@ -68,11 +68,11 @@ namespace Project_FileContentExplorer
 
         void backgroundWork(object sender, DoWorkEventArgs e)
         {
-            //foreach (string path in Environment.GetLogicalDrives())
-            //{
-            //    sync(path);
-            //}
-            sync(@"D:\");
+            foreach (string path in Environment.GetLogicalDrives())
+            {
+                sync(path);
+            }
+            //sync(@"D:\");
 
             textTxt.WriteLine("End");
             textPdf.WriteLine("End");
@@ -226,6 +226,8 @@ namespace Project_FileContentExplorer
                 F_Account.Close();
             if (F_Setting != null)
                 F_Setting.Close();
+
+
             //Sign_Up 닫기
             if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
             {
@@ -233,12 +235,23 @@ namespace Project_FileContentExplorer
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
             {
-                Application.OpenForms.Cast<Form>().Last().Close();
+                Application.OpenForms["Searching"].Enabled = false;
+                Application.OpenForms["Searching"].Visible = false;
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("SearchedFile"))
+            {
+                Application.OpenForms["Searching"].Enabled = false;
+                Application.OpenForms["Searching"].Visible = false;
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Findaccount"))
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
+
+            Application.OpenForms["Searching"].Enabled = true;
+            Application.OpenForms["Searching"].Visible = true;
+            //Application.OpenForms["Searching"].TopLevel = true;
+
 
             //Search_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(98, 50, 170);
@@ -263,7 +276,7 @@ namespace Project_FileContentExplorer
                 F_Account.Close();
             if (F_Setting != null)
                 F_Setting.Close();
-
+            
             //Sign_Up 닫기
             if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
             {
@@ -271,13 +284,19 @@ namespace Project_FileContentExplorer
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
             {
-                Application.OpenForms.Cast<Form>().Last().Close();
+                Application.OpenForms["Searching"].Enabled = false;
+                Application.OpenForms["Searching"].Visible = false;
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("SearchedFile"))
+            {
+                Application.OpenForms["Searching"].Enabled = false;
+                Application.OpenForms["Searching"].Visible = false;
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Findaccount"))
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
-
+            
             //Account_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(35, 45, 65);
             Account_Btn.BackColor = Color.FromArgb(98, 50, 170);
@@ -309,7 +328,13 @@ namespace Project_FileContentExplorer
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
             {
-                Application.OpenForms.Cast<Form>().Last().Close();
+                Application.OpenForms["Searching"].Enabled = false;
+                Application.OpenForms["Searching"].Visible = false;
+            }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("SearchedFile"))
+            {
+                Application.OpenForms["Searching"].Enabled = false;
+                Application.OpenForms["Searching"].Visible = false;
             }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Findaccount"))
             {

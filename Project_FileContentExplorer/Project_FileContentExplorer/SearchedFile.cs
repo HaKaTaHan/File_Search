@@ -19,13 +19,14 @@ namespace Project_FileContentExplorer
         {
             InitializeComponent();
             Home_Panel = panel;
+            Extension_Picture.Image = il.Images[0];
         }
 
         public SearchedFile()
         {
             InitializeComponent();
             //Default
-            Extension_Picture.Image = il.Images[0];
+           
         }
 
         private void SearchedFile_DoubleClick(object sender, EventArgs e)
