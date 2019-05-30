@@ -40,14 +40,14 @@ namespace Project_FileContentExplorer
             }
         }
 
-        private void SearchedFile_MouseHover(object sender, EventArgs e)
-        {
-            this.BackColor = Color.FromArgb(69, 79, 100);
-        }
-
         private void SearchedFile_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(47, 57, 78);
+        }
+
+        private void SearchedFile_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.BackColor = Color.FromArgb(69, 79, 100);
         }
 
 
