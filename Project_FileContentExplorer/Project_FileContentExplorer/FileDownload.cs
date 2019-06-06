@@ -108,7 +108,17 @@ namespace Project_FileContentExplorer
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 downpath = fbd.SelectedPath;
+                int index;
+                index = download_ListView.FocusedItem.Index;
+                string name = download_ListView.Items[index].SubItems[0].Text;
+                string url = download_ListView.Items[index].SubItems[2].Text;
+                Http down = new Http(url);
 
+                string fin = down.File_Download(downpath +"\\"+ name);
+                if (fin.Equals("fin"))
+                {
+                    MessageBox.Show("다운이 완료되었습니다.");
+                }
             }
         }
     }
