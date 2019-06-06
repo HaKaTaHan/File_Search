@@ -14,7 +14,7 @@ namespace Project_FileContentExplorer
         public byte[] Data;
         HttpWebRequest Request;
         public Stream formDataStream;
-        string IP = "http://ec2-52-79-229-92.ap-northeast-2.compute.amazonaws.com/Project/";//your ServerIP
+        string IP = "";//your ServerIP
         string PHP;
         public string Boundary = String.Format("----------{0:N}", Guid.NewGuid());
         public Http(string PHP)
