@@ -55,9 +55,13 @@ namespace Project_FileContentExplorer
         private void Upload_Btn_Click(object sender, EventArgs e)
         {
             string path = this.FilePath_Label.Text;
-            //업로드 여부 확인
             string user_name = Properties.Settings.Default.ID;
 
+            if (user_name.Equals(""))
+            {
+                MessageBox.Show("로그인 후 업로드가 가능합니다.");
+                return;
+            }
 
             FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
             byte[] data = new byte[fs.Length];
@@ -95,6 +99,11 @@ namespace Project_FileContentExplorer
             http.formDataStream.Close();
 
             string result = http.File_Upload();
+
+            if (result.Equals("1"))
+            {
+                MessageBox.Show("업로드 되었습니다.");
+            }
         }
 
 
