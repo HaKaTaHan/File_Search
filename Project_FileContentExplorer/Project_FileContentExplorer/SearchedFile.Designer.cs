@@ -106,6 +106,7 @@
             // 
             // SearchedFile
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
@@ -118,9 +119,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SearchedFile";
             this.Text = "SearchedFile";
-            this.DoubleClick += new System.EventHandler(this.SearchedFile_DoubleClick);
+            this.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.SearchedFile_GiveFeedback);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SearchedFile_MouseDoubleClick);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SearchedFile_MouseDown);
             this.MouseLeave += new System.EventHandler(this.SearchedFile_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SearchedFile_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SearchedFile_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.Extension_Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

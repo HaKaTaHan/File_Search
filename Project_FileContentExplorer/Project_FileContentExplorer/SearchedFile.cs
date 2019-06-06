@@ -15,7 +15,11 @@ namespace Project_FileContentExplorer
     public partial class SearchedFile : Form
     {
         Panel Home_Panel;
-        
+
+        public bool isMouseDown;
+        public static string filePath;
+        public static bool isDraging;
+
         public SearchedFile(Panel panel)
         {
             InitializeComponent();
@@ -30,18 +34,6 @@ namespace Project_FileContentExplorer
            
         }
 
-        private void SearchedFile_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start(this.FilePath_Label.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("파일을 연결프로그램으로 열기 실패" + ex.ToString());
-            }
-        }
-
         private void SearchedFile_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(47, 57, 78);
@@ -49,7 +41,25 @@ namespace Project_FileContentExplorer
 
         private void SearchedFile_MouseMove(object sender, MouseEventArgs e)
         {
-            this.BackColor = Color.FromArgb(69, 79, 100);
+            this.BackColor = Color.FromArgb(69, 79, 100);            
+
+            if (isDraging == false)
+            {
+                try
+                {
+                    isDraging = true;
+                    filePath = this.FilePath_Label.Text;
+                    var files = new string[1];
+                    files[0] = filePath;
+                    var dob = new DataObject();
+                    dob.SetData(DataFormats.FileDrop, files);
+                    DragDropEffects dragEvent = this.DoDragDrop(dob, DragDropEffects.Copy);
+                }
+                catch
+                {
+
+                }
+            }
         }
 
         private void Upload_Btn_Click(object sender, EventArgs e)
@@ -105,6 +115,33 @@ namespace Project_FileContentExplorer
             {
                 MessageBox.Show("업로드 되었습니다.");
             }
+        }
+
+        private void SearchedFile_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Process.Start(this.FilePath_Label.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("파일을 연결프로그램으로 열기 실패" + ex.ToString());
+            }
+        }
+
+        private void SearchedFile_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDraging = false;
+        }
+
+        private void SearchedFile_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDraging = false;
+        }
+
+        private void SearchedFile_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
+            //커서 이동동안 그림      
         }
 
 

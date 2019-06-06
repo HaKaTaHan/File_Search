@@ -53,9 +53,8 @@
             this.Panel_Btns.Controls.Add(this.Search_Btn);
             this.Panel_Btns.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_Btns.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Btns.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Panel_Btns.Name = "Panel_Btns";
-            this.Panel_Btns.Size = new System.Drawing.Size(160, 751);
+            this.Panel_Btns.Size = new System.Drawing.Size(140, 601);
             this.Panel_Btns.TabIndex = 0;
             // 
             // button4
@@ -64,10 +63,10 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
-            this.button4.Location = new System.Drawing.Point(0, 450);
+            this.button4.Location = new System.Drawing.Point(0, 360);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 150);
+            this.button4.Size = new System.Drawing.Size(140, 120);
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = false;
@@ -80,10 +79,10 @@
             this.Setting_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Setting_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
             this.Setting_Btn.Image = global::Project_FileContentExplorer.Properties.Resources.KakaoTalk_20190509_181414212;
-            this.Setting_Btn.Location = new System.Drawing.Point(0, 300);
+            this.Setting_Btn.Location = new System.Drawing.Point(0, 240);
             this.Setting_Btn.Margin = new System.Windows.Forms.Padding(0);
             this.Setting_Btn.Name = "Setting_Btn";
-            this.Setting_Btn.Size = new System.Drawing.Size(160, 150);
+            this.Setting_Btn.Size = new System.Drawing.Size(140, 120);
             this.Setting_Btn.TabIndex = 2;
             this.Setting_Btn.UseVisualStyleBackColor = false;
             this.Setting_Btn.Click += new System.EventHandler(this.Setting_Btn_Click);
@@ -96,10 +95,10 @@
             this.Account_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Account_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
             this.Account_Btn.Image = global::Project_FileContentExplorer.Properties.Resources.KakaoTalk_20190509_181414334;
-            this.Account_Btn.Location = new System.Drawing.Point(0, 150);
+            this.Account_Btn.Location = new System.Drawing.Point(0, 120);
             this.Account_Btn.Margin = new System.Windows.Forms.Padding(0);
             this.Account_Btn.Name = "Account_Btn";
-            this.Account_Btn.Size = new System.Drawing.Size(160, 150);
+            this.Account_Btn.Size = new System.Drawing.Size(140, 120);
             this.Account_Btn.TabIndex = 1;
             this.Account_Btn.UseVisualStyleBackColor = false;
             this.Account_Btn.Click += new System.EventHandler(this.Account_Btn_Click);
@@ -115,7 +114,7 @@
             this.Search_Btn.Location = new System.Drawing.Point(0, 0);
             this.Search_Btn.Margin = new System.Windows.Forms.Padding(0);
             this.Search_Btn.Name = "Search_Btn";
-            this.Search_Btn.Size = new System.Drawing.Size(160, 150);
+            this.Search_Btn.Size = new System.Drawing.Size(140, 120);
             this.Search_Btn.TabIndex = 0;
             this.Search_Btn.UseVisualStyleBackColor = false;
             this.Search_Btn.Click += new System.EventHandler(this.Search_Btn_Click);
@@ -123,10 +122,9 @@
             // Display_Area
             // 
             this.Display_Area.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Display_Area.Location = new System.Drawing.Point(160, 0);
-            this.Display_Area.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Display_Area.Location = new System.Drawing.Point(140, 0);
             this.Display_Area.Name = "Display_Area";
-            this.Display_Area.Size = new System.Drawing.Size(1056, 751);
+            this.Display_Area.Size = new System.Drawing.Size(924, 601);
             this.Display_Area.TabIndex = 3;
             this.Display_Area.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Area_Paint);
             // 
@@ -144,32 +142,32 @@
             this.btn_open,
             this.btn_exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 48);
             // 
             // btn_open
             // 
             this.btn_open.Name = "btn_open";
-            this.btn_open.Size = new System.Drawing.Size(108, 24);
+            this.btn_open.Size = new System.Drawing.Size(98, 22);
             this.btn_open.Text = "열기";
             this.btn_open.Click += new System.EventHandler(this.btn_open_Click);
             // 
             // btn_exit
             // 
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(108, 24);
+            this.btn_exit.Size = new System.Drawing.Size(98, 22);
             this.btn_exit.Text = "종료";
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AllowDrop = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(1216, 751);
+            this.ClientSize = new System.Drawing.Size(1064, 601);
             this.Controls.Add(this.Display_Area);
             this.Controls.Add(this.Panel_Btns);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Home";
             this.Text = "File Content Explorer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);

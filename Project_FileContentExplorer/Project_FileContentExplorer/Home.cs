@@ -68,11 +68,11 @@ namespace Project_FileContentExplorer
 
         void backgroundWork(object sender, DoWorkEventArgs e)
         {
-            foreach (string path in Environment.GetLogicalDrives())
-            {
-                sync(path);
-            }
-            //sync(@"D:\");
+            //foreach (string path in Environment.GetLogicalDrives())
+            //{
+            //    sync(path);
+            //}
+            sync(@"D:\");
 
             textTxt.WriteLine("End");
             textPdf.WriteLine("End");
