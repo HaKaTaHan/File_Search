@@ -12,6 +12,7 @@ namespace Project_FileContentExplorer
 {
     public partial class Account : Form
     {
+        FileDownload F_FileDownload;
         Signup F_Signup;
         Findaccount F_Findaccount;
         Panel Home_Panel;
@@ -72,6 +73,14 @@ namespace Project_FileContentExplorer
                     Properties.Settings.Default.ID = ID_Text.Text;
                     MessageBox.Show("로그인이 되었습니다.", "환영합니다", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //MessageBox.Show(Properties.Settings.Default.ID);
+
+                    F_FileDownload = new FileDownload(Home_Panel);
+                    F_FileDownload.TopLevel = false;
+                    F_FileDownload.Dock = System.Windows.Forms.DockStyle.Fill;
+                    Home_Panel.Controls.Add(F_FileDownload);
+
+                    F_FileDownload.Show();
+                    Close();
                 }
 
             }

@@ -20,6 +20,7 @@ namespace Project_FileContentExplorer
 {
     public partial class Searching : Form
     {
+        Search F_Search;
         SearchedFile F_SearchedFile;
         Panel Home_Panel;
         Searching F_Searching;
@@ -47,15 +48,15 @@ namespace Project_FileContentExplorer
         int docChecked;
         int docxChecked;
 
-        bool txtCompleted=false;
+        bool txtCompleted = false;
         bool txtsw = false;
-        bool pdfCompleted=false;
+        bool pdfCompleted = false;
         bool pdfsw = false;
-        bool hwpCompleted=false;
+        bool hwpCompleted = false;
         bool hwpsw = false;
-        bool docCompleted=false;
+        bool docCompleted = false;
         bool docsw = false;
-        bool docxCompleted=false;
+        bool docxCompleted = false;
         bool docxsw = false;
 
         bool completesw = false;
@@ -83,11 +84,12 @@ namespace Project_FileContentExplorer
         };
 
 
-        public Searching(String Keyword)
+        public Searching(Panel panel, String Keyword)
         {
             InitializeComponent();
             this.Keyword = Keyword;
             ProgressInit();
+            this.Home_Panel = panel;
         }
 
         public void ProgressInit()
@@ -105,14 +107,20 @@ namespace Project_FileContentExplorer
 
         public void SearchingComplete()
         {
+            Tohome_Btn.Visible = true;
             completesw = true;
             int filenum = txtCount + hwpCount + pdfCount + docCount + docxCount;
             //MessageBox.Show("검색이 완료되었습니다");
-        } 
+  
+            Resume_Btn.Visible = false;
+            Stop_Btn.Visible = false;
+            Pause_Btn.Visible = false;
+            //Tohome_Btn.Visible = true;
+        }
 
         private void Searching_Load(object sender, EventArgs e)
-        {            
-            Keyword_Label.Text = Keyword;          
+        {
+            Keyword_Label.Text = Keyword;
 
             if (Keyword.Length != 0)
             {
@@ -123,7 +131,7 @@ namespace Project_FileContentExplorer
                 docxCount = 0;
                 //p = 0;
                 keyword = Keyword;
-                                               
+
                 txtChecked = Properties.Settings.Default.txtList.Length;
                 pdfChecked = Properties.Settings.Default.pdfList.Length;
                 hwpChecked = Properties.Settings.Default.hwpList.Length;
@@ -138,7 +146,7 @@ namespace Project_FileContentExplorer
                 }
                 else txtCompleted = true;
 
-                
+
                 if (pdfChecked != 0)
                 {
                     pdfThread = new Thread(new ThreadStart(pdfWork));
@@ -164,7 +172,7 @@ namespace Project_FileContentExplorer
                 }
                 else docxCompleted = true;
 
-                if(txtChecked + pdfChecked + hwpChecked + docxChecked + docChecked + docxChecked == 0)
+                if (txtChecked + pdfChecked + hwpChecked + docxChecked + docChecked + docxChecked == 0)
                 {
                     txtThread = new Thread(new ThreadStart(txtWork));
                     txtThread.Start();
@@ -176,28 +184,28 @@ namespace Project_FileContentExplorer
                     docThread.Start();
                     docxThread = new Thread(new ThreadStart(docxWork));
                     docxThread.Start();
-                }                
-            }          
-        }       
+                }
+            }
+        }
 
         void txtWork()
-        {            
+        {
             //FileStream txtFileStream = File.Open(@"D:\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             FileStream txtFileStream = File.Open(currentDirectory + "\\txtList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            StreamReader txtReader = new StreamReader(txtFileStream, Encoding.Default);            
+            StreamReader txtReader = new StreamReader(txtFileStream, Encoding.Default);
             while (true)
-            {                
-                string path = txtReader.ReadLine();                
+            {
+                string path = txtReader.ReadLine();
                 if (path == "End")
                     break;
                 else if (path == null)
                     continue;
-                else if (Properties.Settings.Default.Path_Scope.Length == 0)                                   
-                    txtExtract(keyword, path);               
-                else if (path.Contains(Properties.Settings.Default.Path_Scope))                                    
+                else if (Properties.Settings.Default.Path_Scope.Length == 0)
+                    txtExtract(keyword, path);
+                else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     txtExtract(keyword, path);
                 //Console.WriteLine(path);
-                               
+
             }
             Console.WriteLine("txt 검색 끝");
             Console.WriteLine("keyword가 들어있는 txt 개수 : " + txtCount);
@@ -214,8 +222,8 @@ namespace Project_FileContentExplorer
 
         void pdfWork()
         {
-            FileStream pdfFileStream = File.Open(currentDirectory + "\\pdfList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
-            StreamReader pdfReader = new StreamReader(pdfFileStream, Encoding.Default);           
+            FileStream pdfFileStream = File.Open(currentDirectory + "\\pdfList.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            StreamReader pdfReader = new StreamReader(pdfFileStream, Encoding.Default);
             while (true)
             {
                 string path = pdfReader.ReadLine();
@@ -228,7 +236,7 @@ namespace Project_FileContentExplorer
                 else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     pdfExtract(keyword, path);
                 //Console.WriteLine(path);
-            }                        
+            }
             Console.WriteLine("pdf 검색 끝");
             Console.WriteLine("keyword가 들어있는 pdf 개수 " + pdfCount);
             pdfCompleted = true;
@@ -334,9 +342,9 @@ namespace Project_FileContentExplorer
         }
 
         public void txtExtract(string keyWord, string path)
-        {            
+        {
             try
-            {                
+            {
                 FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 StreamReader textTxt = new StreamReader(fs, Encoding.Default);
                 string all = textTxt.ReadToEnd();
@@ -345,7 +353,7 @@ namespace Project_FileContentExplorer
                 {
                     txtCount++;
                     Console.WriteLine(path);
-                    
+
 
                     Task.Run(() =>
                     {
@@ -361,16 +369,16 @@ namespace Project_FileContentExplorer
 
         public void pdfExtract(string keyWord, string path)
         {
-            PDDocument doc = null;            
+            PDDocument doc = null;
             try
-            {                             
-                doc = PDDocument.load(path);               
+            {
+                doc = PDDocument.load(path);
                 if (doc.isEncrypted())
                 {
                     doc.close();
                     return;
-                }              
-                PDFTextStripper stripper = new PDFTextStripper();                
+                }
+                PDFTextStripper stripper = new PDFTextStripper();
                 bool isExist = stripper.getText(doc).ToLower().Contains(keyword);
                 if (isExist)
                 {
@@ -382,7 +390,7 @@ namespace Project_FileContentExplorer
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
                 }
-                    doc.close();
+                doc.close();
             }
             catch
             {
@@ -402,7 +410,7 @@ namespace Project_FileContentExplorer
         public void hwpExtract(string keyWord, string path)
         {
             try
-            {                
+            {
                 StringBuilder sb = new StringBuilder();
                 HWPMeta meta = new HWPMeta();
                 H2TParser parser = new H2TParser();
@@ -432,7 +440,7 @@ namespace Project_FileContentExplorer
         public void docExtract(string keyWord, string path)
         {
             try
-            {                
+            {
                 Document doc = new Document(path);
                 DocumentBuilder builder = new DocumentBuilder(doc);
 
@@ -457,7 +465,7 @@ namespace Project_FileContentExplorer
         public void docxExtract(string keyWord, string path)
         {
             try
-            {                
+            {
                 Document doc = new Document(path);
                 DocumentBuilder builder = new DocumentBuilder(doc);
                 //MessageBox.Show(doc.GetText());
@@ -471,17 +479,17 @@ namespace Project_FileContentExplorer
                     {
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
-                    
+
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                //MessageBox.Show(e.Message);
                 return;
             }
         }
 
-        
+
 
         private void Pause_Btn_Click(object sender, EventArgs e)
         {
@@ -493,7 +501,7 @@ namespace Project_FileContentExplorer
             {
                 if (txtChecked != 0 && txtThread.ThreadState.ToString() != "Stopped")
                 {
-                    txtThread.Suspend();                   
+                    txtThread.Suspend();
                     Console.WriteLine("txtThread 중단됨");
                 }
                 if (pdfChecked != 0 && pdfThread.ThreadState.ToString() != "Stopped")
@@ -553,12 +561,23 @@ namespace Project_FileContentExplorer
 
         }
 
+        private void Tohome_Btn_Click (object sender, EventArgs e)
+        {
+            F_Search = new Search(Home_Panel);
+            F_Search.TopLevel = false;
+            F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+            Home_Panel.Controls.Add(F_Search);
+            F_Search.Show();
+            this.Close();
+
+        }
+
         private void Resume_Btn_Click(object sender, EventArgs e)
         {
             Resume_Btn.Visible = false;
             Stop_Btn.Visible = false;
             Pause_Btn.Visible = true;
-            Console.WriteLine(pdfThread.ThreadState.ToString());
+            //Console.WriteLine(pdfThread.ThreadState.ToString());
             try
             {
                 if (txtChecked != 0 && txtThread.ThreadState.ToString() == "Suspended")
@@ -608,8 +627,12 @@ namespace Project_FileContentExplorer
 
         private void Stop_Btn_Click(object sender, EventArgs e)
         {
+            Resume_Btn.Visible = false;
+            Stop_Btn.Visible = false;
+            Tohome_Btn.Visible = true;
+
             //quit thread
-            
+
             try
             {
                 if (txtThread.ThreadState.ToString() == "Suspended")
@@ -699,7 +722,7 @@ namespace Project_FileContentExplorer
 
                 F_SearchedFile.Show();
             }
-                ));                                                
+                ));
             //Console.WriteLine("Test: " + path);
         }
 
@@ -710,7 +733,7 @@ namespace Project_FileContentExplorer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (time < 20)
+            if (time < 2)
             {
                 time++;
                 if (completesw)

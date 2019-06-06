@@ -253,6 +253,17 @@ namespace Project_FileContentExplorer
                 Application.OpenForms["Searching"].Enabled = true;
                 Application.OpenForms["Searching"].Visible = true;
             }
+            if (Application.OpenForms["Account"] != null)
+            {
+                Application.OpenForms["Account"].Enabled = false;
+                Application.OpenForms["Account"].Visible = false;
+            }
+            if (Application.OpenForms["FileDownload"] != null)
+            {
+                Application.OpenForms["FileDownload"].Enabled = false;
+                Application.OpenForms["FileDownload"].Visible = false;
+            }
+
             //Application.OpenForms["Searching"].TopLevel = true;
 
 
@@ -299,7 +310,14 @@ namespace Project_FileContentExplorer
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
+            if((!Properties.Settings.Default.ID.Equals("")) && Application.OpenForms["FileDownload"] != null)
+            {
+                Application.OpenForms["FileDownload"].Enabled = true;
+                Application.OpenForms["FileDownload"].Visible = true;
+            }
             
+
+
             //Account_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(35, 45, 65);
             Account_Btn.BackColor = Color.FromArgb(98, 50, 170);
@@ -344,6 +362,17 @@ namespace Project_FileContentExplorer
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
 
+            if (Application.OpenForms["Account"] != null)
+            {
+                Application.OpenForms["Account"].Enabled = false;
+                Application.OpenForms["Account"].Visible = false;
+            }
+            if (Application.OpenForms["FileDownload"] != null)
+            {
+                Application.OpenForms["FileDownload"].Enabled = false;
+                Application.OpenForms["FileDownload"].Visible = false;
+            }
+
             //Setting_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(35, 45, 65);
             Account_Btn.BackColor = Color.FromArgb(35, 45, 65);
@@ -363,7 +392,6 @@ namespace Project_FileContentExplorer
             e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
             //scope path 해제해야됨
             Properties.Settings.Default.Path_Scope = "";
-            Properties.Settings.Default.ID = "";
             Properties.Settings.Default.Save();
             this.Visible = false;
 
