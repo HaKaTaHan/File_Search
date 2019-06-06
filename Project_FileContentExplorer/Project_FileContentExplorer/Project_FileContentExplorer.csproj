@@ -123,6 +123,12 @@
     <Compile Include="Alarm.Designer.cs">
       <DependentUpon>Alarm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDownload.Designer.cs">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+    </Compile>
     <Compile Include="Findaccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alarm.resx">
       <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDownload.resx">
+      <DependentUpon>FileDownload.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Findaccount.resx">
       <DependentUpon>Findaccount.cs</DependentUpon>

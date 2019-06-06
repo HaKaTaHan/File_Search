@@ -1,1 +1,549 @@
+C:\Windows\System32\DriverStore\FileRepository\nvmsoi.inf_amd64_b13051ab066c6492\nvidia-smi.1.pdf
+C:\Windows\System32\DriverStore\FileRepository\nvmso.inf_amd64_5b595424bb8a665b\nvidia-smi.1.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\transpose\doc\MatrixTranspose.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\simpleHyperQ\doc\HyperQ.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\eigenvalues\doc\eigenvalues.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\smokeParticles\doc\smokeParticles.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\particles\doc\particles.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\nbody\doc\nbody_gems3_ch31.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\fluidsGL\doc\fluidsGL.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\MonteCarloMultiGPU\doc\MonteCarlo.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\BlackScholes\doc\BlackScholes.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\binomialOptions\doc\binomialOptions.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\imageDenoising\doc\imageDenoising.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\HSOpticalFlow\doc\OpticalFlow.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\histogram\doc\histogram.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dxtc\doc\cuda_dxtc.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dct8x8\doc\dct8x8.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\convolutionSeparable\doc\convolutionSeparable.pdf
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\0_Simple\simpleZeroCopy\doc\CUDA2.2PinnedMemoryAPIs.pdf
+C:\Users\alask\Downloads\06_리눅스활용실습_쉘프로그래밍2.pdf
+C:\Users\alask\Downloads\07.InterProcess_Commnication_01 (1).pdf
+C:\Users\alask\Downloads\07_리눅스활용실습_Vim,gcc,Make.pdf
+C:\Users\alask\Downloads\08_리눅스활용실습_GDB.pdf
+C:\Users\alask\Downloads\1-1.산학연계SW프로젝트_수요조사서(프로젝트_주제).pdf
+C:\Users\alask\Downloads\100-13 (1).pdf
+C:\Users\alask\Downloads\100-13.pdf
+C:\Users\alask\Downloads\100-73 (1).pdf
+C:\Users\alask\Downloads\100-73.pdf
+C:\Users\alask\Downloads\100-88.pdf
+C:\Users\alask\Downloads\10장-사랑과+성.pdf
+C:\Users\alask\Downloads\11장-이상행동.pdf
+C:\Users\alask\Downloads\12장-심리치료.pdf
+C:\Users\alask\Downloads\13장-긍정심리학.pdf
+C:\Users\alask\Downloads\1장-심리학의+이해.pdf
+C:\Users\alask\Downloads\2-나._졸업이수학점_496.pdf
+C:\Users\alask\Downloads\2-다. 공학인증제도.pdf
+C:\Users\alask\Downloads\2015+가을+대학수학2+중간시험 (1).pdf
+C:\Users\alask\Downloads\2015+가을+대학수학2+중간시험+풀이.pdf
+C:\Users\alask\Downloads\2015+가을+대학수학2+중간시험.pdf
+C:\Users\alask\Downloads\2018-2019 FTC 팀 안내문 (1).pdf
+C:\Users\alask\Downloads\2018-2019 FTC 팀 안내문.pdf
+C:\Users\alask\Downloads\2018-2019 KRC 공통일정 진행안내.pdf
+C:\Users\alask\Downloads\2018-2019 KRC 배치도 0120.pdf
+C:\Users\alask\Downloads\2018-2019 KRC 안내문.pdf
+C:\Users\alask\Downloads\20180927_(SW)_오픈소스소프트웨어개발-(조별)프로젝트.pdf
+C:\Users\alask\Downloads\2018_SystemSoftwarePractice_Project01.pdf
+C:\Users\alask\Downloads\2018학년도 정시모집 결과(수정본_1115).pdf
+C:\Users\alask\Downloads\2019 GKS Associate Degree Program Successful Candidates_Final result.pdf
+C:\Users\alask\Downloads\2019 GKS-G Application Guidelines (Korean).pdf
+C:\Users\alask\Downloads\2019학년도_하계_계절수업_개설_교과목_현황(190524).pdf
+C:\Users\alask\Downloads\2장-신경생리학의+이해.pdf
+C:\Users\alask\Downloads\3장-지능과+심리검사.pdf
+C:\Users\alask\Downloads\4-가._강의시간표(전체)_190129_504.pdf
+C:\Users\alask\Downloads\4-라-2_소프트웨어융합대학_509.pdf
+C:\Users\alask\Downloads\4장-성격.pdf
+C:\Users\alask\Downloads\5009. E.E (1).pdf
+C:\Users\alask\Downloads\5009. E.E.pdf
+C:\Users\alask\Downloads\5장-인간발달.pdf
+C:\Users\alask\Downloads\6장-사회적+행동과+집단+역학.pdf
+C:\Users\alask\Downloads\7장-학습과+행동.pdf
+C:\Users\alask\Downloads\8장-기억과+지각.pdf
+C:\Users\alask\Downloads\9. 공산품(30개 업종).pdf
+C:\Users\alask\Downloads\9장-동기와+정서.pdf
+C:\Users\alask\Downloads\Algorithm_Chap2_3_4.pdf
+C:\Users\alask\Downloads\Algo_Chap_5_6_7_9.pdf
+C:\Users\alask\Downloads\Assignment_1.pdf
+C:\Users\alask\Downloads\Chap5_6_7_8.pdf
+C:\Users\alask\Downloads\CHAPT01_02_03_04.pdf
+C:\Users\alask\Downloads\Chapts_9_10_11_12_13_15.pdf
+C:\Users\alask\Downloads\cisconetworkingessentials_2nded.pdf
+C:\Users\alask\Downloads\DS_Assignment2 (1).pdf
+C:\Users\alask\Downloads\DS_Assignment2.pdf
+C:\Users\alask\Downloads\DS_Assignment3.pdf
+C:\Users\alask\Downloads\H2-History+(2019) (1).pdf
+C:\Users\alask\Downloads\H3-Design+process+(2019).pdf
+C:\Users\alask\Downloads\H4-Task+analysis+(2019) (1).pdf
+C:\Users\alask\Downloads\H4-Task+analysis+(2019).pdf
+C:\Users\alask\Downloads\H5-Prototyping+(2019) (1).pdf
+C:\Users\alask\Downloads\H5-Prototyping+(2019).pdf
+C:\Users\alask\Downloads\H6-Mental+model+(2019).pdf
+C:\Users\alask\Downloads\H7-Human+information+processor+(1)+(2019).pdf
+C:\Users\alask\Downloads\Hefferson_Answers.pdf
+C:\Users\alask\Downloads\HW4.pdf
+C:\Users\alask\Downloads\HW5.pdf
+C:\Users\alask\Downloads\KRC 전체 일정.pdf
+C:\Users\alask\Downloads\KRC 팀 서약서.pdf
+C:\Users\alask\Downloads\Linear_Algebra_Hefferson.pdf
+C:\Users\alask\Downloads\M0-JavaScriptReview+(2019) (1).pdf
+C:\Users\alask\Downloads\M1-GUI+(2019) (1).pdf
+C:\Users\alask\Downloads\M4-Space+(2019).pdf
+C:\Users\alask\Downloads\M5-Motion+(2019).pdf
+C:\Users\alask\Downloads\ncurses_Installation (1).pdf
+C:\Users\alask\Downloads\ncurses_Installation.pdf
+C:\Users\alask\Downloads\P1-BasicCalculator (1).pdf
+C:\Users\alask\Downloads\P1-BasicCalculator.pdf
+C:\Users\alask\Downloads\P2-BlockCalculator (1).pdf
+C:\Users\alask\Downloads\P2-BlockCalculator (2).pdf
+C:\Users\alask\Downloads\P2-BlockCalculator.pdf
+C:\Users\alask\Downloads\Tab_Flower_Dance_DJ_Okawari (1).pdf
+C:\Users\alask\Downloads\Tab_Flower_Dance_DJ_Okawari (2).pdf
+C:\Users\alask\Downloads\Tab_Flower_Dance_DJ_Okawari-2p.pdf
+C:\Users\alask\Downloads\Tab_Flower_Dance_DJ_Okawari.pdf
+C:\Users\alask\Downloads\updated_lecture_schedule.pdf
+C:\Users\alask\Downloads\WESContest2018_개발완료보고서_실시간 IoT시스템_19025_KOBOT.pdf
+C:\Users\alask\Downloads\과제01.+C#+조사 (1).pdf
+C:\Users\alask\Downloads\과제01.+C#+조사 (2).pdf
+C:\Users\alask\Downloads\과제01.+C#+조사.pdf
+C:\Users\alask\Downloads\과제1.pdf
+C:\Users\alask\Downloads\과제2 (1).pdf
+C:\Users\alask\Downloads\과제2 (2).pdf
+C:\Users\alask\Downloads\과제2 (3).pdf
+C:\Users\alask\Downloads\과제2.pdf
+C:\Users\alask\Downloads\과제3 (1).pdf
+C:\Users\alask\Downloads\과제3.pdf
+C:\Users\alask\Downloads\과제4 (1).pdf
+C:\Users\alask\Downloads\과제4.pdf
+C:\Users\alask\Downloads\대학수학2+중간시험+기출+문제들 (1).pdf
+C:\Users\alask\Downloads\대학수학2+중간시험+기출+문제들.pdf
+C:\Users\alask\Downloads\부동산거래와+법률(법과+권리).pdf
+C:\Users\alask\Downloads\안전교육+수강+방법+안내.pdf
+C:\Users\alask\Downloads\HW2\HW2.pdf
+C:\Users\alask\Downloads\2018_Project02\2018_Project02.pdf
+C:\Users\alask\Documents\01_(FOSS)_Introduction_to_Free-OpenSource_Software.pdf
+C:\Users\alask\Documents\02_(FOSS)_Free-OpenSource_Software-License.pdf
+C:\Users\alask\Documents\03_(FOSS)_Free-OpenSource-Compliance.pdf
+C:\Users\alask\Documents\04_(FOSS)_Operating_Systems.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\DataStructuresProjectPart1WT.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\DB과제1.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\elt51108-lecture1.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\elt51108-lecture2.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\elt51108-lecture3.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\elt51108-lecture4.pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\fundamentals-of-database-systems-7th (1).pdf
+C:\Users\alask\Documents\카카오톡 받은 파일\P2-BlockCalculator.pdf
+C:\Users\alask\Desktop\2015726055_박태현.pdf
+C:\Users\alask\Desktop\2019 GKS-G Application Guidelines (Korean).pdf
+C:\Users\alask\Desktop\A1.pdf
+C:\Users\alask\Desktop\Algorithm_Chap1.pdf
+C:\Users\alask\Desktop\Algorithm_Chap2_3_4.pdf
+C:\Users\alask\Desktop\Ch10+SQLProgram.pdf
+C:\Users\alask\Desktop\Ch11+Web+Programming.pdf
+C:\Users\alask\Desktop\Ch14+Normalization.pdf
+C:\Users\alask\Desktop\Ch3+ER+.pdf
+C:\Users\alask\Desktop\Ch9+ER2Rel+.pdf
+C:\Users\alask\Desktop\Chap05.pdf
+C:\Users\alask\Desktop\fundamentals-of-database-systems-7th.pdf
+C:\Users\alask\Desktop\kangchanghun.pdf
+C:\Users\alask\Desktop\report.pdf
+C:\Users\alask\Desktop\이수증명서_2015726055_박태현.pdf
+C:\Users\alask\Desktop\LITLAYOUT\메일읽기 __ 네이버 메일.pdf
+C:\Users\alask\Desktop\HCI\H1-Usability+(2019).pdf
+C:\Users\alask\Desktop\HCI\H2-History+(2019).pdf
+C:\Users\alask\Desktop\HCI\M0-JavaScriptReview+(2019).pdf
+C:\Users\alask\Desktop\HCI\M1-GUI+(2019).pdf
+C:\Users\alask\Desktop\HCI\M2-Bitmap+(2019).pdf
+C:\Users\alask\Desktop\HCI\M3-Vector+(2019).pdf
+C:\Users\alask\Desktop\eBook\SQL\sqlcookbook.pdf
+C:\Users\alask\Desktop\eBook\Security\comptiasecurityplusstudyguide_examsy0401_6thed.pdf
+C:\Users\alask\Desktop\eBook\Scala\scalacookbook.pdf
+C:\Users\alask\Desktop\eBook\Regular Expression\regularexpressionscookbook.pdf
+C:\Users\alask\Desktop\eBook\Raspberry Pi\jumpstartingtheraspberrypizerow.pdf
+C:\Users\alask\Desktop\eBook\Raspberry Pi\learnelectronicswithraspberrypi.pdf
+C:\Users\alask\Desktop\eBook\Raspberry Pi\raspberrypicookbook.pdf
+C:\Users\alask\Desktop\eBook\R\rcookbook.pdf
+C:\Users\alask\Desktop\eBook\Python\pythoncookbook.pdf
+C:\Users\alask\Desktop\eBook\PowerShell\windowspowershellcookbook.pdf
+C:\Users\alask\Desktop\eBook\PHP\phpcookbook.pdf
+C:\Users\alask\Desktop\eBook\Photon\make_gettingstartedwithphoton.pdf
+C:\Users\alask\Desktop\eBook\Perl\perlcookbook.pdf
+C:\Users\alask\Desktop\eBook\OpenStack\masteringopenstack.pdf
+C:\Users\alask\Desktop\eBook\OpenStack\openstackforarchitects.pdf
+C:\Users\alask\Desktop\eBook\OpenCV\learningopencv.pdf
+C:\Users\alask\Desktop\eBook\Network\cisconetworkingessentials_2nded.pdf
+C:\Users\alask\Desktop\eBook\Network\comptianetworkplusstudyguide_examn10006_3rded.pdf
+C:\Users\alask\Desktop\eBook\Network\datastoragenetworking_comptiastoragepluscertificationandbeyond.pdf
+C:\Users\alask\Desktop\eBook\Network\microsoftwindowsnetworkingessentials.pdf
+C:\Users\alask\Desktop\eBook\Network\networkattacksandexploitation.pdf
+C:\Users\alask\Desktop\eBook\Network\networksecuritybible_2nded.pdf
+C:\Users\alask\Desktop\eBook\Network\System Center\masteringsystemcenter2012r2_configurationmanager.pdf
+C:\Users\alask\Desktop\eBook\Network\MCSA Windows Server\mcsa_windowsserver2012r2_administrationstudyguide_exam70411.pdf
+C:\Users\alask\Desktop\eBook\Network\MCSA Windows Server\mcsa_windowsserver2012r2_configuringadvancedservicesstudyguide_exam70412.pdf
+C:\Users\alask\Desktop\eBook\Network\MCSA Windows Server\mcsa_windowsserver2012r2_installationandconfigurationstudyguide_exam70410.pdf
+C:\Users\alask\Desktop\eBook\Minecraft\beautifulminecraft.pdf
+C:\Users\alask\Desktop\eBook\Minecraft\minecraftmoddingwithforge.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\deeplearning.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\deeplearningcookbook.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\featureengineeringformachinelearning_1ed.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\fundamentalsofdeeplearning_1ed.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\introductiontomachinelearningwithpython.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\introductiontomachinelearningwithr.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\learningtensorflow_1ed.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\machinelearningandsecurity.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\machinelearningforhackers.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\machinelearningischangingtherules_1ed.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\naturallanguageannotationformachinelearning.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\practicalmachinelearningwithh2o_1ed.pdf
+C:\Users\alask\Desktop\eBook\Machine&Deep Learning\thoughtfulmachinelearningwithpython_1ed.pdf
+C:\Users\alask\Desktop\eBook\LEGO\beginninglegomindstormsev3.pdf
+C:\Users\alask\Desktop\eBook\LEGO\beginningroboticsprogramminginjavawithlegomindstorms.pdf
+C:\Users\alask\Desktop\eBook\LEGO\legomindstormsev3.pdf
+C:\Users\alask\Desktop\eBook\LEGO\LEGONeighborhood1421975366.pdf
+C:\Users\alask\Desktop\eBook\LEGO\legotechnicrobotics.pdf
+C:\Users\alask\Desktop\eBook\LEGO\theartoflegoscalemodeling.pdf
+C:\Users\alask\Desktop\eBook\LEGO\thelegoanimationbook.pdf
+C:\Users\alask\Desktop\eBook\Kubernetes\gettingstartedwithkubernetes_secondedition.pdf
+C:\Users\alask\Desktop\eBook\Kubernetes\masteringkubernetes.pdf
+C:\Users\alask\Desktop\eBook\Jenkins\jenkins_thedefinitiveguide.pdf
+C:\Users\alask\Desktop\eBook\JavaScript\javascriptcookbook.pdf
+C:\Users\alask\Desktop\eBook\Java\java8lambdas.pdf
+C:\Users\alask\Desktop\eBook\Java\javacookbook.pdf
+C:\Users\alask\Desktop\eBook\Java\javagenericsandcollections.pdf
+C:\Users\alask\Desktop\eBook\Java\javainanutshell.pdf
+C:\Users\alask\Desktop\eBook\Java\javamessageservice.pdf
+C:\Users\alask\Desktop\eBook\Java\javanetworkprogramming.pdf
+C:\Users\alask\Desktop\eBook\Java\javaperformance_thedefinitiveguide.pdf
+C:\Users\alask\Desktop\eBook\Java\javapocketguide.pdf
+C:\Users\alask\Desktop\eBook\Java\javathreads.pdf
+C:\Users\alask\Desktop\eBook\Java\javawebservices_upandrunning.pdf
+C:\Users\alask\Desktop\eBook\Java\learningjava.pdf
+C:\Users\alask\Desktop\eBook\Java\restfuljavawithjaxrs2.pdf
+C:\Users\alask\Desktop\eBook\Java\thinkjava.pdf
+C:\Users\alask\Desktop\eBook\Hyper-V\masteringhyperv2012r2_withsystemcenterandwindowsazure.pdf
+C:\Users\alask\Desktop\eBook\Game Develop\inventyourowncomputergameswithpython.pdf
+C:\Users\alask\Desktop\eBook\Etc\bestofmake_vol2_65projectsandskillbuilders.pdf
+C:\Users\alask\Desktop\eBook\Etc\brainiac2_sampler.pdf
+C:\Users\alask\Desktop\eBook\Etc\electricityforyoungmakers.pdf
+C:\Users\alask\Desktop\eBook\Etc\electronicsforkids.pdf
+C:\Users\alask\Desktop\eBook\Etc\encylopediaofelectroniccomponents_vol1_powersourcesandconversion.pdf
+C:\Users\alask\Desktop\eBook\Etc\encylopediaofelectroniccomponents_vol2_signalprocessing.pdf
+C:\Users\alask\Desktop\eBook\Etc\encylopediaofelectroniccomponents_vol3_sensors.pdf
+C:\Users\alask\Desktop\eBook\Etc\howtouseabreadboard.pdf
+C:\Users\alask\Desktop\eBook\Etc\junkyardjamband.pdf
+C:\Users\alask\Desktop\eBook\Etc\laurenipsum.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_action_movementliveandsound.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_drones.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_electronics_2ndedition.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_gettingstartedwithadafruitflora.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_gettingstartedwithadafruittrinket.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_moreelectronics.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_sensors.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_vol50_skillschool.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_vol52_virtualcreation.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_vol54_ultimateguidetodesktopfabrication2017.pdf
+C:\Users\alask\Desktop\eBook\Etc\make_wearableelectronics.pdf
+C:\Users\alask\Desktop\eBook\Etc\makingthingssmart.pdf
+C:\Users\alask\Desktop\eBook\Etc\medievallego.pdf
+C:\Users\alask\Desktop\eBook\Etc\phishingdarkwaters.pdf
+C:\Users\alask\Desktop\eBook\Etc\practicallegotechnics.pdf
+C:\Users\alask\Desktop\eBook\Etc\robotbuildingforbeginnersthirdedition.pdf
+C:\Users\alask\Desktop\eBook\Etc\scratchprogrammingplayground.pdf
+C:\Users\alask\Desktop\eBook\Etc\teachyourkidstocode_1490913058.pdf
+C:\Users\alask\Desktop\eBook\Etc\themangaguidetoelectricity.pdf
+C:\Users\alask\Desktop\eBook\Etc\theofficialscratchjrbook.pdf
+C:\Users\alask\Desktop\eBook\Etc\tinylegowonders.pdf
+C:\Users\alask\Desktop\eBook\Etc\winningdesign__2017.pdf
+C:\Users\alask\Desktop\eBook\Etc\winninglegomindstormsprogramming.pdf
+C:\Users\alask\Desktop\eBook\Etc\EyeCandy2_Artpack_1419899852\FRACTOSC_artbook.pdf
+C:\Users\alask\Desktop\eBook\Etc\EyeCandy2_Artpack_1419899852\Mind_ Path to Thalamus\MIND Path to Thalamus Environmental Art.pdf
+C:\Users\alask\Desktop\eBook\Docker\dockercookbook.pdf
+C:\Users\alask\Desktop\eBook\Docker\masteringdocker.pdf
+C:\Users\alask\Desktop\eBook\DevOps\introductiontodevopswithchocolatelegoandscrumgame.pdf
+C:\Users\alask\Desktop\eBook\CSS\csscookbook.pdf
+C:\Users\alask\Desktop\eBook\Cloud\cloudnativepython.pdf
+C:\Users\alask\Desktop\eBook\Bash\bashcookbook.pdf
+C:\Users\alask\Desktop\eBook\Azure\buildinghybridcloudswithazurestack.pdf
+C:\Users\alask\Desktop\eBook\Azure\implementsazuresolutions.pdf
+C:\Users\alask\Desktop\eBook\Azure\masteringidentityandaccessmanagement.pdf
+C:\Users\alask\Desktop\eBook\Azure\microserviceswithazure.pdf
+C:\Users\alask\Desktop\eBook\AWS\awsadministrationcookbook_reupload.pdf
+C:\Users\alask\Desktop\eBook\AWS\awsadministration_thedefinitiveguide_reupload.pdf
+C:\Users\alask\Desktop\eBook\Arduino\arduinoandkinectprojects.pdf
+C:\Users\alask\Desktop\eBook\Arduino\arduinoandlegoprojects.pdf
+C:\Users\alask\Desktop\eBook\Arduino\arduinocookbook.pdf
+C:\Users\alask\Desktop\eBook\Arduino\arduinoprojecthandbook.pdf
+C:\Users\alask\Desktop\eBook\Arduino\arduinorobotics.pdf
+C:\Users\alask\Desktop\eBook\Arduino\atmosphericmonitoringwitharduino.pdf
+C:\Users\alask\Desktop\eBook\Arduino\beginningarduinoprogramming.pdf
+C:\Users\alask\Desktop\eBook\Arduino\beginningcforarduinosecondedition.pdf
+C:\Users\alask\Desktop\eBook\Arduino\environmentalmonitoringwitharduino.pdf
+C:\Users\alask\Desktop\eBook\Arduino\jumpstartingthearduino101.pdf
+C:\Users\alask\Desktop\eBook\Arduino\junkboxarduino.pdf
+C:\Users\alask\Desktop\eBook\Android\androidcookbook.pdf
+C:\Users\alask\Desktop\eBook\Algorithm\thecsdetective.pdf
+C:\Users\alask\Desktop\DB\Ch1+DB+and+Users.pdf
+C:\Users\alask\Desktop\DB\Ch2+DBS+Concept+Archi.pdf
+C:\Users\alask\Desktop\DB\Ch5+Rel+Data+Model.pdf
+C:\Users\alask\Desktop\DB\Ch6+Basic+SQL.pdf
+C:\Users\alask\Desktop\DB\Ch7+More+SQL.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Assignment1.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Assignment2.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Chap1_2.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Chap22.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Chap24.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Chap3_4.pdf
+C:\Users\alask\Desktop\3-2\인공지능\Chap_7_12.pdf
+C:\Users\alask\Desktop\3-2\인공지능\intro.pdf
+C:\Users\alask\Desktop\3-2\인공지능\ML.pdf
+C:\Users\alask\Desktop\3-2\인공지능\[솔루션] 인공지능 (저자 Nils J. Nilsson - Artificial Intelligence - A new Symthesis).pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\10. Image Segmentation I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\10. Image Segmentation II.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\2. Digital Image Fundamentals I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\2. Digital Image Fundamentals II - 온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\2. Digital Image Fundamentals III - 온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\3. Fundamentals of Signal Processing_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\4. Intensity Transformations and Spatial Filtering I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\4. Intensity Transformations and Spatial Filtering III.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\4. Intensity Transformations and Spatial Filtering II_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\4. Intensity Transformations and Spatial Filtering IV_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\5. Filtering in the Frequency Domain I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\5. Filtering in the Frequency Domain II_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\6. Image Restoration and Reconstruction I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\6. Image Restoration and Reconstruction II_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\7. Color Image Processing I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\7. Color Image Processing II_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\8. Image Compression I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\8. Image Compression III.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\8. Image Compression II_온라인 .pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\8. Image Compression IV_온라인.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\9. Morphological Image Processing I.pdf
+C:\Users\alask\Desktop\3-2\디지털영상처리\9. Morphological Image Processing II.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\17quiz_ch4b (1).pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch0a.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch0b.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch1a.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch1b.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch2ab.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch2cd.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch2z_숙제1b.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ch4ab.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ex1.11%2C12.pdf
+C:\Users\alask\Desktop\3-1\컴퓨터구조\ex1.5-7.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\chapter03.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\chapter04.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\chapter05.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\chapter06_new.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\Chapter_00.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\Chapter_00_Introduction.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\Chapter_01.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\Chapter_02.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\기말\chapter07.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\기말\chapter08.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\기말\chapter09_2017.pdf
+C:\Users\alask\Desktop\3-1\응용소프트웨어실습 C#\기말\chapter10_new.pdf
+C:\Users\alask\Desktop\3-1\알고리즘\Algo_Chap1_2_3_4.pdf
+C:\Users\alask\Desktop\3-1\알고리즘\Algo_Chap_5_6_7_9.pdf
+C:\Users\alask\Desktop\3-1\알고리즘\PS_Sample_Chapters.pdf
+C:\Users\alask\Desktop\3-1\3-1과제\응용소프트웨어실습 [과제1] HW1_2015726077_이동건.pdf
+C:\Users\alask\Desktop\2019FTC\2018-2019 FTC 팀 안내문.pdf
+C:\Users\alask\Desktop\2019FTC\2018-2019 KRC 공통일정 진행안내.pdf
+C:\Users\alask\Desktop\2019FTC\2018-2019 KRC 배치도 0120.pdf
+C:\Users\alask\Desktop\2019FTC\2018-2019 KRC 안내문.pdf
+C:\Users\alask\Desktop\2019FTC\gefm1.pdf
+C:\Users\alask\Desktop\2019FTC\KRC 전체 일정.pdf
+C:\Users\alask\Desktop\2019FTC\KRC 팀 서약서.pdf
+C:\Users\alask\Desktop\201572~2\2015726064김정환.pdf
+C:\Users\alask\Desktop\201572~1\report.pdf
+C:\Users\alask\Desktop\2-2\05_(FOSS)_Version_Control_Systems.pdf
+C:\Users\alask\Desktop\2-2\06_(FOSS)_Git.pdf
+C:\Users\alask\Desktop\2-2\07_(FOSS)_Programming_Languages.pdf
+C:\Users\alask\Desktop\2-2\08_(FOSS)_DataBase-BigData.pdf
+C:\Users\alask\Desktop\2-2\09_(FOSS)_Network-Security.pdf
+C:\Users\alask\Desktop\2-2\10_(FOSS)_Software_Development_Methodology.pdf
+C:\Users\alask\Desktop\2-2\HANBIT_Cathedral_Bazaar.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\01.File_Input_Output.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\02.File_Directory.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\03.Process.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\04.Memory.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\05.Signal.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\06.Timer.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\07.InterProcess_Commnication_01.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\08.InterProcess_Communication_02.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\09.Socket.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\10.Semaphore.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\11.Thread.pdf
+C:\Users\alask\Desktop\2-2\시소실 기말\12.Select.pdf
+C:\Users\alask\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\usr\share\doc\shared-mime-info\shared-mime-info-spec.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\back.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\filesave.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\forward.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\hand.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\help.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\home.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\matplotlib.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\move.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\qt4_editor_options.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\subplots.pdf
+C:\Users\alask\Anaconda3\pkgs\matplotlib-3.0.2-py37hc8f65d3_0\Lib\site-packages\matplotlib\mpl-data\images\zoom_to_rect.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\back.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\filesave.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\forward.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\hand.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\help.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\home.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\matplotlib.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\move.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\qt4_editor_options.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\subplots.pdf
+C:\Users\alask\Anaconda3\Lib\site-packages\matplotlib\mpl-data\images\zoom_to_rect.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\transpose\doc\MatrixTranspose.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\simpleHyperQ\doc\HyperQ.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\eigenvalues\doc\eigenvalues.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\smokeParticles\doc\smokeParticles.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\particles\doc\particles.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\nbody\doc\nbody_gems3_ch31.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\fluidsGL\doc\fluidsGL.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\MonteCarloMultiGPU\doc\MonteCarlo.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\BlackScholes\doc\BlackScholes.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\binomialOptions\doc\binomialOptions.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\imageDenoising\doc\imageDenoising.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\HSOpticalFlow\doc\OpticalFlow.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\histogram\doc\histogram.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dxtc\doc\cuda_dxtc.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dct8x8\doc\dct8x8.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\convolutionSeparable\doc\convolutionSeparable.pdf
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\0_Simple\simpleZeroCopy\doc\CUDA2.2PinnedMemoryAPIs.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_CH.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_CZ.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_DE.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_EN.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_ES.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_FR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_HU.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_IT.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_KOR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_LATAM.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_PTBR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\The_Witcher_3_Wild_Hunt_World_Map_RU.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MAP\Wiedzmin_3_Dziki_Gon_Mapa_Swiata.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_AR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_CZ.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_DE.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_EN.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_ES_EU.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_ES_LAT.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_FR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_GB.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_HU.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_IT.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_KOR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_PL.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_PT-BR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_RU.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\MANUAL\The_Witcher_3_Wild_Hunt_Game_Manual_PC_ZH.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Hearts of Stone extras\Comic\Saskia_comic_online_EN.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Blood and Wine extras\Comics\The_Witcher_Killing_Monsters_Comic_DE.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Blood and Wine extras\Comics\The_Witcher_Killing_Monsters_Comic_EN.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Blood and Wine extras\Comics\The_Witcher_Killing_Monsters_Comic_ES.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Blood and Wine extras\Comics\The_Witcher_Killing_Monsters_Comic_FR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Blood and Wine extras\Comics\The_Witcher_Killing_Monsters_Comic_IT.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\Blood and Wine extras\Comics\The_Witcher_Killing_Monsters_Comic_PL.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\ARTBOOK\The_Witcher_3_Wild_Hunt_Artbook_DE.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\ARTBOOK\The_Witcher_3_Wild_Hunt_Artbook_EN.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\ARTBOOK\The_Witcher_3_Wild_Hunt_Artbook_ES.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\ARTBOOK\The_Witcher_3_Wild_Hunt_Artbook_FR.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\ARTBOOK\The_Witcher_3_Wild_Hunt_Artbook_IT.pdf
+C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\ARTBOOK\The_Witcher_3_Wild_Hunt_Artbook_PL.pdf
+C:\Program Files (x86)\NVIDIA Corporation\Nsight Visual Studio Edition 6.0\Monitor\nvapi\docs\NVAPI SDKs Samples and Tools License Agreement (Public).pdf
+C:\Program Files (x86)\NVIDIA Corporation\Nsight Visual Studio Edition 6.0\Monitor\nvapi\docs\NVAPI_R375_Public_SDK_RelNotes_v01.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUBLAS_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\cuda-gdb.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Binary_Utilities.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Compiler_Driver_NVCC.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_C_Best_Practices_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_C_Programming_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Debugger_API.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Driver_API.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Installation_Guide_Linux.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Installation_Guide_Mac.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Installation_Guide_Windows.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Math_API.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Memcheck.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Profiler_Users_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Quick_Start_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Runtime_API.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Samples.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUDA_Toolkit_Release_Notes.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUFFT_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUPTI_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CURAND_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUSOLVER_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\CUSPARSE_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Demo_Suite.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\EULA.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Floating_Point_on_NVIDIA_GPU.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\GPUDirect_RDMA.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\GPU_Library_Advisor.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Incomplete_LU_Cholesky.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Inline_PTX_Assembly.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Kepler_Tuning_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\libdevice-users-guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\libNVVM_API.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Maxwell_Compatibility_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Maxwell_Tuning_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Nsight_Eclipse_Edition_Getting_Started.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Nsight_Eclipse_Plugins_Getting_Started.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Nsight_Eclipse_Plugins_Installtion_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\NVBLAS_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\nvGRAPH_Library.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\NVIDIA_Video_Decoder.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\nvJPEG.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\nvml.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\NVRTC_User_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\NVVM_IR_Specification.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Optimus_Developer_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Pascal_Compatibility_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Pascal_Tuning_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\ptx_isa_6.3.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\PTX_Writers_Guide_To_Interoperability.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Thrust_Quick_Start_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Turing_Compatibility_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Turing_Tuning_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\vGPU.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Volta_Compatibility_Guide.pdf
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\doc\pdf\Volta_Tuning_Guide.pdf
+C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.1.pdf
+C:\Program Files\NVIDIA Corporation\NVIDIA Nsight Compute 1.0\pdf\CustomizationGuide.pdf
+C:\Program Files\NVIDIA Corporation\NVIDIA Nsight Compute 1.0\pdf\NsightCompute.pdf
+C:\Program Files\NVIDIA Corporation\NVIDIA Nsight Compute 1.0\pdf\NsightComputeCli.pdf
+C:\Program Files\NVIDIA Corporation\NVIDIA Nsight Compute 1.0\pdf\ReleaseNotes.pdf
+C:\JSP\apache-tomcat-9.0.20\webapps\docs\architecture\startup\serverStartup.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$I215URM.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$I2VN8YK.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$I41S75W.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$I4I8H39.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$I5RRJ3D.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IM6WOW4.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$INVRWKS.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IOAT5E0.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IRTYKZD.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IUFSNXG.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IX4H6RN.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IXJ7NQY.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IY1043U.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$IZ68JV4.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$R215URM.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$R2VN8YK.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$R41S75W.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$R4I8H39.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$R5RRJ3D.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RM6WOW4.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RNVRWKS.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$ROAT5E0.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RRTYKZD.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RUFSNXG.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RX4H6RN.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RXJ7NQY.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RY1043U.pdf
+C:\$RECYCLE.BIN\S-1-5-21-1145052029-615583400-3734838586-1001\$RZ68JV4.pdf
 End

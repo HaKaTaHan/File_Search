@@ -1,1 +1,42 @@
+C:\Windows\WinSxS\wow64_microsoft-windows-r..t-office-protectors_31bf3856ad364e35_10.0.17763.1_none_08e5c4718206e3dd\MsoIrmProtector.doc
+C:\Windows\WinSxS\amd64_microsoft-windows-r..t-office-protectors_31bf3856ad364e35_10.0.17763.1_none_fe911a1f4da621e2\MsoIrmProtector.doc
+C:\Windows\SysWOW64\MSDRM\MsoIrmProtector.doc
+C:\Windows\System32\MSDRM\MsoIrmProtector.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\fastWalshTransform\doc\FWT.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\eigenvalues\doc\eigenvalues.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\smokeParticles\doc\smokeParticles.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\particles\doc\particles.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\fluidsGL\doc\fluidsGL.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\MonteCarloMultiGPU\doc\MonteCarlo.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\BlackScholes\doc\BlackScholes.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\binomialOptions\doc\binomialOptions.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\imageDenoising\doc\imageDenoising.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\histogram\doc\histogram.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dxtc\doc\cuda_dxtc.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dwtHaar1D\doc\template.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dct8x8\doc\dct8x8.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\convolutionSeparable\doc\convolutionSeparable.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\2_Graphics\simpleGL\doc\template.doc
+C:\Users\All Users\NVIDIA Corporation\CUDA Samples\v10.0\0_Simple\simpleZeroCopy\doc\CUDA2.2PinnedMemoryAPIs.doc
+C:\Users\alask\Downloads\Elmasri 6e_ISM 05.doc
+C:\Users\alask\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\taehyun\ncurses-6.1\doc\hackguide.doc
+C:\Users\alask\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\taehyun\ncurses-6.1\doc\ncurses-intro.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\fastWalshTransform\doc\FWT.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\6_Advanced\eigenvalues\doc\eigenvalues.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\smokeParticles\doc\smokeParticles.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\particles\doc\particles.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\5_Simulations\fluidsGL\doc\fluidsGL.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\MonteCarloMultiGPU\doc\MonteCarlo.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\BlackScholes\doc\BlackScholes.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\4_Finance\binomialOptions\doc\binomialOptions.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\imageDenoising\doc\imageDenoising.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\histogram\doc\histogram.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dxtc\doc\cuda_dxtc.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dwtHaar1D\doc\template.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\dct8x8\doc\dct8x8.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\3_Imaging\convolutionSeparable\doc\convolutionSeparable.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\2_Graphics\simpleGL\doc\template.doc
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\0_Simple\simpleZeroCopy\doc\CUDA2.2PinnedMemoryAPIs.doc
+C:\Program Files (x86)\Steam\ThirdPartyLegalNotices.doc
+C:\MinGW\msys\1.0\share\cvs\contrib\intro.doc
 End
