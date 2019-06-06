@@ -58,6 +58,8 @@ namespace Project_FileContentExplorer
         bool docxCompleted=false;
         bool docxsw = false;
 
+        bool completesw = false;
+
         int time = 0;
 
         static string[] txtExtensions =
@@ -101,10 +103,11 @@ namespace Project_FileContentExplorer
             timer1.Tick += new System.EventHandler(this.timer1_Tick);
         }
 
-        public void SerachingComplete()
+        public void SearchingComplete()
         {
+            completesw = true;
             int filenum = txtCount + hwpCount + pdfCount + docCount + docxCount;
-            MessageBox.Show("검색이 완료되었습니다");
+            //MessageBox.Show("검색이 완료되었습니다");
         } 
 
         private void Searching_Load(object sender, EventArgs e)
@@ -202,7 +205,7 @@ namespace Project_FileContentExplorer
             //if (txtCompleted) MessageBox.Show("txt끝"); 
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
             {
-                MessageBox.Show("검색이 완료되었습니다");
+                SearchingComplete();
             }
 
             txtReader.Dispose();
@@ -232,7 +235,7 @@ namespace Project_FileContentExplorer
             //if (pdfCompleted) MessageBox.Show("pdf끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
             {
-                SerachingComplete();
+                SearchingComplete();
             }
 
             pdfReader.Dispose();
@@ -263,7 +266,7 @@ namespace Project_FileContentExplorer
             //if (hwpCompleted) MessageBox.Show("hwp끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
             {
-                SerachingComplete();
+                SearchingComplete();
             }
 
 
@@ -293,7 +296,7 @@ namespace Project_FileContentExplorer
             //if (docCompleted) MessageBox.Show("doc끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
             {
-                SerachingComplete();
+                SearchingComplete();
             }
 
             docReader.Dispose();
@@ -323,7 +326,7 @@ namespace Project_FileContentExplorer
             //if (docxCompleted) MessageBox.Show("docx끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
             {
-                SerachingComplete();
+                SearchingComplete();
             }
 
             docxReader.Dispose();
@@ -710,51 +713,69 @@ namespace Project_FileContentExplorer
             if (time < 20)
             {
                 time++;
+                if (completesw)
+                {
+                    Search_Progress.Value = Search_Progress.Maximum;
+                }
             }
             else
             {
                 if (Search_Progress.Value < 700)
-                    Search_Progress.Value += 5;
+                {
+                    if (completesw)
+                    {
+                        Search_Progress.Value = Search_Progress.Maximum;
+                    }
+                    else
+                        Search_Progress.Value += 5;
+                }
                 else if (Search_Progress.Value < 1000 && Search_Progress.Value >= 700)
                 {
-                    if (txtCompleted)
+                    if (completesw)
                     {
-                        if (!txtsw)
-                        {
-                            txtsw = true;
-                            Search_Progress.Value += 50;
-                        }
+                        Search_Progress.Value = Search_Progress.Maximum;
                     }
-                    if (docCompleted)
+                    else
                     {
-                        if (!docsw)
+                        if (txtCompleted)
                         {
-                            docsw = true;
-                            Search_Progress.Value += 50;
+                            if (!txtsw)
+                            {
+                                txtsw = true;
+                                Search_Progress.Value += 50;
+                            }
                         }
-                    }
-                    if (docxCompleted)
-                    {
-                        if (!docxsw)
+                        if (docCompleted)
                         {
-                            docxsw = true;
-                            Search_Progress.Value += 50;
+                            if (!docsw)
+                            {
+                                docsw = true;
+                                Search_Progress.Value += 50;
+                            }
                         }
-                    }
-                    if (hwpCompleted)
-                    {
-                        if (!hwpsw)
+                        if (docxCompleted)
                         {
-                            hwpsw = true;
-                            Search_Progress.Value += 50;
+                            if (!docxsw)
+                            {
+                                docxsw = true;
+                                Search_Progress.Value += 50;
+                            }
                         }
-                    }
-                    if (pdfCompleted)
-                    {
-                        if (!pdfsw)
+                        if (hwpCompleted)
                         {
-                            pdfsw = true;
-                            Search_Progress.Value += 100;
+                            if (!hwpsw)
+                            {
+                                hwpsw = true;
+                                Search_Progress.Value += 50;
+                            }
+                        }
+                        if (pdfCompleted)
+                        {
+                            if (!pdfsw)
+                            {
+                                pdfsw = true;
+                                Search_Progress.Value += 100;
+                            }
                         }
                     }
 
