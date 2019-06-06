@@ -14,7 +14,7 @@ namespace Project_FileContentExplorer
         public byte[] Data;
         HttpWebRequest Request;
         public Stream formDataStream;
-        string IP = "";//your ServerIP
+        string IP = "http://ec2-52-79-229-92.ap-northeast-2.compute.amazonaws.com/Project/";//your ServerIP
         string PHP;
         public string Boundary = String.Format("----------{0:N}", Guid.NewGuid());
         public Http(string PHP)
@@ -81,6 +81,42 @@ namespace Project_FileContentExplorer
             response.Close();
 
             return From_Server;
+        }
+
+        public string File_Download(string path)
+        {
+            Request = (HttpWebRequest)WebRequest.Create(IP + PHP);
+            Request.Credentials = CredentialCache.DefaultCredentials;
+            Request.Method = "POST";
+            Request.ContentType = "application/x-www-form-urlencoded";
+
+            HttpWebResponse response = (HttpWebResponse)Request.GetResponse();
+
+            Stream dataStream = response.GetResponseStream();
+
+            byte[] read = new byte[4096];
+
+            int bytes = dataStream.Read(read, 0, read.Length);
+
+            FileStream FileStr = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+
+            Encoding encode;
+            encode = System.Text.Encoding.Default;
+
+            // FileStream에 byte 쓰기
+            // 스트림의 끝에 도달 하면 0 이 Return
+            while (bytes > 0)
+            {
+                // 버퍼의 데이터를 사용하여 이 스트림에 바이트 블록을 씀
+                FileStr.Write(read, 0, bytes);
+                bytes = dataStream.Read(read, 0, read.Length);
+
+            }
+            // Save File
+            BinaryWriter Savefile = new BinaryWriter(FileStr, encode);
+            Savefile.Close();
+
+            return "fin";
         }
     }
 }
