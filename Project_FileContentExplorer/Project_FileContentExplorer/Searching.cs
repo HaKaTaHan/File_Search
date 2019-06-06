@@ -47,6 +47,19 @@ namespace Project_FileContentExplorer
         int docChecked;
         int docxChecked;
 
+        bool txtCompleted=false;
+        bool txtsw = false;
+        bool pdfCompleted=false;
+        bool pdfsw = false;
+        bool hwpCompleted=false;
+        bool hwpsw = false;
+        bool docCompleted=false;
+        bool docsw = false;
+        bool docxCompleted=false;
+        bool docxsw = false;
+
+        int time = 0;
+
         static string[] txtExtensions =
         {
             ".txt"
@@ -72,7 +85,27 @@ namespace Project_FileContentExplorer
         {
             InitializeComponent();
             this.Keyword = Keyword;
+            ProgressInit();
         }
+
+        public void ProgressInit()
+        {
+            Search_Progress.Style = ProgressBarStyle.Continuous;
+            Search_Progress.Minimum = 0;
+            Search_Progress.Maximum = 1000;
+            //Search_Progress.Step = 1;
+            Search_Progress.Value = 0;
+
+            timer1.Interval = 500;  //0.5초 간격
+            timer1.Start();
+            timer1.Tick += new System.EventHandler(this.timer1_Tick);
+        }
+
+        public void SerachingComplete()
+        {
+            int filenum = txtCount + hwpCount + pdfCount + docCount + docxCount;
+            MessageBox.Show("검색이 완료되었습니다");
+        } 
 
         private void Searching_Load(object sender, EventArgs e)
         {            
@@ -93,33 +126,40 @@ namespace Project_FileContentExplorer
                 hwpChecked = Properties.Settings.Default.hwpList.Length;
                 docChecked = Properties.Settings.Default.docList.Length;
                 docxChecked = Properties.Settings.Default.docxList.Length;
-                
+
 
                 if (txtChecked != 0)
                 {
-                    txtThread = new Thread(new ThreadStart(txtWork));                    
+                    txtThread = new Thread(new ThreadStart(txtWork));
                     txtThread.Start();
                 }
+                else txtCompleted = true;
+
+                
                 if (pdfChecked != 0)
                 {
                     pdfThread = new Thread(new ThreadStart(pdfWork));
                     pdfThread.Start();
                 }
+                else pdfCompleted = true;
                 if (hwpChecked != 0)
                 {
                     hwpThread = new Thread(new ThreadStart(hwpWork));
                     hwpThread.Start();
                 }
+                else hwpCompleted = true;
                 if (docChecked != 0)
                 {
                     docThread = new Thread(new ThreadStart(docWork));
                     docThread.Start();
                 }
+                else docCompleted = true;
                 if (docxChecked != 0)
                 {
                     docxThread = new Thread(new ThreadStart(docxWork));
                     docxThread.Start();
                 }
+                else docxCompleted = true;
 
                 if(txtChecked + pdfChecked + hwpChecked + docxChecked + docChecked + docxChecked == 0)
                 {
@@ -158,6 +198,12 @@ namespace Project_FileContentExplorer
             }
             Console.WriteLine("txt 검색 끝");
             Console.WriteLine("keyword가 들어있는 txt 개수 : " + txtCount);
+            txtCompleted = true;
+            //if (txtCompleted) MessageBox.Show("txt끝"); 
+            if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
+            {
+                MessageBox.Show("검색이 완료되었습니다");
+            }
 
             txtReader.Dispose();
             txtFileStream.Close();
@@ -182,6 +228,12 @@ namespace Project_FileContentExplorer
             }                        
             Console.WriteLine("pdf 검색 끝");
             Console.WriteLine("keyword가 들어있는 pdf 개수 " + pdfCount);
+            pdfCompleted = true;
+            //if (pdfCompleted) MessageBox.Show("pdf끝");
+            if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
+            {
+                SerachingComplete();
+            }
 
             pdfReader.Dispose();
             pdfFileStream.Close();
@@ -207,6 +259,14 @@ namespace Project_FileContentExplorer
             }
             Console.WriteLine("hwp 검색 끝");
             Console.WriteLine("keyword가 들어있는 hwp 개수 " + hwpCount);
+            hwpCompleted = true;
+            //if (hwpCompleted) MessageBox.Show("hwp끝");
+            if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
+            {
+                SerachingComplete();
+            }
+
+
             hwpReader.Dispose();
             hwpFileStream.Close();
         }
@@ -229,6 +289,12 @@ namespace Project_FileContentExplorer
             }
             Console.WriteLine("doc 검색 끝");
             Console.WriteLine("keyword가 들어있는 doc 개수 " + docCount);
+            docCompleted = true;
+            //if (docCompleted) MessageBox.Show("doc끝");
+            if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
+            {
+                SerachingComplete();
+            }
 
             docReader.Dispose();
             docFileStream.Close();
@@ -253,6 +319,13 @@ namespace Project_FileContentExplorer
             }
             Console.WriteLine("docx 검색 끝");
             Console.WriteLine("keyword가 들어있는 docx 개수 " + docxCount);
+            docxCompleted = true;
+            //if (docxCompleted) MessageBox.Show("docx끝");
+            if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
+            {
+                SerachingComplete();
+            }
+
             docxReader.Dispose();
             docxFileStream.Close();
         }
@@ -630,6 +703,65 @@ namespace Project_FileContentExplorer
         private void Item_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (time < 20)
+            {
+                time++;
+            }
+            else
+            {
+                if (Search_Progress.Value < 700)
+                    Search_Progress.Value += 5;
+                else if (Search_Progress.Value < 1000 && Search_Progress.Value >= 700)
+                {
+                    if (txtCompleted)
+                    {
+                        if (!txtsw)
+                        {
+                            txtsw = true;
+                            Search_Progress.Value += 50;
+                        }
+                    }
+                    if (docCompleted)
+                    {
+                        if (!docsw)
+                        {
+                            docsw = true;
+                            Search_Progress.Value += 50;
+                        }
+                    }
+                    if (docxCompleted)
+                    {
+                        if (!docxsw)
+                        {
+                            docxsw = true;
+                            Search_Progress.Value += 50;
+                        }
+                    }
+                    if (hwpCompleted)
+                    {
+                        if (!hwpsw)
+                        {
+                            hwpsw = true;
+                            Search_Progress.Value += 50;
+                        }
+                    }
+                    if (pdfCompleted)
+                    {
+                        if (!pdfsw)
+                        {
+                            pdfsw = true;
+                            Search_Progress.Value += 100;
+                        }
+                    }
+
+                }
+                else
+                    timer1.Stop();
+            }
         }
     }
 }
