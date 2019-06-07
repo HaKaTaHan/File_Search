@@ -45,5 +45,11 @@ namespace Project_FileContentExplorer
         {
 
         }
+
+        private void txt_Search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_Search_Click(sender, e);
+        }
     }
 }

@@ -493,6 +493,7 @@ namespace Project_FileContentExplorer
 
         private void Pause_Btn_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             Resume_Btn.Visible = true;
             Pause_Btn.Visible = false;
             Stop_Btn.Visible = true;
@@ -574,6 +575,7 @@ namespace Project_FileContentExplorer
 
         private void Resume_Btn_Click(object sender, EventArgs e)
         {
+            timer1.Start();
             Resume_Btn.Visible = false;
             Stop_Btn.Visible = false;
             Pause_Btn.Visible = true;
@@ -750,7 +752,49 @@ namespace Project_FileContentExplorer
                         Search_Progress.Value = Search_Progress.Maximum;
                     }
                     else
+                    {
+                        if (txtCompleted)
+                        {
+                            if (!txtsw)
+                            {
+                                txtsw = true;
+                                Search_Progress.Value += 50;
+                            }
+                        }
+                        if (docCompleted)
+                        {
+                            if (!docsw)
+                            {
+                                docsw = true;
+                                Search_Progress.Value += 50;
+                            }
+                        }
+                        if (docxCompleted)
+                        {
+                            if (!docxsw)
+                            {
+                                docxsw = true;
+                                Search_Progress.Value += 50;
+                            }
+                        }
+                        if (hwpCompleted)
+                        {
+                            if (!hwpsw)
+                            {
+                                hwpsw = true;
+                                Search_Progress.Value += 50;
+                            }
+                        }
+                        if (pdfCompleted)
+                        {
+                            if (!pdfsw)
+                            {
+                                pdfsw = true;
+                                Search_Progress.Value += 100;
+                            }
+                        }
                         Search_Progress.Value += 5;
+                    }
                 }
                 else if (Search_Progress.Value < 1000 && Search_Progress.Value >= 700)
                 {
