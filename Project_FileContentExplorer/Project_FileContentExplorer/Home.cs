@@ -421,13 +421,53 @@ namespace Project_FileContentExplorer
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
-        {
+        {            
             worker.Dispose();
-            sw = true;
+            try
+            {
+                Searching.txtThread.Abort();
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                Searching.hwpThread.Abort();
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                Searching.docThread.Abort();
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                Searching.docxThread.Abort();
+            }
+            catch
+            {
+            }
+            try
+            {
+                Searching.pdfThread.Abort();
+            }
+            catch
+            {
+
+            }
+            
+            sw = true;            
             Application.Exit();
             Properties.Settings.Default.Path_Scope = "";
             Properties.Settings.Default.ID = "";
-            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Save();            
         }
 
         private void btn_open_Click(object sender, EventArgs e)

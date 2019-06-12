@@ -25,11 +25,11 @@ namespace Project_FileContentExplorer
         Panel Home_Panel;
         Searching F_Searching;
         String Keyword;
-        public Thread txtThread;
-        Thread pdfThread;
-        Thread hwpThread;
-        Thread docThread;
-        Thread docxThread;
+        public static Thread txtThread;
+        public static Thread pdfThread;
+        public static Thread hwpThread;
+        public static Thread docThread;
+        public static Thread docxThread;
         // 일단 검색어 상관 없이, 드라이브 속 pdf, hwp, doc, docx, txt 총 개수
         // 프로젝트 -> 프로젝트 속성 -> 응용 프로그램 -> 출력 형식 -> 콘솔
         // search 누르면 개수 
