@@ -15,6 +15,7 @@ using org.apache.pdfbox.pdmodel;
 using org.apache.pdfbox.pdmodel.edit;
 using org.apache.pdfbox.util;
 using Aspose.Words;
+using System.Collections;
 
 namespace Project_FileContentExplorer
 {
@@ -36,6 +37,9 @@ namespace Project_FileContentExplorer
         string currentDirectory = Directory.GetCurrentDirectory();
         string keyword;
         string systemFolder = Environment.GetFolderPath(System.Environment.SpecialFolder.Windows);//윈도우 폴더
+
+        ArrayList sf = new ArrayList();
+
         int txtCount = 0;
         int hwpCount = 0;
         int pdfCount = 0;
@@ -548,6 +552,10 @@ namespace Project_FileContentExplorer
             F_Search.TopLevel = false;
             F_Search.Dock = System.Windows.Forms.DockStyle.Fill;
             Home_Panel.Controls.Add(F_Search);
+            foreach(SearchedFile F_SearchedFile in sf)
+            {
+                F_SearchedFile.Close();
+            }
             F_Search.Show();
             this.Close();
 
@@ -712,6 +720,7 @@ namespace Project_FileContentExplorer
                 F_SearchedFile.Dock = System.Windows.Forms.DockStyle.Top;
                 F_SearchedFile.FileName_Label.Text = name;
                 F_SearchedFile.FilePath_Label.Text = path;
+                sf.Add(F_SearchedFile);
                 if (Array.IndexOf(txtExtensions, extension) != -1)
                 {
                     F_SearchedFile.Extension_Picture.Image = F_SearchedFile.il.Images[0];
