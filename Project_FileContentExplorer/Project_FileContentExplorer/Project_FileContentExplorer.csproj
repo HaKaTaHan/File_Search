@@ -135,12 +135,6 @@
     <Compile Include="Findaccount.Designer.cs">
       <DependentUpon>Findaccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="FullAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FullAccount.Designer.cs">
-      <DependentUpon>FullAccount.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,12 +149,6 @@
     </Compile>
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FullSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FullSetting.Designer.cs">
-      <DependentUpon>FullSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchedFile.cs">
       <SubType>Form</SubType>
@@ -198,9 +186,6 @@
     <EmbeddedResource Include="Findaccount.resx">
       <DependentUpon>Findaccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FullAccount.resx">
-      <DependentUpon>FullAccount.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,9 +200,6 @@
     </Compile>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FullSetting.resx">
-      <DependentUpon>FullSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchedFile.resx">
       <DependentUpon>SearchedFile.cs</DependentUpon>
