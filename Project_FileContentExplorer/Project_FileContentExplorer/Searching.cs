@@ -745,7 +745,7 @@ namespace Project_FileContentExplorer
             }
             else
             {
-                if (Search_Progress.Value < 700)
+                if (Search_Progress.Value < 900)
                 {
                     if (completesw)
                     {
@@ -796,7 +796,7 @@ namespace Project_FileContentExplorer
                         Search_Progress.Value += 5;
                     }
                 }
-                else if (Search_Progress.Value < 1000 && Search_Progress.Value >= 700)
+                else if (Search_Progress.Value < 1000 && Search_Progress.Value >= 900)
                 {
                     if (completesw)
                     {
