@@ -144,6 +144,18 @@ namespace Project_FileContentExplorer
             //커서 이동동안 그림      
         }
 
+        private void Download_Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(this.FilePath_Label.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("파일을 연결프로그램으로 열기 실패" + ex.ToString());
+            }
+        }
+
 
 
         //0: txt 1: pdf 2: hwp 3: doc, docx

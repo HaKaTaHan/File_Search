@@ -36,6 +36,7 @@
             this.il = new System.Windows.Forms.ImageList(this.components);
             this.Extension_Picture = new System.Windows.Forms.PictureBox();
             this.Upload_Btn = new System.Windows.Forms.Button();
+            this.Download_Btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Extension_Picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +105,21 @@
             this.Upload_Btn.UseVisualStyleBackColor = false;
             this.Upload_Btn.Click += new System.EventHandler(this.Upload_Btn_Click);
             // 
+            // Download_Btn
+            // 
+            this.Download_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(50)))), ((int)(((byte)(170)))));
+            this.Download_Btn.FlatAppearance.BorderSize = 0;
+            this.Download_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Download_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Download_Btn.ForeColor = System.Drawing.Color.White;
+            this.Download_Btn.Location = new System.Drawing.Point(343, 52);
+            this.Download_Btn.Name = "Download_Btn";
+            this.Download_Btn.Size = new System.Drawing.Size(100, 30);
+            this.Download_Btn.TabIndex = 33;
+            this.Download_Btn.Text = "OPEN";
+            this.Download_Btn.UseVisualStyleBackColor = false;
+            this.Download_Btn.Click += new System.EventHandler(this.Download_Btn_Click);
+            // 
             // SearchedFile
             // 
             this.AllowDrop = true;
@@ -111,6 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(57)))), ((int)(((byte)(78)))));
             this.ClientSize = new System.Drawing.Size(814, 100);
+            this.Controls.Add(this.Download_Btn);
             this.Controls.Add(this.Upload_Btn);
             this.Controls.Add(this.Extension_Picture);
             this.Controls.Add(this.label3);
@@ -138,5 +155,6 @@
         public System.Windows.Forms.ImageList il;
         public System.Windows.Forms.PictureBox Extension_Picture;
         private System.Windows.Forms.Button Upload_Btn;
+        private System.Windows.Forms.Button Download_Btn;
     }
 }
