@@ -16,6 +16,7 @@ namespace Project_FileContentExplorer
         Search F_Search;
         Account F_Account;
         Setting F_Setting;
+        bool sw = false;
 
         // 일단 검색어 상관 없이, 드라이브 속 pdf, hwp, doc, docx, txt 총 개수
         // 프로젝트 -> 프로젝트 속성 -> 응용 프로그램 -> 출력 형식 -> 콘솔
@@ -408,20 +409,25 @@ namespace Project_FileContentExplorer
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
-            //scope path 해제해야됨
-            Properties.Settings.Default.Path_Scope = "";
-            Properties.Settings.Default.ID = "";
-            Properties.Settings.Default.Save();
-            this.Visible = false;
-
-            
+            if (!sw)
+            {
+                //MessageBox.Show("테스트");
+                e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
+                                 //scope path 해제해야됨
+                this.Visible = false;
+            }
+            else
+                e.Cancel = false;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            notifyIcon1.Dispose();
+            worker.Dispose();
+            sw = true;
             Application.Exit();
+            Properties.Settings.Default.Path_Scope = "";
+            Properties.Settings.Default.ID = "";
+            Properties.Settings.Default.Save();
         }
 
         private void btn_open_Click(object sender, EventArgs e)
