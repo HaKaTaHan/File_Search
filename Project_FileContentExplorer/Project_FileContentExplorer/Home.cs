@@ -351,6 +351,7 @@ namespace Project_FileContentExplorer
                 F_Setting.Close();
                 
 
+
             //Sign_Up 닫기
             if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
             {

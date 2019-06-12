@@ -122,8 +122,7 @@ namespace Project_FileContentExplorer
 
         private void Searching_Load(object sender, EventArgs e)
         {
-            Keyword_Label.Text = Keyword;
-
+            Keyword_Label.Text = Keyword;            
             if (Keyword.Length != 0)
             {
                 txtCount = 0;
@@ -139,8 +138,7 @@ namespace Project_FileContentExplorer
                 hwpChecked = Properties.Settings.Default.hwpList.Length;
                 docChecked = Properties.Settings.Default.docList.Length;
                 docxChecked = Properties.Settings.Default.docxList.Length;
-
-
+                
                 if (txtChecked != 0)
                 {
                     txtThread = new Thread(new ThreadStart(txtWork));
@@ -208,9 +206,7 @@ namespace Project_FileContentExplorer
                     txtExtract(keyword, path);
                 //Console.WriteLine(path);
 
-            }
-            Console.WriteLine("txt 검색 끝");
-            Console.WriteLine("keyword가 들어있는 txt 개수 : " + txtCount);
+            }            
             txtCompleted = true;
             //if (txtCompleted) MessageBox.Show("txt끝"); 
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
@@ -220,6 +216,8 @@ namespace Project_FileContentExplorer
 
             txtReader.Dispose();
             txtFileStream.Close();
+            
+            
         }
 
         void pdfWork()
@@ -238,9 +236,7 @@ namespace Project_FileContentExplorer
                 else if (path.Contains(Properties.Settings.Default.Path_Scope))
                     pdfExtract(keyword, path);
                 //Console.WriteLine(path);
-            }
-            Console.WriteLine("pdf 검색 끝");
-            Console.WriteLine("keyword가 들어있는 pdf 개수 " + pdfCount);
+            }     
             pdfCompleted = true;
             //if (pdfCompleted) MessageBox.Show("pdf끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
@@ -269,9 +265,7 @@ namespace Project_FileContentExplorer
                     hwpExtract(keyword, path);
 
                 //Console.WriteLine(path);
-            }
-            Console.WriteLine("hwp 검색 끝");
-            Console.WriteLine("keyword가 들어있는 hwp 개수 " + hwpCount);
+            }          
             hwpCompleted = true;
             //if (hwpCompleted) MessageBox.Show("hwp끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
@@ -300,8 +294,6 @@ namespace Project_FileContentExplorer
                     docExtract(keyword, path);
                 //Console.WriteLine(path);
             }
-            Console.WriteLine("doc 검색 끝");
-            Console.WriteLine("keyword가 들어있는 doc 개수 " + docCount);
             docCompleted = true;
             //if (docCompleted) MessageBox.Show("doc끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
@@ -330,8 +322,6 @@ namespace Project_FileContentExplorer
                     docxExtract(keyword, path);
                 //Console.WriteLine(path);
             }
-            Console.WriteLine("docx 검색 끝");
-            Console.WriteLine("keyword가 들어있는 docx 개수 " + docxCount);
             docxCompleted = true;
             //if (docxCompleted) MessageBox.Show("docx끝");
             if (txtCompleted && pdfCompleted && hwpCompleted && docCompleted && docxCompleted)
@@ -353,15 +343,16 @@ namespace Project_FileContentExplorer
                 bool isExist = all.ToLower().Contains(keyword);
                 if (isExist)
                 {
-                    txtCount++;
-                    Console.WriteLine(path);
+                    txtCount++;                    
 
 
                     Task.Run(() =>
                     {
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
+                    Thread.Sleep(200);
                 }
+                fs.Close();
             }
             catch
             {
@@ -384,13 +375,13 @@ namespace Project_FileContentExplorer
                 bool isExist = stripper.getText(doc).ToLower().Contains(keyword);
                 if (isExist)
                 {
-                    pdfCount++;
-                    Console.WriteLine(path);
+                    pdfCount++;                    
 
                     Task.Run(() =>
                     {
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
+                    Thread.Sleep(200);
                 }
                 doc.close();
             }
@@ -424,13 +415,12 @@ namespace Project_FileContentExplorer
                 }
                 if (isExist)
                 {
-                    hwpCount++;
-                    Console.WriteLine(path);
-
+                    hwpCount++;                                        
                     Task.Run(() =>
                     {
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
+                    Thread.Sleep(200);
                 }
             }
             catch
@@ -449,13 +439,13 @@ namespace Project_FileContentExplorer
                 bool isExist = doc.GetText().ToLower().Contains(keyword);
                 if (isExist)
                 {
-                    docCount++;
-                    Console.WriteLine(path);
+                    docCount++;                    
 
                     Task.Run(() =>
                     {
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
-                    });
+                    });                    
+                    Thread.Sleep(200);
                 }
             }
             catch
@@ -474,14 +464,13 @@ namespace Project_FileContentExplorer
                 bool isExist = doc.GetText().ToLower().Contains(keyword);
                 if (isExist)
                 {
-                    docxCount++;
-                    Console.WriteLine(path);
+                    docxCount++;                    
 
                     Task.Run(() =>
                     {
                         Add_Item(Path.GetFileNameWithoutExtension(path), path, Path.GetExtension(path));
                     });
-
+                    Thread.Sleep(200);
                 }
             }
             catch (Exception e)
@@ -504,56 +493,45 @@ namespace Project_FileContentExplorer
             {
                 if (txtChecked != 0 && txtThread.ThreadState.ToString() != "Stopped")
                 {
-                    txtThread.Suspend();
-                    Console.WriteLine("txtThread 중단됨");
+                    txtThread.Suspend();                    
                 }
                 if (pdfChecked != 0 && pdfThread.ThreadState.ToString() != "Stopped")
                 {
-                    pdfThread.Suspend();
-                    Console.WriteLine(pdfThread.ThreadState.ToString());
-                    Console.WriteLine("pdfThread 중단됨");
+                    pdfThread.Suspend();                    
                 }
                 if (hwpChecked != 0 && hwpThread.ThreadState.ToString() != "Stopped")
                 {
-                    hwpThread.Suspend();
-                    Console.WriteLine("hwpThread 중단됨");
+                    hwpThread.Suspend();                    
                 }
                 if (docChecked != 0 && docThread.ThreadState.ToString() != "Stopped")
                 {
-                    docThread.Suspend();
-                    Console.WriteLine("tdocThread 중단됨");
+                    docThread.Suspend();                    
                 }
                 if (docxChecked != 0 && docxThread.ThreadState.ToString() != "Stopped")
                 {
-                    docxThread.Suspend();
-                    Console.WriteLine("tdocxThread 중단됨");
+                    docxThread.Suspend();                    
                 }
                 if (txtChecked + pdfChecked + hwpChecked + docxChecked + docChecked + docxChecked == 0)
                 {
                     if (txtThread.ThreadState.ToString() != "Stopped")
                     {
-                        txtThread.Suspend();
-                        Console.WriteLine("txtThread 중단됨");
+                        txtThread.Suspend();                        
                     }
                     if (pdfThread.ThreadState.ToString() != "Stopped")
                     {
-                        pdfThread.Suspend();
-                        Console.WriteLine("pdfThread 중단됨");
+                        pdfThread.Suspend();                        
                     }
                     if (hwpThread.ThreadState.ToString() != "Stopped")
                     {
-                        hwpThread.Suspend();
-                        Console.WriteLine("hwpThread 중단됨");
+                        hwpThread.Suspend();                        
                     }
                     if (docThread.ThreadState.ToString() != "Stopped")
                     {
-                        docThread.Suspend();
-                        Console.WriteLine("tdocThread 중단됨");
+                        docThread.Suspend();                        
                     }
                     if (docxThread.ThreadState.ToString() != "Stopped")
                     {
-                        docxThread.Suspend();
-                        Console.WriteLine("tdocxThread 중단됨");
+                        docxThread.Suspend();                        
                     }
                 }
             }
@@ -586,41 +564,31 @@ namespace Project_FileContentExplorer
             {
                 if (txtChecked != 0 && txtThread.ThreadState.ToString() == "Suspended")
                 {
-                    txtThread.Resume();
-                    Console.WriteLine("txtThread 다시 시작됨");
+                    txtThread.Resume();                    
                 }
                 if (pdfChecked != 0 && pdfThread.ThreadState.ToString() == "Suspended")
                 {
-                    pdfThread.Resume();
-                    Console.WriteLine("pdfThread 다시 시작됨");
+                    pdfThread.Resume();                    
                 }
                 if (hwpChecked != 0 && hwpThread.ThreadState.ToString() == "Suspended")
                 {
-                    hwpThread.Resume();
-                    Console.WriteLine("hwpThread 다시 시작됨");
+                    hwpThread.Resume();                    
                 }
                 if (docChecked != 0 && docThread.ThreadState.ToString() == "Suspended")
                 {
-                    docThread.Resume();
-                    Console.WriteLine("tdocThread 다시 시작됨");
+                    docThread.Resume();                    
                 }
                 if (docxChecked != 0 && docxThread.ThreadState.ToString() == "Suspended")
                 {
-                    docxThread.Resume();
-                    Console.WriteLine("tdocxThread 다시 시작됨");
+                    docxThread.Resume();                    
                 }
                 if (txtChecked + pdfChecked + hwpChecked + docxChecked + docChecked + docxChecked == 0)
                 {
-                    txtThread.Resume();
-                    Console.WriteLine("txtThread 다시 시작됨");
-                    pdfThread.Resume();
-                    Console.WriteLine("pdfThread 다시 시작됨");
-                    hwpThread.Resume();
-                    Console.WriteLine("hwpThread 다시 시작됨");
-                    docThread.Resume();
-                    Console.WriteLine("tdocThread 다시 시작됨");
-                    docxThread.Resume();
-                    Console.WriteLine("tdocxThread 다시 시작됨");
+                    txtThread.Resume();                    
+                    pdfThread.Resume();                    
+                    hwpThread.Resume();                    
+                    docThread.Resume();                    
+                    docxThread.Resume();                    
                 }
             }
             catch
@@ -639,35 +607,76 @@ namespace Project_FileContentExplorer
 
             try
             {
+                //Console.WriteLine(txtThread.ThreadState);
+                //Console.WriteLine(hwpThread.ThreadState);
+                //Console.WriteLine(pdfThread.ThreadState);
+                //Console.WriteLine(docThread.ThreadState);
+                //Console.WriteLine(docxThread.ThreadState);                                
+
                 if (txtThread.ThreadState.ToString() == "Suspended")
                 {
-                    txtThread.Resume();
-                    txtThread.Abort();
-                    Console.WriteLine("txtThread 종료");
+                    //txtThread.Resume();
+                    try
+                    {
+                        txtThread.Abort();
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
                 if (pdfThread.ThreadState.ToString() == "Suspended")
                 {
-                    pdfThread.Resume();
-                    pdfThread.Abort();
-                    Console.WriteLine("pdfThread 종료");
+                    //pdfThread.Resume();
+                    try
+                    {
+                        pdfThread.Abort();
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
                 if (hwpThread.ThreadState.ToString() == "Suspended")
                 {
-                    hwpThread.Resume();
-                    hwpThread.Abort();
-                    Console.WriteLine("hwpThread 종료");
+                    //hwpThread.Resume();
+                    try
+                    {
+                        hwpThread.Abort();
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
                 if (docThread.ThreadState.ToString() == "Suspended")
                 {
-                    docThread.Resume();
-                    docThread.Abort();
-                    Console.WriteLine("tdocThread 종료");
+                    //docThread.Resume();
+                    try
+                    {
+                        docThread.Abort();
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
                 if (docxThread.ThreadState.ToString() == "Running" || docxThread.ThreadState.ToString() == "Suspended")
                 {
-                    docxThread.Resume();
-                    docxThread.Abort();
-                    Console.WriteLine("tdocxThread 종료");
+                    //docxThread.Resume();
+                    try
+                    {
+                        docxThread.Abort();
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
             }
             catch
