@@ -12,7 +12,8 @@ namespace Project_FileContentExplorer
 {
     public partial class Setting : Form
     {
-        public Setting()
+        Panel Home_Panel;
+        public Setting(Panel panel)
         {
             InitializeComponent();
             if (!Properties.Settings.Default.pdfList.Equals(""))
@@ -35,6 +36,7 @@ namespace Project_FileContentExplorer
             {
                 Scope_Text.AppendText(Properties.Settings.Default.Path_Scope);
             }
+            Home_Panel = panel;
         }
 
         private void ChangeLocation_Btn_Click(object sender, EventArgs e)

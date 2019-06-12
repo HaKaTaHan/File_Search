@@ -89,6 +89,7 @@
             this.Name = "FileDownload";
             this.Text = "FileDownload";
             this.Load += new System.EventHandler(this.FileDownload_Load);
+            this.VisibleChanged += new System.EventHandler(this.FileDownload_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

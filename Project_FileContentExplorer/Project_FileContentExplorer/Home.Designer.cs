@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.Panel_Btns = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.Setting_Btn = new System.Windows.Forms.Button();
             this.Account_Btn = new System.Windows.Forms.Button();
             this.Search_Btn = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             // Panel_Btns
             // 
             this.Panel_Btns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
-            this.Panel_Btns.Controls.Add(this.button4);
             this.Panel_Btns.Controls.Add(this.Setting_Btn);
             this.Panel_Btns.Controls.Add(this.Account_Btn);
             this.Panel_Btns.Controls.Add(this.Search_Btn);
@@ -56,20 +54,6 @@
             this.Panel_Btns.Name = "Panel_Btns";
             this.Panel_Btns.Size = new System.Drawing.Size(140, 601);
             this.Panel_Btns.TabIndex = 0;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
-            this.button4.Location = new System.Drawing.Point(0, 360);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 120);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // Setting_Btn
             // 
@@ -181,7 +165,6 @@
         #endregion
 
         private System.Windows.Forms.Panel Panel_Btns;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button Setting_Btn;
         private System.Windows.Forms.Button Account_Btn;
         private System.Windows.Forms.Panel Display_Area;

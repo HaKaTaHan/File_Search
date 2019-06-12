@@ -68,11 +68,11 @@ namespace Project_FileContentExplorer
 
         void backgroundWork(object sender, DoWorkEventArgs e)
         {
-            //foreach (string path in Environment.GetLogicalDrives())
-            //{
-            //    sync(path);
-            //}
-            sync(@"D:\");
+            foreach (string path in Environment.GetLogicalDrives())
+            {
+                sync(path);
+            }
+            //sync(@"D:\");
 
             textTxt.WriteLine("End");
             textPdf.WriteLine("End");
@@ -248,6 +248,7 @@ namespace Project_FileContentExplorer
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
 
+
             if (Application.OpenForms["Searching"] != null)
             {
                 Application.OpenForms["Searching"].Enabled = true;
@@ -296,6 +297,11 @@ namespace Project_FileContentExplorer
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Search"))
+            {
+                Application.OpenForms["Search"].Enabled = false;
+                Application.OpenForms["Search"].Visible = false;
+            }
             else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Searching"))
             {
                 Application.OpenForms["Searching"].Enabled = false;
@@ -339,8 +345,10 @@ namespace Project_FileContentExplorer
                 F_Search.Close();
             if (F_Account != null)
                 F_Account.Close();
+            
             if (F_Setting != null)
                 F_Setting.Close();
+                
 
             //Sign_Up 닫기
             if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Signup"))
@@ -361,6 +369,11 @@ namespace Project_FileContentExplorer
             {
                 Application.OpenForms.Cast<Form>().Last().Close();
             }
+            else if (Application.OpenForms.Cast<Form>().Last().Text.Equals("Search"))
+            {
+                Application.OpenForms.Cast<Form>().Last().Close();
+            }
+
 
             if (Application.OpenForms["Account"] != null)
             {
@@ -372,6 +385,12 @@ namespace Project_FileContentExplorer
                 Application.OpenForms["FileDownload"].Enabled = false;
                 Application.OpenForms["FileDownload"].Visible = false;
             }
+            if (Application.OpenForms["Setting"] != null)
+            {
+                Application.OpenForms["Setting"].Enabled = true;
+                Application.OpenForms["Setting"].Visible = true;
+            }
+
 
             //Setting_Btn이 클릭되었으므로 배경색깔을 바꿔준다.
             Search_Btn.BackColor = Color.FromArgb(35, 45, 65);
@@ -379,7 +398,7 @@ namespace Project_FileContentExplorer
             Setting_Btn.BackColor = Color.FromArgb(98, 50, 170);
 
             //Setting폼을 Display_Area 패널에 띄운다.
-            F_Setting = new Setting();
+            F_Setting = new Setting(Display_Area);
             F_Setting.TopLevel = false;
             F_Setting.Dock = System.Windows.Forms.DockStyle.Fill;
             Display_Area.Controls.Add(F_Setting);
@@ -392,6 +411,7 @@ namespace Project_FileContentExplorer
             e.Cancel = true; //창이 닫히지 않게 설정해줌 defalut가 false
             //scope path 해제해야됨
             Properties.Settings.Default.Path_Scope = "";
+            Properties.Settings.Default.ID = "";
             Properties.Settings.Default.Save();
             this.Visible = false;
 
