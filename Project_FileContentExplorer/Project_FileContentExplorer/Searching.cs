@@ -107,7 +107,6 @@ namespace Project_FileContentExplorer
 
         public void SearchingComplete()
         {
-            Tohome_Btn.Visible = true;
             completesw = true;
             int filenum = txtCount + hwpCount + pdfCount + docCount + docxCount;
             //MessageBox.Show("검색이 완료되었습니다");
@@ -115,7 +114,10 @@ namespace Project_FileContentExplorer
             Resume_Btn.Visible = false;
             Stop_Btn.Visible = false;
             Pause_Btn.Visible = false;
-            //Tohome_Btn.Visible = true;
+            Task.Run(() =>
+            {
+                change_button();
+            });
         }
 
         private void Searching_Load(object sender, EventArgs e)
@@ -683,6 +685,13 @@ namespace Project_FileContentExplorer
             this.F_SearchedFile.FilePath_Label.Text = "Fixed_Path";
             this.Item_Panel.Controls.Add(F_SearchedFile);
             this.F_SearchedFile.Show();
+        }
+        private void change_button()
+        {
+            this.Invoke((System.Action)(() =>
+            {
+                Tohome_Btn.Visible = true;
+            }));
         }
 
         private void Add_Item(string name, string path, string extension)
