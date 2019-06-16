@@ -112,7 +112,6 @@ namespace Project_FileContentExplorer
         public void SearchingComplete()
         {
             completesw = true;
-            int filenum = txtCount + hwpCount + pdfCount + docCount + docxCount;
             //MessageBox.Show("검색이 완료되었습니다");
   
             Resume_Btn.Visible = false;
@@ -708,6 +707,20 @@ namespace Project_FileContentExplorer
             this.Invoke((System.Action)(() =>
             {
                 Tohome_Btn.Visible = true;
+                int filenum = txtCount + hwpCount + pdfCount + docCount + docxCount;
+                Alarm alrm = new Alarm(filenum.ToString());
+
+                alrm.setLabel1("검색 완료");
+                //알림창 위치 조절
+                System.Drawing.Rectangle ScreenRectangle = Screen.PrimaryScreen.WorkingArea;
+                int xPos = ScreenRectangle.Width - alrm.Bounds.Width;
+                int yPos = ScreenRectangle.Height - alrm.Bounds.Height;
+
+                //오류메세지 바꿔줘야함 (if 에러시 오류창, 정상작동시 갯수 출력)
+
+                alrm.Show();
+                alrm.SetBounds(xPos, yPos, alrm.Size.Width, alrm.Size.Height, BoundsSpecified.Location);
+                alrm.BringToFront();
             }));
         }
 
